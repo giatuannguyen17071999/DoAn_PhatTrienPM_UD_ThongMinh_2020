@@ -56,6 +56,8 @@ namespace DAL_BLL
 
         public bool them(PHIEU_NHAP pn, List<CT_PHIEU_NHAP> ctPNs)
         {
+            if (ctPNs.Count == 0)
+                return false;
             try
             {
                 db.PHIEU_NHAPs.InsertOnSubmit(pn);
