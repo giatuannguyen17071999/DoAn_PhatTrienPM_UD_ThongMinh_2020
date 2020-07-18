@@ -148,6 +148,9 @@
     <EmbeddedResource Include="fdFrmQuanLy\fdQuanLy\frmQuanLyPhieuNhapHang.resx">
       <DependentUpon>frmQuanLyPhieuNhapHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLyQuyen.resx">
+      <DependentUpon>frmQuanLyQuyen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
