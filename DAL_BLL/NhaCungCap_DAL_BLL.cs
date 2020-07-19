@@ -29,5 +29,79 @@ namespace DAL_BLL
 
             return result;
         }
+
+
+        public string insert(string pMaNCC, string pTenNCC, string pDiaChi)
+        {
+            if (db.NHACUNGCAPs.Any(ncc => ncc.MANCC == pMaNCC))
+                return "Đã tồn tại nhà cung cấp có mã này !";
+            else
+            {
+                try
+                {
+                    NHACUNGCAP ncc = new NHACUNGCAP();
+                    ncc.MANCC = pMaNCC;
+                    ncc.TENNCC = pTenNCC;
+                    ncc.DIACHI = pDiaChi;
+                    db.NHACUNGCAPs.InsertOnSubmit(ncc);
+                    db.SubmitChanges();
+                    return "Thêm thành công !";
+                }
+                catch (Exception e)
+                {
+                    return "Thêm thất bại !\nLoi: " + e.Message;
+                }
+            }
+        }
+        public string edit(string pMaNCC, string pTenNCC, string pDiaChi)
+        {
+            if (!db.NHACUNGCAPs.Any(ncc => ncc.MANCC == pMaNCC))
+                return "Không tồn tại nhà cung cấp có mã này !";
+            NHACUNGCAP nhaCC = db.NHACUNGCAPs.FirstOrDefault(n => n.MANCC == pMaNCC);
+            try
+            {
+                nhaCC.TENNCC = pTenNCC;
+                nhaCC.DIACHI = pDiaChi;
+                db.SubmitChanges();
+                return "Cập nhật thành công !";
+            }
+            catch (Exception e)
+            {
+                return "Cập nhật thất bại !\nLoi: " + e.Message;
+            }
+        }
+
+        public string delete(string pMaNCC)
+        {
+            string references = beingUseInAnotherTable(pMaNCC);
+            NHACUNGCAP nhaCC = db.NHACUNGCAPs.FirstOrDefault(n => n.MANCC == pMaNCC);
+            if (nhaCC == null)
+                return "Không tồn tại nhà cung cấp này trong bảng !";
+            else if (!String.IsNullOrEmpty(references))
+            {
+                return references;
+            }
+            else
+            {
+                try
+                {
+                    db.NHACUNGCAPs.DeleteOnSubmit(nhaCC);
+                    db.SubmitChanges();
+                    return "Xóa thành công !";
+                }
+                catch
+                {
+                    return "Xóa thất bại !";
+                }
+            }
+        }
+        private string beingUseInAnotherTable(string pMaNCC)
+        {
+            if (db.PHIEU_NHAPs.Any(pn => pn.NHACC == pMaNCC))
+                return "Mã nhớm này đang được sử dụng trong bảng PHIEU_NHAP, không thể XOÁ !";
+            return null;
+        }
+
+
     }
 }

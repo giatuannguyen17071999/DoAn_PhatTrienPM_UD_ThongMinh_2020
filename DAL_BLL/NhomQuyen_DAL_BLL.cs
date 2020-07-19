@@ -65,5 +65,80 @@ namespace DAL_BLL
 
             db.SubmitChanges();
         }
+
+        public string insert(string pMaNhom,string pTenNhom,string pGhiChu)
+        {
+            if (db.NHOMQUYENs.Any(nq => nq.MANHOM == pMaNhom))
+                return "Đã tồn tại nhóm quyền có mã này !";
+            else
+            {
+                try
+                {
+                    NHOMQUYEN nq = new NHOMQUYEN();
+                    nq.MANHOM = pMaNhom;
+                    nq.TENNHOM = pTenNhom;
+                    nq.GHICHU = pGhiChu;
+                    db.NHOMQUYENs.InsertOnSubmit(nq);
+                    db.SubmitChanges();
+                    return "Thêm thành công !";
+                }
+                catch(Exception e)
+                {
+                    return "Thêm thất bại !\nLoi: " + e.Message; 
+                }
+            }
+        }
+        public string edit(string pMaNhom, string pTenNhom, string pGhiChu)
+        {
+            if (!db.NHOMQUYENs.Any(n => n.MANHOM == pMaNhom))
+                return "Không tồn tại nhóm quyền có mã này !";
+            NHOMQUYEN nq = db.NHOMQUYENs.FirstOrDefault(n => n.MANHOM == pMaNhom);
+            try
+            {
+                nq.TENNHOM = pTenNhom;
+                nq.GHICHU = pGhiChu;
+                db.SubmitChanges();
+                return "Cập nhật thành công !";
+            }
+            catch (Exception e)
+            {
+                return "Cập nhật thất bại !\nLoi: " + e.Message;
+            }
+        }
+
+        public string delete(string pMaNhom)
+        {
+            string references = beingUseInAnotherTable(pMaNhom);
+            NHOMQUYEN nq = db.NHOMQUYENs.FirstOrDefault(n => n.MANHOM == pMaNhom);
+            if (nq == null)
+                return "Không tồn tại nhóm quyền này trong bảng !";
+            else if(!String.IsNullOrEmpty(references))
+            {
+                return references;
+            }    
+            else
+            {
+                try
+                {
+                    db.NHOMQUYENs.DeleteOnSubmit(nq);
+                    db.SubmitChanges();
+                    return "Xóa thành công !";
+                }
+                catch
+                {
+                    return "Xóa thất bại !";
+                }
+            }
+        }
+        private string beingUseInAnotherTable(string pMaNhom)
+        {
+            if (db.PHANQUYENs.Any(pq => pq.MANHOM == pMaNhom))
+                return "Mã nhớm này đang được sử dụng trong bảng PHÂN QUYỀN, không thể XOÁ !";
+            if(db.PHANNHANVIEN_VAONHOMQUYENs.Any(n => n.MANHOM == pMaNhom))
+                return "Mã nhớm này đang được sử dụng trong bảng PHANNHANVIEN_VAONHOMQUYENs, không thể XOÁ !";
+            return null;
+        }
+
+
     }
 }
