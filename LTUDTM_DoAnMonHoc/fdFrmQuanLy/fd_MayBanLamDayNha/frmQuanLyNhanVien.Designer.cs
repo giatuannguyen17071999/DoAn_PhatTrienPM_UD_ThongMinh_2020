@@ -31,19 +31,23 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanLyNhanVien));
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cboxMaPhieu = new System.Windows.Forms.ComboBox();
-            this.cboxMaSanPham = new System.Windows.Forms.ComboBox();
-            this.tbDonGia = new ControlDesign.tbNhapSo();
-            this.tbSoLuong = new ControlDesign.tbNhapSo();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtTenNV = new System.Windows.Forms.TextBox();
+            this.lblMaSV = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblTenNV = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtEmail = new ControlDesign.tbNhapSo();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.chkStatus = new System.Windows.Forms.CheckBox();
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnThemSanPham = new System.Windows.Forms.Button();
-            this.dgvChiTietPN = new DevExpress.XtraGrid.GridControl();
-            this.gvChiTietPN = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dgvUser = new DevExpress.XtraGrid.GridControl();
+            this.gvUser = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnThemUser = new System.Windows.Forms.Button();
+            this.btnUpdateUser = new System.Windows.Forms.Button();
+            this.btnXoaUser = new System.Windows.Forms.Button();
             this.popupMenuChiTietPN = new DevExpress.XtraBars.PopupMenu(this.components);
             this.barItemSuaCTPN = new DevExpress.XtraBars.BarButtonItem();
             this.itemPopupXoaCTPN = new DevExpress.XtraBars.BarButtonItem();
@@ -60,8 +64,9 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietPN)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvChiTietPN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvUser)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenuChiTietPN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManagerCTPhieuNhap)).BeginInit();
             this.tableLayoutPanel6.SuspendLayout();
@@ -73,104 +78,124 @@
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.ColumnCount = 4;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel7.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.label6, 2, 0);
-            this.tableLayoutPanel7.Controls.Add(this.label7, 0, 1);
-            this.tableLayoutPanel7.Controls.Add(this.label8, 2, 1);
-            this.tableLayoutPanel7.Controls.Add(this.cboxMaPhieu, 1, 0);
-            this.tableLayoutPanel7.Controls.Add(this.cboxMaSanPham, 3, 0);
-            this.tableLayoutPanel7.Controls.Add(this.tbDonGia, 1, 1);
-            this.tableLayoutPanel7.Controls.Add(this.tbSoLuong, 3, 1);
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel7.Controls.Add(this.txtPassword, 3, 0);
+            this.tableLayoutPanel7.Controls.Add(this.txtTenNV, 1, 1);
+            this.tableLayoutPanel7.Controls.Add(this.lblMaSV, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.lblPassword, 2, 0);
+            this.tableLayoutPanel7.Controls.Add(this.lblTenNV, 0, 1);
+            this.tableLayoutPanel7.Controls.Add(this.lblEmail, 2, 1);
+            this.tableLayoutPanel7.Controls.Add(this.txtEmail, 3, 1);
+            this.tableLayoutPanel7.Controls.Add(this.txtUserName, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.chkStatus, 1, 2);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 4);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 2;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(330, 100);
+            this.tableLayoutPanel7.RowCount = 3;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(782, 122);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
-            // label5
+            // txtPassword
             // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label5.Location = new System.Drawing.Point(26, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 50);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Mã phiếu nhập: ";
+            this.txtPassword.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPassword.Location = new System.Drawing.Point(549, 3);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(230, 23);
+            this.txtPassword.TabIndex = 12;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
-            // label6
+            // txtTenNV
             // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label6.Location = new System.Drawing.Point(169, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 50);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Mã sản phẩm: ";
+            this.txtTenNV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtTenNV.Location = new System.Drawing.Point(159, 43);
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.Size = new System.Drawing.Size(228, 23);
+            this.txtTenNV.TabIndex = 11;
             // 
-            // label7
+            // lblMaSV
             // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label7.Location = new System.Drawing.Point(28, 50);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 50);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Đơn giá: ";
+            this.lblMaSV.AutoSize = true;
+            this.lblMaSV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblMaSV.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaSV.Location = new System.Drawing.Point(3, 0);
+            this.lblMaSV.Name = "lblMaSV";
+            this.lblMaSV.Size = new System.Drawing.Size(150, 40);
+            this.lblMaSV.TabIndex = 0;
+            this.lblMaSV.Text = "UserName:";
             // 
-            // label8
+            // lblPassword
             // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label8.Location = new System.Drawing.Point(187, 50);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 50);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Số lượng: ";
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblPassword.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(393, 0);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(150, 40);
+            this.lblPassword.TabIndex = 1;
+            this.lblPassword.Text = "Password:";
             // 
-            // cboxMaPhieu
+            // lblTenNV
             // 
-            this.cboxMaPhieu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblTenNV.AutoSize = true;
+            this.lblTenNV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTenNV.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenNV.Location = new System.Drawing.Point(3, 40);
+            this.lblTenNV.Name = "lblTenNV";
+            this.lblTenNV.Size = new System.Drawing.Size(150, 40);
+            this.lblTenNV.TabIndex = 2;
+            this.lblTenNV.Text = "Tên Nhân Viên:";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblEmail.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(393, 40);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(150, 40);
+            this.lblEmail.TabIndex = 3;
+            this.lblEmail.Text = "Email:";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboxMaPhieu.FormattingEnabled = true;
-            this.cboxMaPhieu.Location = new System.Drawing.Point(85, 3);
-            this.cboxMaPhieu.Name = "cboxMaPhieu";
-            this.cboxMaPhieu.Size = new System.Drawing.Size(76, 21);
-            this.cboxMaPhieu.TabIndex = 4;
+            this.txtEmail.Location = new System.Drawing.Point(549, 44);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(230, 23);
+            this.txtEmail.TabIndex = 9;
             // 
-            // cboxMaSanPham
+            // txtUserName
             // 
-            this.cboxMaSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboxMaSanPham.FormattingEnabled = true;
-            this.cboxMaSanPham.Location = new System.Drawing.Point(249, 3);
-            this.cboxMaSanPham.Name = "cboxMaSanPham";
-            this.cboxMaSanPham.Size = new System.Drawing.Size(78, 21);
-            this.cboxMaSanPham.TabIndex = 5;
+            this.txtUserName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtUserName.Location = new System.Drawing.Point(159, 3);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(228, 23);
+            this.txtUserName.TabIndex = 10;
             // 
-            // tbDonGia
+            // chkStatus
             // 
-            this.tbDonGia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbDonGia.Location = new System.Drawing.Point(85, 53);
-            this.tbDonGia.Name = "tbDonGia";
-            this.tbDonGia.Size = new System.Drawing.Size(76, 21);
-            this.tbDonGia.TabIndex = 8;
-            // 
-            // tbSoLuong
-            // 
-            this.tbSoLuong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbSoLuong.Location = new System.Drawing.Point(249, 53);
-            this.tbSoLuong.Name = "tbSoLuong";
-            this.tbSoLuong.Size = new System.Drawing.Size(78, 21);
-            this.tbSoLuong.TabIndex = 9;
+            this.chkStatus.AutoSize = true;
+            this.chkStatus.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkStatus.Checked = true;
+            this.chkStatus.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkStatus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkStatus.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkStatus.Location = new System.Drawing.Point(159, 83);
+            this.chkStatus.Name = "chkStatus";
+            this.chkStatus.Size = new System.Drawing.Size(228, 36);
+            this.chkStatus.TabIndex = 13;
+            this.chkStatus.Text = "Status";
+            this.chkStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkStatus.UseVisualStyleBackColor = true;
             // 
             // bar2
             // 
@@ -185,44 +210,90 @@
             this.tableLayoutPanel8.ColumnCount = 2;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel8.Controls.Add(this.btnThemSanPham, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.dgvChiTietPN, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.dgvUser, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 115);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 142);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 1;
+            this.tableLayoutPanel8.RowCount = 2;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(673, 257);
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(788, 316);
             this.tableLayoutPanel8.TabIndex = 1;
             // 
-            // btnThemSanPham
+            // dgvUser
             // 
-            this.btnThemSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThemSanPham.Location = new System.Drawing.Point(3, 3);
-            this.btnThemSanPham.Name = "btnThemSanPham";
-            this.btnThemSanPham.Size = new System.Drawing.Size(61, 61);
-            this.btnThemSanPham.TabIndex = 0;
-            this.btnThemSanPham.Text = "Thêm sản phẩm";
-            this.btnThemSanPham.UseVisualStyleBackColor = true;
+            this.dgvUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvUser.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvUser.Location = new System.Drawing.Point(81, 4);
+            this.dgvUser.MainView = this.gvUser;
+            this.dgvUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvUser.Name = "dgvUser";
+            this.dgvUser.Size = new System.Drawing.Size(704, 288);
+            this.dgvUser.TabIndex = 1;
+            this.dgvUser.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvUser});
             // 
-            // dgvChiTietPN
+            // gvUser
             // 
-            this.dgvChiTietPN.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvChiTietPN.Location = new System.Drawing.Point(70, 3);
-            this.dgvChiTietPN.MainView = this.gvChiTietPN;
-            this.dgvChiTietPN.Name = "dgvChiTietPN";
-            this.dgvChiTietPN.Size = new System.Drawing.Size(600, 251);
-            this.dgvChiTietPN.TabIndex = 1;
-            this.dgvChiTietPN.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvChiTietPN});
+            this.gvUser.DetailHeight = 431;
+            this.gvUser.GridControl = this.dgvUser;
+            this.gvUser.Name = "gvUser";
+            this.gvUser.OptionsBehavior.Editable = false;
+            this.gvUser.OptionsBehavior.ReadOnly = true;
             // 
-            // gvChiTietPN
+            // tableLayoutPanel2
             // 
-            this.gvChiTietPN.GridControl = this.dgvChiTietPN;
-            this.gvChiTietPN.Name = "gvChiTietPN";
-            this.gvChiTietPN.OptionsBehavior.Editable = false;
-            this.gvChiTietPN.OptionsBehavior.ReadOnly = true;
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.btnThemUser, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnUpdateUser, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btnXoaUser, 0, 2);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 299);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(72, 14);
+            this.tableLayoutPanel2.TabIndex = 14;
+            // 
+            // btnThemUser
+            // 
+            this.btnThemUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnThemUser.Location = new System.Drawing.Point(3, 4);
+            this.btnThemUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnThemUser.Name = "btnThemUser";
+            this.btnThemUser.Size = new System.Drawing.Size(66, 1);
+            this.btnThemUser.TabIndex = 0;
+            this.btnThemUser.Text = "Thêm User";
+            this.btnThemUser.UseVisualStyleBackColor = true;
+            this.btnThemUser.Click += new System.EventHandler(this.btnThemUser_Click);
+            // 
+            // btnUpdateUser
+            // 
+            this.btnUpdateUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnUpdateUser.Location = new System.Drawing.Point(3, 7);
+            this.btnUpdateUser.Name = "btnUpdateUser";
+            this.btnUpdateUser.Size = new System.Drawing.Size(66, 1);
+            this.btnUpdateUser.TabIndex = 14;
+            this.btnUpdateUser.Text = "Update User";
+            this.btnUpdateUser.UseVisualStyleBackColor = true;
+            this.btnUpdateUser.Click += new System.EventHandler(this.btnUpdateUser_Click);
+            // 
+            // btnXoaUser
+            // 
+            this.btnXoaUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnXoaUser.Location = new System.Drawing.Point(3, 11);
+            this.btnXoaUser.Name = "btnXoaUser";
+            this.btnXoaUser.Size = new System.Drawing.Size(66, 1);
+            this.btnXoaUser.TabIndex = 15;
+            this.btnXoaUser.Text = "Xóa User";
+            this.btnXoaUser.UseVisualStyleBackColor = true;
+            this.btnXoaUser.Click += new System.EventHandler(this.btnXoaUser_Click);
             // 
             // popupMenuChiTietPN
             // 
@@ -268,15 +339,17 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManagerCTPhieuNhap;
-            this.barDockControlTop.Size = new System.Drawing.Size(691, 0);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(806, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 401);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 494);
             this.barDockControlBottom.Manager = this.barManagerCTPhieuNhap;
-            this.barDockControlBottom.Size = new System.Drawing.Size(691, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(806, 0);
             // 
             // barDockControlLeft
             // 
@@ -284,15 +357,17 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManagerCTPhieuNhap;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 401);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 494);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(691, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(806, 0);
             this.barDockControlRight.Manager = this.barManagerCTPhieuNhap;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 401);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 494);
             // 
             // bar1
             // 
@@ -312,39 +387,43 @@
             // 
             // tableLayoutPanel6
             // 
-            this.tableLayoutPanel6.ColumnCount = 2;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel7, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 4);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(673, 106);
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(788, 130);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 530F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 618F));
             this.tableLayoutPanel1.Controls.Add(this.groupBox2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(691, 401);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(806, 494);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.tableLayoutPanel5);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(3, 3);
+            this.groupBox2.Location = new System.Drawing.Point(3, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(685, 395);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(800, 486);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Nhân Viên:";
@@ -356,31 +435,35 @@
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel8, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 17);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 20);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(679, 375);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(794, 462);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // frmQuanLyNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 401);
+            this.ClientSize = new System.Drawing.Size(806, 494);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmQuanLyNhanVien";
             this.Text = "frmQuanLyNhanVien";
+            this.Load += new System.EventHandler(this.frmQuanLyNhanVien_Load);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietPN)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvChiTietPN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvUser)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.popupMenuChiTietPN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManagerCTPhieuNhap)).EndInit();
             this.tableLayoutPanel6.ResumeLayout(false);
@@ -395,19 +478,16 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cboxMaPhieu;
-        private System.Windows.Forms.ComboBox cboxMaSanPham;
-        private ControlDesign.tbNhapSo tbDonGia;
-        private ControlDesign.tbNhapSo tbSoLuong;
+        private System.Windows.Forms.Label lblMaSV;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label lblTenNV;
+        private System.Windows.Forms.Label lblEmail;
+        private ControlDesign.tbNhapSo txtEmail;
         private DevExpress.XtraBars.Bar bar2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.Button btnThemSanPham;
-        private DevExpress.XtraGrid.GridControl dgvChiTietPN;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvChiTietPN;
+        private System.Windows.Forms.Button btnThemUser;
+        private DevExpress.XtraGrid.GridControl dgvUser;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvUser;
         private DevExpress.XtraBars.PopupMenu popupMenuChiTietPN;
         private DevExpress.XtraBars.BarButtonItem barItemSuaCTPN;
         private DevExpress.XtraBars.BarButtonItem itemPopupXoaCTPN;
@@ -422,5 +502,12 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private DevExpress.XtraBars.Bar bar1;
         private DevExpress.XtraBars.Bar bar3;
+        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.TextBox txtTenNV;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.CheckBox chkStatus;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button btnUpdateUser;
+        private System.Windows.Forms.Button btnXoaUser;
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyLibrary;
 
 namespace DAL_BLL
 {
@@ -15,6 +16,8 @@ namespace DAL_BLL
         {
             db = new QL_MBTBDTDataContext();
         }
+
+        #region Phần Của Việt
 
         public List<NhanVien_DTO> layTatCa()
         {
@@ -34,15 +37,66 @@ namespace DAL_BLL
 
         public IQueryable layNhanVienTheoMaNhom(string maNhom)
         {
-            var list = from nv in db.NHANVIENs 
-                       join p in db.PHANNHANVIEN_VAONHOMQUYENs 
-                       on nv.USERNAME equals p.USERNAME 
-                       where p.MANHOM.Equals(maNhom) 
-                       select new { nv.USERNAME, nv.TENNHANVIEN, nv.EMAIL, p.GHICHU};
+            var list = from nv in db.NHANVIENs
+                join p in db.PHANNHANVIEN_VAONHOMQUYENs
+                    on nv.USERNAME equals p.USERNAME
+                where p.MANHOM.Equals(maNhom)
+                select new { nv.USERNAME, nv.TENNHANVIEN, nv.EMAIL, p.GHICHU};
 
             return list;
         }
 
-        
+        #endregion
+
+        #region Phần Của Long
+
+        public EStatus XoaNhanVien(string username)
+        {
+            var nv = db.NHANVIENs.SingleOrDefault(x => x.USERNAME.Equals(username));
+            if (nv == null)
+            {
+                return EStatus.LOI;
+            }
+            db.NHANVIENs.DeleteOnSubmit(nv);
+            db.SubmitChanges();
+            return EStatus.THANH_CONG;
+
+        }
+
+        public EStatus UpdateNhanVien(NhanVien_DTO nvDto)
+        {
+            var nv = db.NHANVIENs.SingleOrDefault(x => x.USERNAME == nvDto.UserName);
+            if (nv == null) return EStatus.LOI;
+            nv.USERNAME = nvDto.UserName;
+            nv.PASS = nvDto.Pass;
+            nv.EMAIL = nvDto.Email;
+            nv.HOATDONG = nvDto.HoatDong;
+            nv.TENNHANVIEN = nvDto.TenNhanVien;
+            db.SubmitChanges();
+            return EStatus.THANH_CONG;
+        }
+
+        public EStatus AddNhanVien(NhanVien_DTO nvDto)
+        {
+            try
+            {
+
+                db.NHANVIENs.InsertOnSubmit(new NHANVIEN()
+                {
+                    EMAIL = nvDto.Email,
+                    HOATDONG = nvDto.HoatDong,
+                    PASS = nvDto.Pass,
+                    TENNHANVIEN = nvDto.TenNhanVien,
+                    USERNAME = nvDto.UserName
+                });
+                db.SubmitChanges();
+                return EStatus.THANH_CONG;
+            }
+            catch (Exception)
+            {
+                return EStatus.LOI;
+            }
+        }
+        #endregion
     }
 }
