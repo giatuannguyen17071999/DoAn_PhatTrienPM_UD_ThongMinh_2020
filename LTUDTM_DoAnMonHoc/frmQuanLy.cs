@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy;
 using MyLibrary;
 using LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang;
+using LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha;
 
 namespace LTUDTM_DoAnMonHoc
 {
@@ -39,6 +40,16 @@ namespace LTUDTM_DoAnMonHoc
         private void barItemGiaoDienBanHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FunctionStatic.hienThiFormMoi(this, new frmBanHang());
+        }
+
+        private void mnuQuanLyNhomQuyen_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FunctionStatic.hienThiFormMoi(this, new frmQuanLyNhomQuyen());
+        }
+
+        private void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FunctionStatic.hienThiFormMoi(this, new frmQuanLyNhaCungCap());
         }
     }
 }
