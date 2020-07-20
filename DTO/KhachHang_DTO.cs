@@ -29,5 +29,10 @@ namespace DTO
         public string DiaChi { get => diaChi; set => diaChi = value; }
         [DisplayName("Trạng Thái")]
         public bool Status { get => status; set => status = value; }
+
+        public override string ToString()
+        {
+            return string.Format("[maKH: {0}; tenKH: {1}; SDT: {2} ]", MaKH, HoTen, DienThoai);
+        }
     }
 }
