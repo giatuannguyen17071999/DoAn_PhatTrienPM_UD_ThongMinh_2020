@@ -11,11 +11,13 @@ namespace DAL_BLL
     public class PhanQuyen_DAL_BLL
     {
         private QL_MBTBDTDataContext db;
-        
+
         public PhanQuyen_DAL_BLL()
         {
             db = new QL_MBTBDTDataContext();
         }
+
+        #region Phần của Việt
 
         public void them(PhanQuyen_DTO pQuyen)
         {
@@ -37,5 +39,35 @@ namespace DAL_BLL
             db.SubmitChanges();
             return EStatus.THANH_CONG;
         }
+
+        #endregion
+
+        #region Phần Của Long
+
+        public IQueryable<PhanQuyen_DTO> layTheoQuyen(string ma)
+        {
+            return db.PHANQUYENs.Where(x => x.MAQUYEN.Equals(ma)).Select(x => new PhanQuyen_DTO()
+            {
+                MaQuyen = x.MAQUYEN,
+                MaNhom = x.MANHOM,
+                CoQuyen = x.COQUYEN
+            });
+        }
+
+        public bool xoaPhanQuyen(List<PHANQUYEN> q)
+        {
+            try
+            {
+                db.PHANQUYENs.DeleteAllOnSubmit(q);
+                db.SubmitChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        #endregion
     }
 }
