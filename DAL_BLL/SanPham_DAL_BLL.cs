@@ -136,5 +136,21 @@ namespace DAL_BLL
 
             return result;
         }
+
+        public SanPham_DTO laySanPham(string maSP)
+        {
+            var sp = db.SanPhams.FirstOrDefault(n => n.MaSP.Equals(maSP));
+            return new SanPham_DTO
+            {
+                MaSP = sp.MaSP.Trim(),
+                MaLoai = sp.MaLoai,
+                TenSP = sp.TenSP,
+                Hinh = sp.Hinh,
+                GiaBan = sp.GiaBan,
+                CreateDate = sp.CreatedDate,
+                MoTa = sp.Description,
+                SlTon = sp.SL_TON
+            };
+        }
     }
 }

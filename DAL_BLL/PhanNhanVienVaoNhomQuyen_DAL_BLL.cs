@@ -18,6 +18,8 @@ namespace DAL_BLL
             db = new QL_MBTBDTDataContext();
         }
 
+        #region Phan Cua Viet
+
         public PhanNhanVienVaoNhomQuyen_DTO layTheoKhoaChinh(string uName, string maNhom)
         {
             PHANNHANVIEN_VAONHOMQUYEN p = db.PHANNHANVIEN_VAONHOMQUYENs.FirstOrDefault(n => n.USERNAME.Equals(uName) && n.MANHOM.Equals(maNhom));
@@ -61,5 +63,34 @@ namespace DAL_BLL
             db.SubmitChanges();
             return EStatus.THANH_CONG;
         }
+
+        #endregion
+
+        #region Phan Cua Long
+
+        public IQueryable<PhanNhanVienVaoNhomQuyen_DTO> layTheoMaUser(string uName)
+        {
+            return db.PHANNHANVIEN_VAONHOMQUYENs.Where(n => n.USERNAME.Equals(uName)).Select(p => new PhanNhanVienVaoNhomQuyen_DTO
+            {
+                UserName = p.USERNAME,
+                MaNhom = p.MANHOM,
+                GhiChu = p.GHICHU
+            });
+        }
+
+        public bool XoaNhieuNhomQuyen(List<PHANNHANVIEN_VAONHOMQUYEN> lst)
+        {
+            try
+            {
+                db.PHANNHANVIEN_VAONHOMQUYENs.DeleteAllOnSubmit(lst);
+                db.SubmitChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        #endregion
     }
 }

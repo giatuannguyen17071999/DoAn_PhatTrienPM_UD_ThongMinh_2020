@@ -15,6 +15,8 @@ using System.Threading;
 using ControlDesign;
 using System.Runtime.CompilerServices;
 using LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang.frmPhatSinh;
+using System.Collections;
+using DevExpress.Data.Linq.Helpers;
 
 namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
 {
@@ -28,6 +30,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
         private DonHang dhChoInHoaDon;
         private DonHang_DAL_BLL dhDAL_BLL;
         private CTDonHang_DAL_BLL ctDonHangDAL_BLL;
+        private KhachHang_DAL_BLL khDAL_BLL;
 
         public frmBanHang()
         {
@@ -42,12 +45,15 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
             spDAL_BLL = new SanPham_DAL_BLL();
             dhDAL_BLL = new DonHang_DAL_BLL();
             ctDonHangDAL_BLL = new CTDonHang_DAL_BLL();
+            khDAL_BLL = new KhachHang_DAL_BLL();
 
             //load
             loadTrvDanhMuc_TheLoai();
             initMyComponent();
             taiSanPhams(spDAL_BLL.latTaCa());
             loadCboxTimKiem();
+            kiemTraVaChuanBiKhiHoaDonCho();
+            taiTrvLichSuGiaoDich();
 
             //event
             btnTimKiem.Click += BtnTimKiem_Click;
@@ -131,13 +137,32 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
                     return;
                 khChoInHoaDon = frm.khChon;
                 themMotDongHoaDon();
+                hienThiThongTinDonHang();
+                themMotKhachHangCho(khChoInHoaDon);
             }
 
             Control pnAnh = sender as Control;
             SanPham_DTO sp = (pnAnh.Tag) as SanPham_DTO;
             themMotChiTietDonHang(sp);
+            hienThiTongTien_TongSLMua();
             tabCT.SelectedIndex = 1;
-         }
+        }
+
+        private void hienThiTongTien_TongSLMua()
+        {
+            decimal? tongTien = dhDAL_BLL.layTongTien(dhChoInHoaDon.MaDH);
+            txtTongTien.Text = tongTien == null ? string.Format("{0:N0}", 0) : string.Format("{0:N0}", tongTien);
+            txtTongSoLuong.Text = string.Format("{0} Cái", dhDAL_BLL.layTongSoLuongCTSanPhamMua(dhChoInHoaDon.MaDH));
+        }
+
+        private void hienThiThongTinDonHang()
+        {
+            lbHoaDonCho.Text = "Hóa Đơn Đang Chờ: [ "+dhChoInHoaDon.MaDH+" ]";
+            lbMaKhachHangGH.Text = khChoInHoaDon.MaKH.ToString();
+            lbTenKhachHangGH.Text = khChoInHoaDon.HoTen;
+            lbSDTGH.Text = khChoInHoaDon.DienThoai1.ToString();
+            lbDiaChiKhachHangGH.Text = khChoInHoaDon.DiaChi;
+        }
 
         private void themMotChiTietDonHang(SanPham_DTO sp)
         {
@@ -153,7 +178,58 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
                 return;
             }
             FunctionStatic.hienThiThongBaoThanhCong("Thêm một chi tiết đơn hàng thành công!");
-            themMotSanPham_vaoGioHang_GiaoDien(sp);
+            themMotSanPham_vaoGioHang_GiaoDien(sp, 1);
+        }
+
+        private void themMotKhachHangCho(KhachHang_DTO khCho)
+        {
+            pnKhachHangDois.Controls.Clear();
+            Label lbKhachCho = new Label();
+            lbKhachCho.Cursor = Cursors.Hand;
+            lbKhachCho.Width = 300;
+            lbKhachCho.Height = 30;
+            lbKhachCho.BackColor = Color.DarkRed;
+            lbKhachCho.ForeColor = Color.Gold;
+            string str = string.Format("Mã: {0} | Tên: {1} | SDT: {2}", khCho.MaKH, khCho.HoTen, khCho.DienThoai1);
+            lbKhachCho.TextAlign = ContentAlignment.MiddleCenter;
+            lbKhachCho.Text = str;
+            lbKhachCho.Top = 4;
+            lbKhachCho.Left = 10;
+            lbKhachCho.Click += LbKhachCho_Click; ;
+            lbKhachCho.MouseMove += lbKhachCho_MouseMove;
+            lbKhachCho.MouseLeave += lbKhachCho_MouseLeave;
+            pnKhachHangDois.Controls.Add(lbKhachCho);
+        }
+
+        void lbKhachCho_MouseLeave(object sender, EventArgs e)
+        {
+            ttripLblShowTrangThai.Text = string.Empty;
+        }
+
+        void lbKhachCho_MouseMove(object sender, MouseEventArgs e)
+        {
+            ttripLblShowTrangThai.Text = "Nhấn Trái Chuộc vào để xóa khách hàng này";
+        }
+
+        private void LbKhachCho_Click(object sender, EventArgs e)
+        {
+            DialogResult res = FunctionStatic.hienThiCauHoiYesNo("Bạn Có Chắc Muốn Xóa Khách Hàng Đang Chờ Này Không?");
+            if (res == DialogResult.Yes)
+            {
+                ctDonHangDAL_BLL.xoa(dhChoInHoaDon.MaDH);
+                dhDAL_BLL.xoa(dhChoInHoaDon.MaDH);
+                dhChoInHoaDon = null;
+                khChoInHoaDon = null;
+                ganKhachHangTuChoiMua();
+            }
+        }
+
+        private void ganKhachHangTuChoiMua()
+        {
+            pnKhachHangDois.Controls.Clear();
+            lbMaKhachHangGH.Text = txtTongSoLuong.Text = lbTenKhachHangGH.Text = lbSDTGH.Text = txtTongTien.Text = "null";
+            pnGioHang.Controls.Clear();
+            tabCT.SelectedIndex = 0;
         }
 
         private UCSanPham laSanPhamTonTaiTrongGioHang(string maSP)
@@ -164,16 +240,15 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
             return null;
         }
 
-        private void themMotSanPham_vaoGioHang_GiaoDien(SanPham_DTO sanPham)
+        private void themMotSanPham_vaoGioHang_GiaoDien(SanPham_DTO sanPham, int sl)
         {
             UCSanPham UCSPTim = laSanPhamTonTaiTrongGioHang(sanPham.MaSP);
             if (UCSPTim != null)
             {
-                int sl = int.Parse(UCSPTim.Controls["lbSoLuongSanPham"].Tag.ToString());
+                int slLay = int.Parse(UCSPTim.Controls["lbSoLuongSanPham"].Tag.ToString());
                 Label lbSL = UCSPTim.Controls["lbSoLuongSanPham"] as Label;
-                lbSL.Tag = (sl + 1).ToString();
+                lbSL.Tag = (slLay + 1).ToString();
                 lbSL.Text = string.Format("SL Mua: {0}", lbSL.Tag);
-                //setTongTienGioHang();
                 return;
             }
 
@@ -199,6 +274,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
 
             Label lbGiamSL = new Label();
             Label lbTangSL = new Label();
+            Label lbSoLuongSanPham = new Label();
             lbGiamSL.Text = "-";
             lbTangSL.Text = "+";
             lbGiamSL.Cursor = lbTangSL.Cursor = Cursors.Hand;
@@ -210,27 +286,28 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
             lbGiamSL.TextAlign = lbTangSL.TextAlign = ContentAlignment.MiddleCenter;
             lbGiamSL.Left = 10;
             lbTangSL.Left = 150;
-            //lbGiamSL.Click += lbGiamSL_Click;
-            //lbTangSL.Click += lbTangSL_Click;
+
+            lbSoLuongSanPham.Tag = sanPham.MaSP;
+            lbGiamSL.Tag = lbTangSL.Tag = lbSoLuongSanPham;
+            lbGiamSL.Click += LbGiamSL_Click;
+            lbTangSL.Click += LbTangSL_Click;
 
             UCItemGioHang.Controls.Add(lbGiamSL);
             UCItemGioHang.Controls.Add(lbTangSL);
 
-            Label lbSoLuongSanPham = new Label();
             lbSoLuongSanPham.Name = "lbSoLuongSanPham";
-            lbSoLuongSanPham.Tag = 1;
             lbSoLuongSanPham.Width = 100;
             lbSoLuongSanPham.Height = 30;
             lbSoLuongSanPham.BackColor = Color.DarkOliveGreen;
             lbSoLuongSanPham.ForeColor = Color.White;
             lbSoLuongSanPham.TextAlign = ContentAlignment.MiddleCenter;
-            lbSoLuongSanPham.Text = string.Format("SL Mua: {0}", lbSoLuongSanPham.Tag);
+            lbSoLuongSanPham.Text = string.Format("SL Mua: {0}", sl);
             lbSoLuongSanPham.Top = 310;
             lbSoLuongSanPham.Left = 45;
             UCItemGioHang.Controls.Add(lbSoLuongSanPham);
 
-            //pnItemGioHang.Controls["pnAnhSanPham"].Click -= pnAnh_Click;
-            //pnItemGioHang.Controls["pnAnhSanPham"].Click += pnAnhSanPhamGioHang_click;
+            UCItemGioHang.Controls["pnAnhSanPham"].Click -= Ctr_Click;
+            UCItemGioHang.Controls["pnAnhSanPham"].Click += pnAnhGioHang_Click;
             int space = 20;
             int soT = pnGioHang.Controls.Count / 3, soL = pnGioHang.Controls.Count % 3;// soT: Buoc Nhay Top | soL: Buoc Nhay L
             if (pnGioHang.Controls.Count == 0)
@@ -240,7 +317,78 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
             UCItemGioHang.Top = top;
             UCItemGioHang.Left = left;
             pnGioHang.Controls.Add(UCItemGioHang);
-            //setTongTienGioHang();
+        }
+
+        private void pnAnhGioHang_Click(object sender, EventArgs e)
+        {
+            DialogResult res = FunctionStatic.hienThiCauHoiYesNo("Bạn có chắc muốn xóa sản phẩm này khỏi chi tiết?");
+            if (res == DialogResult.No)
+                return;
+
+            SanPham_DTO sp = (sender as Control).Tag as SanPham_DTO;
+            bool isXoa = ctDonHangDAL_BLL.xoa(dhChoInHoaDon.MaDH, sp.MaSP);
+            if (isXoa)
+            {
+                UCSanPham ucTim = laSanPhamTonTaiTrongGioHang(sp.MaSP);
+                if (ucTim != null)
+                {
+                    pnGioHang.Controls.Clear();
+                    lamMoiLaiGioHang();
+                }
+            }
+        }
+
+        private void taiTrvLichSuGiaoDich(List<DonHang_DTO> donHangs)
+        {
+            trvLichSuGiaoDich.Nodes.Clear();
+            int maDH;
+            KhachHang_DTO khTmp;
+            DonHang_DTO dh;
+            List<CTDonHang> ctDons;
+            for (int i = 0; i < donHangs.Count; i++)
+            {
+                dh = donHangs[i];
+                maDH = dh.MaDH;
+                trvLichSuGiaoDich.Nodes.Add(dh.ToString());
+                trvLichSuGiaoDich.Nodes[i].Tag = maDH;
+                khTmp = khDAL_BLL.layKhachHang(int.Parse(dh.MaKH.ToString()));
+                trvLichSuGiaoDich.Nodes[i].Nodes.Add(khTmp.ToString());
+                trvLichSuGiaoDich.Nodes[i].Nodes[0].Tag = dh.MaDH;
+                ctDons = ctDonHangDAL_BLL.laySanPhamDH_Mua(dh.MaDH);
+                foreach (CTDonHang ct in ctDons)
+                    trvLichSuGiaoDich.Nodes[i].Nodes[0].Nodes.Add(string.Format("[Ma SP: {0} - SL Mua: {1}]", ct.MaSP.Trim(), ct.SoLuong));
+            }
+
+            //trvLichSuGiaoDich.ExpandAll();
+        }
+
+        private void taiTrvLichSuGiaoDich()
+        {
+            string filter = cboxLocTheoLichSu.SelectedItem.ToString();
+            if (filter.Equals("Tất Cả"))
+                taiTrvLichSuGiaoDich(dhDAL_BLL.layLichSuGiaoDich(DonHang_DAL_BLL.ELichSu.LICH_SU_TAT_CA));
+            else if (filter.Equals("Hôm Nay"))
+                taiTrvLichSuGiaoDich(dhDAL_BLL.layLichSuGiaoDich(DonHang_DAL_BLL.ELichSu.LICH_SU_NGAY));
+            else if (filter.Equals("Tháng Này"))
+                taiTrvLichSuGiaoDich(dhDAL_BLL.layLichSuGiaoDich(DonHang_DAL_BLL.ELichSu.LICH_SU_THANG));
+            else
+                taiTrvLichSuGiaoDich(dhDAL_BLL.layLichSuGiaoDich(DonHang_DAL_BLL.ELichSu.LICH_SU_NAM));
+        }
+
+        private void LbTangSL_Click(object sender, EventArgs e)
+        {
+            Control lbSlMua = (sender as Control).Tag as Control;
+            int sl = ctDonHangDAL_BLL.tangSoLuong(dhChoInHoaDon.MaDH, lbSlMua.Tag.ToString());
+            hienThiTongTien_TongSLMua();
+            lbSlMua.Text = string.Format("SL Mua: {0}", sl);
+        }
+
+        private void LbGiamSL_Click(object sender, EventArgs e)
+        {
+            Control lbSlMua = (sender as Control).Tag as Control;
+            int sl = ctDonHangDAL_BLL.giamSoLuong(dhChoInHoaDon.MaDH, lbSlMua.Tag.ToString());
+            hienThiTongTien_TongSLMua();
+            lbSlMua.Text = string.Format("SL Mua: {0}", sl);
         }
 
         private void themMotDongHoaDon()
@@ -248,7 +396,6 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
             dhChoInHoaDon = new DonHang();
             dhChoInHoaDon.MaKH = khChoInHoaDon.MaKH;
             dhChoInHoaDon = dhDAL_BLL.them(dhChoInHoaDon);
-            MessageBox.Show(dhChoInHoaDon.MaDH.ToString());
         }
 
         private void taiSanPhams(List<SanPham_DTO> sanPhams)
@@ -341,6 +488,74 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
             {
                 DanhMuc_DTO dm = e.Node.Tag as DanhMuc_DTO;
                 taiSanPhams(spDAL_BLL.locTheoDanhMuc(dm.MaDM));
+            }
+        }
+
+        private void btnMuaThem_Click(object sender, EventArgs e)
+        {
+            tabCT.SelectedIndex = 0;
+        }
+
+        private void btnXoaTatCa_Click(object sender, EventArgs e)
+        {
+            DialogResult res = FunctionStatic.hienThiCauHoiYesNo("Bạn chắc muốn xóa tất cả chi tiết đơn hàng này?");
+            if (res == DialogResult.No)
+                return;
+            ctDonHangDAL_BLL.xoa(dhChoInHoaDon.MaDH);
+            pnGioHang.Controls.Clear();
+            hienThiTongTien_TongSLMua();
+        }
+
+        private void kiemTraVaChuanBiKhiHoaDonCho()
+        {
+            DonHang dhCho = dhDAL_BLL.layDonHangCho();
+            if (dhCho == null)
+                return;
+            dhChoInHoaDon = dhCho;
+            khChoInHoaDon = khDAL_BLL.layKhachHang(int.Parse(dhCho.MaKH.ToString()));
+            lamMoiLaiGioHang();
+        }
+
+        private void lamMoiLaiGioHang()
+        {
+            List<CTDonHang> list = ctDonHangDAL_BLL.laySanPhamDH_Mua(dhChoInHoaDon.MaDH);
+            foreach (CTDonHang ct in list)
+                themMotSanPham_vaoGioHang_GiaoDien(spDAL_BLL.laySanPham(ct.MaSP), int.Parse(ct.SoLuong.ToString()));
+            themMotKhachHangCho(khChoInHoaDon);
+            hienThiThongTinDonHang();
+            hienThiTongTien_TongSLMua();
+        }
+
+        private void trvLichSuGiaoDich_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            TreeNode node = e.Node;
+            lstBLichSuGiaoDich.Items.Clear();
+            if (node.Level == 0 || node.Level == 1)
+            {
+                int maDH = int.Parse(node.Tag.ToString());
+                foreach (CTDonHang ct in ctDonHangDAL_BLL.laySanPhamDH_Mua(maDH))
+                    lstBLichSuGiaoDich.Items.Add(spDAL_BLL.laySanPham(ct.MaSP).ToString());
+            }
+        }
+
+        private void cboxLocTheoLichSu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            taiTrvLichSuGiaoDich();
+        }
+
+        private void btnInHoaDon_Click(object sender, EventArgs e)
+        {
+            //in hoa don
+            //cap nhat trang thai thanh toan
+            bool isTT = dhDAL_BLL.capNhatTrangThaiThanhToan(dhChoInHoaDon.MaDH, true);
+
+            if (isTT)
+            {
+                dhChoInHoaDon = null;
+                khChoInHoaDon = null;
+                ganKhachHangTuChoiMua();
+                taiTrvLichSuGiaoDich();
+                FunctionStatic.hienThiThongBaoThanhCong("In Hoa Don Thanh Cong");
             }
         }
     }
