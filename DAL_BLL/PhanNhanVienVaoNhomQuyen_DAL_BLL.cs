@@ -77,7 +77,10 @@ namespace DAL_BLL
                 GhiChu = p.GHICHU
             });
         }
-
+        public bool GetById(string username)
+        {
+            return db.PHANNHANVIEN_VAONHOMQUYENs.Any(x => x.USERNAME.Equals(username));
+        }
         public bool XoaNhieuNhomQuyen(List<PHANNHANVIEN_VAONHOMQUYEN> lst)
         {
             try

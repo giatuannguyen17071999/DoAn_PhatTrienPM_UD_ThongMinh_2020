@@ -131,7 +131,6 @@
             this.txtTenQuyen.Name = "txtTenQuyen";
             this.txtTenQuyen.Size = new System.Drawing.Size(314, 23);
             this.txtTenQuyen.TabIndex = 12;
-            this.txtTenQuyen.UseSystemPasswordChar = true;
             // 
             // txtMaQuyen
             // 
@@ -275,6 +274,8 @@
             this.gvQuyen.Name = "gvQuyen";
             this.gvQuyen.OptionsBehavior.Editable = false;
             this.gvQuyen.OptionsBehavior.ReadOnly = true;
+            this.gvQuyen.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gvQuyen_RowCellClick);
+            this.gvQuyen.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gvQuyen_CellValueChanged);
             // 
             // groupBox2
             // 

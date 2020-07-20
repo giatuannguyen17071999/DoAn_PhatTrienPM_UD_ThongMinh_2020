@@ -37,6 +37,10 @@ namespace DAL_BLL
 
         }
 
+        public bool GetById(string mq)
+        {
+            return _db.QUYENs.Any(t => t.MAQUYEN.Equals(mq));
+        }
         public EStatus UpdateQuyen(Quyen_DTO qDto)
         {
             var nv = _db.QUYENs.SingleOrDefault(x => x.MAQUYEN == qDto.MaQuyen);
