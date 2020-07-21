@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using DevExpress.UserSkins;
 using DevExpress.Skins;
+using LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha;
 
 namespace LTUDTM_DoAnMonHoc
 {
@@ -17,7 +18,7 @@ namespace LTUDTM_DoAnMonHoc
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmQuanLy());
+            Application.Run(new FormLoaiSanPham());
         }
     }
 }

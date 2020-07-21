@@ -278,3 +278,5 @@ D:\1.MonHoc\PhatTrienPhanMem\MainDoAn\Main\DoAn_PhatTrienPM_UD_ThongMinh_2020\LT
 D:\1.MonHoc\PhatTrienPhanMem\MainDoAn\Main\DoAn_PhatTrienPM_UD_ThongMinh_2020\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.csproj.CopyComplete
 D:\1.MonHoc\PhatTrienPhanMem\MainDoAn\Main\DoAn_PhatTrienPM_UD_ThongMinh_2020\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.exe
 D:\1.MonHoc\PhatTrienPhanMem\MainDoAn\Main\DoAn_PhatTrienPM_UD_ThongMinh_2020\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.pdb
+D:\1.MonHoc\PhatTrienPhanMem\MainDoAn\Main\DoAn_PhatTrienPM_UD_ThongMinh_2020\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha.FormDanhMuc.resources
+D:\1.MonHoc\PhatTrienPhanMem\MainDoAn\Main\DoAn_PhatTrienPM_UD_ThongMinh_2020\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha.FormLoaiSanPham.resources
