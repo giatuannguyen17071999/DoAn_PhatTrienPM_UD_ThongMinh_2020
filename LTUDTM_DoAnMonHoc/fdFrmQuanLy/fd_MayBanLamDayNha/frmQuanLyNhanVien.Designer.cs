@@ -290,8 +290,6 @@
             this.gvUser.DetailHeight = 431;
             this.gvUser.GridControl = this.dgvUser;
             this.gvUser.Name = "gvUser";
-            this.gvUser.OptionsBehavior.Editable = false;
-            this.gvUser.OptionsBehavior.ReadOnly = true;
             this.gvUser.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gvUser_RowCellClick);
             this.gvUser.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gvUser_CellValueChanged);
             // 

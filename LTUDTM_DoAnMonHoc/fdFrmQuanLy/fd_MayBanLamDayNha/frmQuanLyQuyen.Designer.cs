@@ -272,8 +272,6 @@
             this.gvQuyen.DetailHeight = 431;
             this.gvQuyen.GridControl = this.dgvQuyen;
             this.gvQuyen.Name = "gvQuyen";
-            this.gvQuyen.OptionsBehavior.Editable = false;
-            this.gvQuyen.OptionsBehavior.ReadOnly = true;
             this.gvQuyen.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gvQuyen_RowCellClick);
             this.gvQuyen.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gvQuyen_CellValueChanged);
             // 
