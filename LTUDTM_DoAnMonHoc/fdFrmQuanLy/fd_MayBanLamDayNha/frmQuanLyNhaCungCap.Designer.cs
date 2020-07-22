@@ -29,21 +29,24 @@
         private void InitializeComponent()
         {
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
-            this.gv_NhaCC = new System.Windows.Forms.DataGridView();
+            this.btnClear = new DevExpress.XtraEditors.SimpleButton();
+            this.gv_NhaCC = new DevExpress.XtraGrid.GridControl();
+            this.gridNhaCC = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.stackPanel1 = new DevExpress.Utils.Layout.StackPanel();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbNhaCC = new System.Windows.Forms.ComboBox();
             this.txtTenNCC = new DevExpress.XtraEditors.TextEdit();
             this.txtDiaChi = new DevExpress.XtraEditors.TextEdit();
             this.lblDiaChi = new DevExpress.XtraEditors.LabelControl();
             this.lblTenNCC = new DevExpress.XtraEditors.LabelControl();
             this.lblMaNCC = new DevExpress.XtraEditors.LabelControl();
-            this.cbNhaCC = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_NhaCC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridNhaCC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stackPanel1)).BeginInit();
             this.stackPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -56,6 +59,7 @@
             this.tablePanel1.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 6.89F),
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 53.11F)});
+            this.tablePanel1.Controls.Add(this.btnClear);
             this.tablePanel1.Controls.Add(this.gv_NhaCC);
             this.tablePanel1.Controls.Add(this.stackPanel1);
             this.tablePanel1.Controls.Add(this.panel1);
@@ -68,19 +72,42 @@
             this.tablePanel1.Size = new System.Drawing.Size(942, 636);
             this.tablePanel1.TabIndex = 1;
             // 
+            // btnClear
+            // 
+            this.btnClear.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.btnClear.Appearance.Options.UseFont = true;
+            this.btnClear.Appearance.Options.UseForeColor = true;
+            this.tablePanel1.SetColumn(this.btnClear, 0);
+            this.btnClear.Location = new System.Drawing.Point(10, 19);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.tablePanel1.SetRow(this.btnClear, 0);
+            this.btnClear.Size = new System.Drawing.Size(88, 128);
+            this.btnClear.TabIndex = 4;
+            this.btnClear.Text = "Clear";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // gv_NhaCC
             // 
-            this.gv_NhaCC.BackgroundColor = System.Drawing.Color.White;
             this.tablePanel1.SetColumn(this.gv_NhaCC, 1);
-            this.gv_NhaCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gv_NhaCC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gv_NhaCC.Location = new System.Drawing.Point(111, 169);
+            this.gv_NhaCC.MainView = this.gridNhaCC;
             this.gv_NhaCC.Name = "gv_NhaCC";
             this.tablePanel1.SetRow(this.gv_NhaCC, 1);
-            this.gv_NhaCC.RowHeadersWidth = 51;
-            this.gv_NhaCC.RowTemplate.Height = 24;
             this.gv_NhaCC.Size = new System.Drawing.Size(828, 464);
             this.gv_NhaCC.TabIndex = 3;
+            this.gv_NhaCC.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridNhaCC});
+            // 
+            // gridNhaCC
+            // 
+            this.gridNhaCC.GridControl = this.gv_NhaCC;
+            this.gridNhaCC.Name = "gridNhaCC";
+            this.gridNhaCC.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridNhaCC_RowCellClick);
+            this.gridNhaCC.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridNhaCC_CellValueChanged);
             // 
             // stackPanel1
             // 
@@ -143,6 +170,15 @@
             this.panel1.Size = new System.Drawing.Size(828, 160);
             this.panel1.TabIndex = 0;
             // 
+            // cbNhaCC
+            // 
+            this.cbNhaCC.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNhaCC.FormattingEnabled = true;
+            this.cbNhaCC.Location = new System.Drawing.Point(203, 29);
+            this.cbNhaCC.Name = "cbNhaCC";
+            this.cbNhaCC.Size = new System.Drawing.Size(225, 29);
+            this.cbNhaCC.TabIndex = 7;
+            // 
             // txtTenNCC
             // 
             this.txtTenNCC.Location = new System.Drawing.Point(203, 87);
@@ -193,27 +229,19 @@
             this.lblMaNCC.TabIndex = 0;
             this.lblMaNCC.Text = "Mã nhà cung cấp";
             // 
-            // cbNhaCC
-            // 
-            this.cbNhaCC.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbNhaCC.FormattingEnabled = true;
-            this.cbNhaCC.Location = new System.Drawing.Point(203, 29);
-            this.cbNhaCC.Name = "cbNhaCC";
-            this.cbNhaCC.Size = new System.Drawing.Size(225, 29);
-            this.cbNhaCC.TabIndex = 7;
-            // 
-            // frmQuanLyNhaCungCung
+            // frmQuanLyNhaCungCap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(942, 636);
             this.Controls.Add(this.tablePanel1);
-            this.Name = "frmQuanLyNhaCungCung";
+            this.Name = "frmQuanLyNhaCungCap";
             this.Text = "frmQuanLyNhaCungCung";
             this.Load += new System.EventHandler(this.frmQuanLyNhaCungCung_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
             this.tablePanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gv_NhaCC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridNhaCC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stackPanel1)).EndInit();
             this.stackPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -227,7 +255,6 @@
         #endregion
 
         private DevExpress.Utils.Layout.TablePanel tablePanel1;
-        private System.Windows.Forms.DataGridView gv_NhaCC;
         private DevExpress.Utils.Layout.StackPanel stackPanel1;
         private DevExpress.XtraEditors.SimpleButton btnThem;
         private DevExpress.XtraEditors.SimpleButton btnXoa;
@@ -239,5 +266,8 @@
         private DevExpress.XtraEditors.LabelControl lblTenNCC;
         private DevExpress.XtraEditors.LabelControl lblMaNCC;
         private System.Windows.Forms.ComboBox cbNhaCC;
+        private DevExpress.XtraGrid.GridControl gv_NhaCC;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridNhaCC;
+        private DevExpress.XtraEditors.SimpleButton btnClear;
     }
 }
