@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.Utils.Layout.TablePanelColumn tablePanelColumn1 = new DevExpress.Utils.Layout.TablePanelColumn();
+            DevExpress.Utils.Layout.TablePanelColumn tablePanelColumn2 = new DevExpress.Utils.Layout.TablePanelColumn();
+            DevExpress.Utils.Layout.TablePanelRow tablePanelRow1 = new DevExpress.Utils.Layout.TablePanelRow();
+            DevExpress.Utils.Layout.TablePanelRow tablePanelRow2 = new DevExpress.Utils.Layout.TablePanelRow();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
             this.gv_NhaCC = new System.Windows.Forms.DataGridView();
             this.stackPanel1 = new DevExpress.Utils.Layout.StackPanel();
@@ -35,17 +39,15 @@
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbNhaCC = new System.Windows.Forms.ComboBox();
             this.txtTenNCC = new DevExpress.XtraEditors.TextEdit();
             this.txtDiaChi = new DevExpress.XtraEditors.TextEdit();
             this.lblDiaChi = new DevExpress.XtraEditors.LabelControl();
             this.lblTenNCC = new DevExpress.XtraEditors.LabelControl();
             this.lblMaNCC = new DevExpress.XtraEditors.LabelControl();
-            this.cbNhaCC = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
-            this.tablePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_NhaCC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stackPanel1)).BeginInit();
-            this.stackPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenNCC.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).BeginInit();
@@ -53,18 +55,26 @@
             // 
             // tablePanel1
             // 
+            tablePanelColumn1.Style = DevExpress.Utils.Layout.TablePanelEntityStyle.Relative;
+            tablePanelColumn1.Width = 6.89F;
+            tablePanelColumn2.Style = DevExpress.Utils.Layout.TablePanelEntityStyle.Relative;
+            tablePanelColumn2.Width = 53.11F;
             this.tablePanel1.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 6.89F),
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 53.11F)});
+            tablePanelColumn1,
+            tablePanelColumn2});
             this.tablePanel1.Controls.Add(this.gv_NhaCC);
             this.tablePanel1.Controls.Add(this.stackPanel1);
             this.tablePanel1.Controls.Add(this.panel1);
             this.tablePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tablePanel1.Location = new System.Drawing.Point(0, 0);
             this.tablePanel1.Name = "tablePanel1";
+            tablePanelRow1.Height = 166.0003F;
+            tablePanelRow1.Style = DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute;
+            tablePanelRow2.Height = 26F;
+            tablePanelRow2.Style = DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute;
             this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
-            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 166.0003F),
-            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
+            tablePanelRow1,
+            tablePanelRow2});
             this.tablePanel1.Size = new System.Drawing.Size(942, 636);
             this.tablePanel1.TabIndex = 1;
             // 
@@ -143,10 +153,22 @@
             this.panel1.Size = new System.Drawing.Size(828, 160);
             this.panel1.TabIndex = 0;
             // 
+            // cbNhaCC
+            // 
+            this.cbNhaCC.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNhaCC.FormattingEnabled = true;
+            this.cbNhaCC.Location = new System.Drawing.Point(203, 29);
+            this.cbNhaCC.Name = "cbNhaCC";
+            this.cbNhaCC.Size = new System.Drawing.Size(225, 29);
+            this.cbNhaCC.TabIndex = 7;
+            // 
             // txtTenNCC
             // 
             this.txtTenNCC.Location = new System.Drawing.Point(203, 87);
             this.txtTenNCC.Name = "txtTenNCC";
+            // 
+            // 
+            // 
             this.txtTenNCC.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenNCC.Properties.Appearance.Options.UseFont = true;
             this.txtTenNCC.Size = new System.Drawing.Size(225, 28);
@@ -156,6 +178,9 @@
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(546, 30);
             this.txtDiaChi.Name = "txtDiaChi";
+            // 
+            // 
+            // 
             this.txtDiaChi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Properties.Appearance.Options.UseFont = true;
             this.txtDiaChi.Size = new System.Drawing.Size(236, 28);
@@ -193,29 +218,18 @@
             this.lblMaNCC.TabIndex = 0;
             this.lblMaNCC.Text = "Mã nhà cung cấp";
             // 
-            // cbNhaCC
-            // 
-            this.cbNhaCC.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbNhaCC.FormattingEnabled = true;
-            this.cbNhaCC.Location = new System.Drawing.Point(203, 29);
-            this.cbNhaCC.Name = "cbNhaCC";
-            this.cbNhaCC.Size = new System.Drawing.Size(225, 29);
-            this.cbNhaCC.TabIndex = 7;
-            // 
-            // frmQuanLyNhaCungCung
+            // frmQuanLyNhaCungCap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(942, 636);
             this.Controls.Add(this.tablePanel1);
-            this.Name = "frmQuanLyNhaCungCung";
-            this.Text = "frmQuanLyNhaCungCung";
+            this.Name = "frmQuanLyNhaCungCap";
+            this.Text = "frmQuanLyNhaCungCungCap";
             this.Load += new System.EventHandler(this.frmQuanLyNhaCungCung_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
-            this.tablePanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gv_NhaCC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stackPanel1)).EndInit();
-            this.stackPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenNCC.Properties)).EndInit();
