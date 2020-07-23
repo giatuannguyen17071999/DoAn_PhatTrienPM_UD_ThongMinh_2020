@@ -616,6 +616,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
 
         private void cboxLocTheoLichSu_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //Test
             taiTrvLichSuGiaoDich();
         }
 
