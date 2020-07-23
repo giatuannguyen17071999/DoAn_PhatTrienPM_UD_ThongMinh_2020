@@ -67,6 +67,7 @@
     </Compile>
     <Compile Include="Quyen_DAL_BLL.cs" />
     <Compile Include="SanPham_DAL_BLL.cs" />
+    <Compile Include="_PublicStatic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

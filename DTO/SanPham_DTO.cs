@@ -31,5 +31,10 @@ namespace DTO
         [DisplayName("Mã Loại")]
         public int? MaLoai { get => maLoai; set => maLoai = value; }
         public int? GiaBan { get => giaBan; set => giaBan = value; }
+
+        public override string ToString()
+        {
+            return string.Format("[ maSP:{0}; tenSP:{1}; donGia:{2} ]", maSP, tenSP, giaBan);
+        }
     }
 }
