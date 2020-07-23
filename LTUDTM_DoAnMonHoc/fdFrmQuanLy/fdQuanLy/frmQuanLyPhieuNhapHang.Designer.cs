@@ -58,9 +58,11 @@
             this.tbDonGia = new ControlDesign.tbNhapSo();
             this.tbSoLuong = new ControlDesign.tbNhapSo();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnThemSanPham = new System.Windows.Forms.Button();
             this.dgvChiTietPN = new DevExpress.XtraGrid.GridControl();
             this.gvChiTietPN = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnThemSanPham = new System.Windows.Forms.Button();
+            this.bntLuu = new System.Windows.Forms.Button();
             this.popupMenuChiTietPN = new DevExpress.XtraBars.PopupMenu(this.components);
             this.barItemSuaCTPN = new DevExpress.XtraBars.BarButtonItem();
             this.itemPopupXoaCTPN = new DevExpress.XtraBars.BarButtonItem();
@@ -85,6 +87,7 @@
             this.tableLayoutPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietPN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvChiTietPN)).BeginInit();
+            this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenuChiTietPN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManagerCTPhieuNhap)).BeginInit();
             this.SuspendLayout();
@@ -412,8 +415,8 @@
             this.tableLayoutPanel8.ColumnCount = 2;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel8.Controls.Add(this.btnThemSanPham, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.dgvChiTietPN, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.flowLayoutPanel2, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 82);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
@@ -421,17 +424,6 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(512, 180);
             this.tableLayoutPanel8.TabIndex = 1;
-            // 
-            // btnThemSanPham
-            // 
-            this.btnThemSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThemSanPham.Location = new System.Drawing.Point(3, 3);
-            this.btnThemSanPham.Name = "btnThemSanPham";
-            this.btnThemSanPham.Size = new System.Drawing.Size(45, 61);
-            this.btnThemSanPham.TabIndex = 0;
-            this.btnThemSanPham.Text = "Thêm sản phẩm";
-            this.btnThemSanPham.UseVisualStyleBackColor = true;
             // 
             // dgvChiTietPN
             // 
@@ -451,6 +443,37 @@
             this.gvChiTietPN.OptionsBehavior.Editable = false;
             this.gvChiTietPN.OptionsBehavior.ReadOnly = true;
             // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.btnThemSanPham);
+            this.flowLayoutPanel2.Controls.Add(this.bntLuu);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(45, 174);
+            this.flowLayoutPanel2.TabIndex = 2;
+            // 
+            // btnThemSanPham
+            // 
+            this.btnThemSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThemSanPham.Location = new System.Drawing.Point(3, 3);
+            this.btnThemSanPham.Name = "btnThemSanPham";
+            this.btnThemSanPham.Size = new System.Drawing.Size(45, 61);
+            this.btnThemSanPham.TabIndex = 1;
+            this.btnThemSanPham.Text = "Thêm sản phẩm";
+            this.btnThemSanPham.UseVisualStyleBackColor = true;
+            // 
+            // bntLuu
+            // 
+            this.bntLuu.Location = new System.Drawing.Point(3, 70);
+            this.bntLuu.Name = "bntLuu";
+            this.bntLuu.Size = new System.Drawing.Size(42, 60);
+            this.bntLuu.TabIndex = 2;
+            this.bntLuu.Text = "Luu";
+            this.bntLuu.UseVisualStyleBackColor = true;
+            this.bntLuu.Click += new System.EventHandler(this.bntLuu_Click);
+            // 
             // popupMenuChiTietPN
             // 
             this.popupMenuChiTietPN.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
@@ -463,8 +486,8 @@
             // 
             this.barItemSuaCTPN.Caption = "Sửa Chi Tiết Phiếu Này";
             this.barItemSuaCTPN.Id = 3;
-            this.barItemSuaCTPN.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.barItemSuaCTPN.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.barItemSuaCTPN.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barItemSuaCTPN.ImageOptions.Image")));
+            this.barItemSuaCTPN.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barItemSuaCTPN.ImageOptions.LargeImage")));
             this.barItemSuaCTPN.Name = "barItemSuaCTPN";
             this.barItemSuaCTPN.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barItemSuaCTPN_ItemClick);
             // 
@@ -575,6 +598,7 @@
             this.tableLayoutPanel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietPN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvChiTietPN)).EndInit();
+            this.flowLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.popupMenuChiTietPN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManagerCTPhieuNhap)).EndInit();
             this.ResumeLayout(false);
@@ -603,7 +627,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.Button btnThemSanPham;
         private DevExpress.XtraGrid.GridControl dgvChiTietPN;
         private DevExpress.XtraGrid.Views.Grid.GridView gvChiTietPN;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
@@ -626,5 +649,8 @@
         private DevExpress.XtraBars.Bar bar3;
         private DevExpress.XtraBars.BarButtonItem barItemSuaCTPN;
         private DevExpress.XtraBars.BarButtonItem itemPopupXoaCTPN;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Button btnThemSanPham;
+        private System.Windows.Forms.Button bntLuu;
     }
 }

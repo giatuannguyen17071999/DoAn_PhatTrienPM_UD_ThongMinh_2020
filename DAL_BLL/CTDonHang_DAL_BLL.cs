@@ -26,7 +26,6 @@ namespace DAL_BLL
                 return false;
 
             db.CTDonHangs.InsertOnSubmit(ctDon);
-            db.SubmitChanges();
             return true;
         }
 

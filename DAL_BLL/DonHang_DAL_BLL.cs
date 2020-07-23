@@ -21,23 +21,17 @@ namespace DAL_BLL
         public DonHang them(DonHang dh )
         {
             db.DonHangs.InsertOnSubmit(dh);
-            db.SubmitChanges();
-            db.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, db.DonHangs);
             return dh;
         }
 
         public decimal? layTongTien(int maDH)
         {
-            db.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, db.DonHangs);
-            db.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, db.CTDonHangs);
             DonHang dhTim = db.DonHangs.FirstOrDefault(n => n.MaDH.Equals(maDH));
             return dhTim == null ? -1 : dhTim.TONGTIEN;
         }
 
         public int layTongSoLuongCTSanPhamMua(int maDH)
         {
-            db.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, db.CTDonHangs);
-            db.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, db.DonHangs);
             int sl = 0;
             foreach (CTDonHang ct in db.CTDonHangs.Where(n => n.MaDH.Equals(maDH)))
                 sl += int.Parse(ct.SoLuong.ToString());
@@ -111,6 +105,26 @@ namespace DAL_BLL
             dhTim.DaThanhToan = isThanhToan;
             db.SubmitChanges();
             return true;
+        }
+
+        public bool them(DonHang dh, List<CTDonHang> ctHDs)
+        {
+            try
+            {
+                db.DonHangs.InsertOnSubmit(dh);
+                db.SubmitChanges();
+                foreach (CTDonHang ct in ctHDs)
+                {
+                    ct.MaDH = dh.MaDH;
+                    db.CTDonHangs.InsertOnSubmit(ct);
+                }
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }
