@@ -26,8 +26,8 @@ namespace DAL_BLL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=VIETSACLO-PC\\SQLEXPRESS;Initial Catalog=QL_MUABAN_TBDT;User ID=sa;Pas" +
-            "sword=vietsaclo1999")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MSI\\SQLEXPRESS;Initial Catalog=QL_MUABAN_TBDT;User ID=sa;Password=123" +
+            "456")]
         public string QL_MUABAN_TBDTConnectionString {
             get {
                 return ((string)(this["QL_MUABAN_TBDTConnectionString"]));
