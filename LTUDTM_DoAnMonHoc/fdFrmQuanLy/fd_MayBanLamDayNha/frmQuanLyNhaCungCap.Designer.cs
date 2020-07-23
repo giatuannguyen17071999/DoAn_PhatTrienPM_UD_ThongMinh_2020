@@ -236,7 +236,7 @@
             this.ClientSize = new System.Drawing.Size(942, 636);
             this.Controls.Add(this.tablePanel1);
             this.Name = "frmQuanLyNhaCungCap";
-            this.Text = "frmQuanLyNhaCungCung";
+            this.Text = "frmQuanLyNhaCungCCap";
             this.Load += new System.EventHandler(this.frmQuanLyNhaCungCung_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
             this.tablePanel1.ResumeLayout(false);
