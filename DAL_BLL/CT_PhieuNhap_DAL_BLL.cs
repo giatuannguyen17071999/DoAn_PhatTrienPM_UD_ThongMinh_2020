@@ -43,6 +43,29 @@ namespace DAL_BLL
             return result;
         }
 
+        public List<CT_PhieuNhap_Print> layPhieuNhap_s(PHIEU_NHAP pn, List<CT_PHIEU_NHAP> ctPhieuNhaps)
+        {
+            List<CT_PhieuNhap_Print> result = new List<CT_PhieuNhap_Print>();
+            SanPham_DTO sp;
+            SanPham_DAL_BLL spDAL_BLL = new SanPham_DAL_BLL();
+            foreach (CT_PHIEU_NHAP ct in ctPhieuNhaps)
+            {
+                sp = spDAL_BLL.laySanPham(ct.MASP);
+
+                result.Add(new CT_PhieuNhap_Print
+                {
+                    MaPN = pn.MAPN,
+                    MaSP = sp.MaSP,
+                    TenSP = sp.TenSP,
+                    NgayNhap = pn.NGAYNHAP,
+                    GiaNhap = string.Format("{0:N0}", ct.GIANHAP),
+                    SlNhap = ct.SL_NHAP
+                });
+            }
+
+            return result;
+        }
+
         public EStatus them(CT_PHIEU_NHAP ctPN)
         {
             CT_PHIEU_NHAP ctTim = db.CT_PHIEU_NHAPs.FirstOrDefault(n => n.MAPN.Equals(ctPN.MAPN) && n.MASP.Equals(ctPN.MASP));

@@ -53,7 +53,9 @@
     <Reference Include="DevExpress.XtraScheduler.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -93,6 +95,18 @@
     </Compile>
     <Compile Include="fdFrmQuanLy\fdQuanLy\frmPhatSinh\frmSuaCT_PhieuNhap.Designer.cs">
       <DependentUpon>frmSuaCT_PhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\FormDanhMuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\FormDanhMuc.Designer.cs">
+      <DependentUpon>FormDanhMuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\FormLoaiSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\FormLoaiSanPham.Designer.cs">
+      <DependentUpon>FormLoaiSanPham.cs</DependentUpon>
     </Compile>
     <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLyNhaCungCap.cs">
       <SubType>Form</SubType>
@@ -152,6 +166,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fdFrmQuanLy\fdQuanLy\frmPhatSinh\frmSuaCT_PhieuNhap.resx">
       <DependentUpon>frmSuaCT_PhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fdFrmQuanLy\fd_MayBanLamDayNha\FormDanhMuc.resx">
+      <DependentUpon>FormDanhMuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fdFrmQuanLy\fd_MayBanLamDayNha\FormLoaiSanPham.resx">
+      <DependentUpon>FormLoaiSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLyNhaCungCap.resx">
       <DependentUpon>frmQuanLyNhaCungCap.cs</DependentUpon>
