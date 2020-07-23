@@ -43,5 +43,65 @@ namespace DAL_BLL
 
             return result;
         }
+
+        public IQueryable<LoaiSP> layTatCaLoaiSP()
+        {
+            return from lsp in db.LoaiSPs select lsp;
+        }
+
+        public LoaiSP LoaiSanPhamTheoMaLoaiSP(int MaLoaiSP)
+        {
+            LoaiSP lsp;
+            return lsp = db.LoaiSPs.Where(m => m.MaLoai == MaLoaiSP).FirstOrDefault();
+        }
+        public bool XoaLoaiSanPham(String MaLoaiSP)
+        {
+            LoaiSP lsp = db.LoaiSPs.Where(m => m.MaLoai.Equals(MaLoaiSP)).FirstOrDefault();
+            if (lsp != null)
+            {
+                db.LoaiSPs.DeleteOnSubmit(lsp);
+                db.SubmitChanges();
+                return true;
+            }
+            return false;
+        }
+        public bool SuaLoaiSanPham(String MaLoaiSP, String TenLoaiSp, String MaDM)
+        {
+
+            LoaiSP lsp = db.LoaiSPs.Where(m => m.MaLoai.Equals(MaLoaiSP)).FirstOrDefault();
+            if (lsp != null)
+            {
+                if (TimTenTrung(TenLoaiSp) == 1)
+                    return false;
+                lsp.TenLoaiSP = TenLoaiSp;
+                lsp.MaDM = int.Parse(MaDM);
+                db.SubmitChanges();
+                return true;
+            }
+            return false;
+        }
+        public bool ThemLoaiSanPham(String TenLoaiSanPham, String MaDM)
+        {
+            if (TimTenTrung(TenLoaiSanPham) == 1)
+                return false;
+            else
+            {
+                LoaiSP lsp = new LoaiSP();
+                lsp.TenLoaiSP = TenLoaiSanPham;
+                lsp.MaDM = int.Parse(MaDM);
+                db.LoaiSPs.InsertOnSubmit(lsp);
+                db.SubmitChanges();
+                return true;
+            }
+        }
+        private int TimTenTrung(String TenLoaiSanPham)
+        {
+            String tenloaisanpham = TenLoaiSanPham.Trim();
+            LoaiSP lsp = db.LoaiSPs.Where(n => n.TenLoaiSP.Equals(tenloaisanpham)).FirstOrDefault();
+            if (lsp != null)
+                return 1;
+
+            return 0;
+        }
     }
 }
