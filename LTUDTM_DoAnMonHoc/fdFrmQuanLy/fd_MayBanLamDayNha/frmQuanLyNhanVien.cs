@@ -32,63 +32,110 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy
         private void LoadGridViewUser()
         {
             dgvUser.DataSource = _dataNv.layTatCa();
+            gvUser.Columns["UserName"].OptionsColumn.AllowEdit = false;
+            gvUser.Columns["UserName"].OptionsColumn.ReadOnly = true;
         }
 
         private void btnThemUser_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtUserName.Text)) return;
-            var kq = _dataNv.AddNhanVien(new NhanVien_DTO()
+            if (_dataNv.EmailIsValid(txtEmail.Text))
             {
-                UserName = txtUserName.Text,
-                Email = txtEmail.Text,
-                HoatDong = chkStatus.Checked,
-                Pass = txtPassword.Text,
-                TenNhanVien = txtTenNV.Text
-            });
-            MessageBox.Show(kq.ToString(), kq.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var kq = _dataNv.AddNhanVien(new NhanVien_DTO()
+                {
+                    UserName = txtUserName.Text,
+                    Email = txtEmail.Text,
+                    HoatDong = chkStatus.Checked,
+                    Pass = txtPassword.Text,
+                    TenNhanVien = txtTenNV.Text
+                });
+                MessageBox.Show("Them " + kq.ToString(), kq.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadGridViewUser();
+            }
+            else
+            {
+                MessageBox.Show("Không Đúng Định Dạng Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
 
         }
 
         private void btnUpdateUser_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtUserName.Text)) return;
-            var kq = _dataNv.UpdateNhanVien(new NhanVien_DTO()
+            if (!_dataNv.GetById(txtUserName.Text)) return;
+            if (_dataNv.EmailIsValid(txtEmail.Text))
             {
-                UserName = txtUserName.Text,
-                Email = txtEmail.Text,
-                HoatDong = chkStatus.Checked,
-                Pass = txtPassword.Text,
-                TenNhanVien = txtTenNV.Text
-            });
-            MessageBox.Show(kq.ToString(), kq.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var kq = _dataNv.UpdateNhanVien(new NhanVien_DTO()
+                {
+                    UserName = txtUserName.Text,
+                    Email = txtEmail.Text,
+                    HoatDong = chkStatus.Checked,
+                    Pass = txtPassword.Text,
+                    TenNhanVien = txtTenNV.Text
+                });
+                MessageBox.Show("Update " + kq.ToString(), kq.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadGridViewUser();
+            }
+            else
+            {
+                MessageBox.Show("Không Đúng Định Dạng Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnXoaUser_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtUserName.Text)) return;
-            var layNhomQuyen = _datapvnq.layTheoMaUser(txtUserName.Text).Select(x => new PHANNHANVIEN_VAONHOMQUYEN()
+
+            if (_datapvnq.GetById(txtUserName.Text))
             {
-                GHICHU = x.GhiChu,
-                MANHOM = x.MaNhom,
-                USERNAME = x.UserName
-            }).ToList();
-            if (layNhomQuyen.Count > 0)
+                var layNhomQuyen = _datapvnq.layTheoMaUser(txtUserName.Text).Select(x => new PHANNHANVIEN_VAONHOMQUYEN()
+                {
+                    GHICHU = x.GhiChu,
+                    MANHOM = x.MaNhom,
+                    USERNAME = x.UserName
+                }).ToList();
+                _datapvnq.XoaNhieuNhomQuyen(layNhomQuyen);
+            }
+            var kq = _dataNv.XoaNhanVien(txtUserName.Text);
+            MessageBox.Show("Xóa " + kq.ToString(), kq.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            LoadGridViewUser();
+        }
+
+        private void gvUser_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            if (e.Column.FieldName == "Email")
             {
-                if (_datapvnq.XoaNhieuNhomQuyen(layNhomQuyen))
+                if (!_dataNv.EmailIsValid(gvUser.GetRowCellValue(e.RowHandle, "Email").ToString()))
                 {
-                    var kq = _dataNv.XoaNhanVien(txtUserName.Text);
-                    MessageBox.Show("Xóa " + kq.ToString(), kq.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Không Đúng Định Dạng Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-                else
-                {
-                    MessageBox.Show("Xóa Thất Bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            }
+            var kq = _dataNv.UpdateNhanVien(new NhanVien_DTO()
+            {
+                UserName = gvUser.GetRowCellValue(e.RowHandle, "UserName").ToString(),
+                Email = gvUser.GetRowCellValue(e.RowHandle, "Email").ToString(),
+                HoatDong = bool.Parse(gvUser.GetRowCellValue(e.RowHandle, "HoatDong").ToString()),
+                Pass = gvUser.GetRowCellValue(e.RowHandle, "Pass").ToString(),
+                TenNhanVien = gvUser.GetRowCellValue(e.RowHandle, "TenNhanVien").ToString()
+            });
+            MessageBox.Show("Update " + kq.ToString(), kq.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void gvUser_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            txtUserName.Text = gvUser.GetRowCellValue(e.RowHandle, "UserName").ToString();
+            if (gvUser.GetRowCellValue(e.RowHandle, "Email") != null)
+            {
+                txtEmail.Text = gvUser.GetRowCellValue(e.RowHandle, "Email").ToString();
             }
             else
             {
-                var kq = _dataNv.XoaNhanVien(txtUserName.Text);
-                MessageBox.Show(kq.ToString(), kq.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtEmail.ResetText();
             }
+            txtPassword.Text = gvUser.GetRowCellValue(e.RowHandle, "Pass").ToString();
+            txtTenNV.Text = gvUser.GetRowCellValue(e.RowHandle, "TenNhanVien").ToString();
+            chkStatus.Checked = bool.Parse(gvUser.GetRowCellValue(e.RowHandle, "HoatDong").ToString());
         }
     }
 }

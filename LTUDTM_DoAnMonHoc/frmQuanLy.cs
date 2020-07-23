@@ -51,5 +51,15 @@ namespace LTUDTM_DoAnMonHoc
         {
             FunctionStatic.hienThiFormMoi(this, new frmQuanLyNhaCungCap());
         }
+
+        private void mnuQuanLyNhanVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FunctionStatic.hienThiFormMoi(this, new frmQuanLyNhanVien());
+        }
+
+        private void mnuQuanLyQuyen_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FunctionStatic.hienThiFormMoi(this, new frmQuanLyQuyen());
+        }
     }
 }

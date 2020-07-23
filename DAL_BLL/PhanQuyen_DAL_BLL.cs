@@ -53,7 +53,10 @@ namespace DAL_BLL
                 CoQuyen = x.COQUYEN
             });
         }
-
+        public bool GetById(string mq)
+        {
+            return db.PHANQUYENs.Any(x => x.MAQUYEN.Equals(mq));
+        }
         public bool xoaPhanQuyen(List<PHANQUYEN> q)
         {
             try
