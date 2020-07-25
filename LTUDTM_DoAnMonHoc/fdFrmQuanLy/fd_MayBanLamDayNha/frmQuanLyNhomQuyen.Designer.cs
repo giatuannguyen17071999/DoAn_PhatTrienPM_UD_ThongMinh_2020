@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
-            this.gv_NhomQuyen = new System.Windows.Forms.DataGridView();
             this.stackPanel1 = new DevExpress.Utils.Layout.StackPanel();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
@@ -41,13 +40,17 @@
             this.lblGhiChu = new DevExpress.XtraEditors.LabelControl();
             this.lblTenNhom = new DevExpress.XtraEditors.LabelControl();
             this.lblMaNhom = new DevExpress.XtraEditors.LabelControl();
+            this.btnClear = new DevExpress.XtraEditors.SimpleButton();
+            this.gv_NhomQuyen = new DevExpress.XtraGrid.GridControl();
+            this.gridNhomQuyen = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gv_NhomQuyen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stackPanel1)).BeginInit();
             this.stackPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenNhom.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_NhomQuyen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridNhomQuyen)).BeginInit();
             this.SuspendLayout();
             // 
             // tablePanel1
@@ -56,6 +59,7 @@
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 6.89F),
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 53.11F)});
             this.tablePanel1.Controls.Add(this.gv_NhomQuyen);
+            this.tablePanel1.Controls.Add(this.btnClear);
             this.tablePanel1.Controls.Add(this.stackPanel1);
             this.tablePanel1.Controls.Add(this.panel1);
             this.tablePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -66,20 +70,6 @@
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
             this.tablePanel1.Size = new System.Drawing.Size(967, 608);
             this.tablePanel1.TabIndex = 0;
-            // 
-            // gv_NhomQuyen
-            // 
-            this.gv_NhomQuyen.BackgroundColor = System.Drawing.Color.White;
-            this.tablePanel1.SetColumn(this.gv_NhomQuyen, 1);
-            this.gv_NhomQuyen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gv_NhomQuyen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gv_NhomQuyen.Location = new System.Drawing.Point(114, 169);
-            this.gv_NhomQuyen.Name = "gv_NhomQuyen";
-            this.tablePanel1.SetRow(this.gv_NhomQuyen, 1);
-            this.gv_NhomQuyen.RowHeadersWidth = 51;
-            this.gv_NhomQuyen.RowTemplate.Height = 24;
-            this.gv_NhomQuyen.Size = new System.Drawing.Size(850, 436);
-            this.gv_NhomQuyen.TabIndex = 3;
             // 
             // stackPanel1
             // 
@@ -201,6 +191,41 @@
             this.lblMaNhom.TabIndex = 0;
             this.lblMaNhom.Text = "Mã nhóm";
             // 
+            // btnClear
+            // 
+            this.btnClear.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Appearance.ForeColor = System.Drawing.Color.Tomato;
+            this.btnClear.Appearance.Options.UseFont = true;
+            this.btnClear.Appearance.Options.UseForeColor = true;
+            this.tablePanel1.SetColumn(this.btnClear, 0);
+            this.btnClear.Location = new System.Drawing.Point(3, 18);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.tablePanel1.SetRow(this.btnClear, 0);
+            this.btnClear.Size = new System.Drawing.Size(105, 129);
+            this.btnClear.TabIndex = 5;
+            this.btnClear.Text = "Clear";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // gv_NhomQuyen
+            // 
+            this.tablePanel1.SetColumn(this.gv_NhomQuyen, 1);
+            this.gv_NhomQuyen.Location = new System.Drawing.Point(114, 287);
+            this.gv_NhomQuyen.MainView = this.gridNhomQuyen;
+            this.gv_NhomQuyen.Name = "gv_NhomQuyen";
+            this.tablePanel1.SetRow(this.gv_NhomQuyen, 1);
+            this.gv_NhomQuyen.Size = new System.Drawing.Size(850, 200);
+            this.gv_NhomQuyen.TabIndex = 6;
+            this.gv_NhomQuyen.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridNhomQuyen});
+            // 
+            // gridNhomQuyen
+            // 
+            this.gridNhomQuyen.GridControl = this.gv_NhomQuyen;
+            this.gridNhomQuyen.Name = "gridNhomQuyen";
+            this.gridNhomQuyen.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridNhomQuyen_RowCellClick);
+            this.gridNhomQuyen.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridNhomQuyen_CellValueChanged);
+            // 
             // frmQuanLyNhomQuyen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -213,12 +238,13 @@
             this.Load += new System.EventHandler(this.frmQuanLyNhomQuyen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
             this.tablePanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gv_NhomQuyen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stackPanel1)).EndInit();
             this.stackPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenNhom.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_NhomQuyen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridNhomQuyen)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -236,7 +262,9 @@
         private DevExpress.XtraEditors.SimpleButton btnThem;
         private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraEditors.SimpleButton btnSua;
-        private System.Windows.Forms.DataGridView gv_NhomQuyen;
         private System.Windows.Forms.ComboBox cbMaNhom;
+        private DevExpress.XtraEditors.SimpleButton btnClear;
+        private DevExpress.XtraGrid.GridControl gv_NhomQuyen;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridNhomQuyen;
     }
 }
