@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MyLibrary.fdPopup;
+using System.IO;
 
 namespace MyLibrary
 {
@@ -54,6 +55,21 @@ namespace MyLibrary
                 ghiChu = frmThemGhiChu.GHICHU;
 
             return ghiChu;
+        }
+
+        public static string chonFileNameHinhAnh()
+        {
+            OpenFileDialog of = new OpenFileDialog();
+            of.Filter = "All Files|*.*|JPEGs|*.jpg|Bitmaps|*.bmp|GIFs|*.gif";
+            DialogResult res = of.ShowDialog();
+            return res == DialogResult.OK ? of.FileName : null;
+        }
+
+        public static void copyHinh(string fNguon)
+        {
+            DateTime dt = DateTime.Now;
+            string fDich = string.Format("sp{0}_{1}_{2}_{3}_{4}_{5}.jpg", dt.Year, dt.Month, dt.Day, dt.Hour, dt.Minute, dt.Second);
+            File.Copy(fNguon, fDich);
         }
     }
 }

@@ -133,6 +133,12 @@
     <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLyQuyen.Designer.cs">
       <DependentUpon>frmQuanLyQuyen.cs</DependentUpon>
     </Compile>
+    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLySanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLySanPham.Designer.cs">
+      <DependentUpon>frmQuanLySanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLyQuyen.resx">
       <DependentUpon>frmQuanLyQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLySanPham.resx">
+      <DependentUpon>frmQuanLySanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -240,6 +249,7 @@
     <Content Include="Contents\Images\img2.png" />
     <Content Include="Contents\Images\imgNotFound.png" />
     <Content Include="Contents\Images\logoSieuThi.png" />
+    <None Include="Resources\icons8-new-copy-96.png" />
     <None Include="Resources\lock-300x300.png" />
     <None Include="Resources\publish_32x32.png" />
     <None Include="Resources\publish_16x16.png" />

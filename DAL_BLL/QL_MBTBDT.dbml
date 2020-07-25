@@ -17,11 +17,6 @@
       <Column Name="TenSP" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
       <Column Name="Hinh" Type="System.String" DbType="NVarChar(700)" CanBeNull="true" />
       <Column Name="GiaBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="NhaSanXuat" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="XuatXu" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="DungTich" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="ChatLieu" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="DoiTuong" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
       <Column Name="CreatedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="SL_TON" Type="System.Int32" DbType="Int" CanBeNull="true" />
