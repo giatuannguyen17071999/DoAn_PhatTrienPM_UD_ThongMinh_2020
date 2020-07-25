@@ -53,7 +53,6 @@
             // 
             this.btnThoat.Location = new System.Drawing.Point(363, 161);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 23);
             this.btnThoat.TabIndex = 17;
             this.btnThoat.Text = "Thoát";
             // 
@@ -61,7 +60,6 @@
             // 
             this.btnDangNhap.Location = new System.Drawing.Point(232, 161);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(75, 23);
             this.btnDangNhap.TabIndex = 16;
             this.btnDangNhap.Text = "Đăng Nhập";
             // 

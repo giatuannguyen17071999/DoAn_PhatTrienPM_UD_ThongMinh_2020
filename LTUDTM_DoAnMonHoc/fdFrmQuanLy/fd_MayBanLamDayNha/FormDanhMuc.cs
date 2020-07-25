@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DAL_BLL;
 using DevExpress.ClipboardSource.SpreadsheetML;
-using DevExpress.XtraRichEdit.Fields;
 
 namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
 {

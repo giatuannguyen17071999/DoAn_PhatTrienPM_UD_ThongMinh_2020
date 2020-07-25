@@ -61,5 +61,10 @@ namespace LTUDTM_DoAnMonHoc
         {
             FunctionStatic.hienThiFormMoi(this, new frmQuanLyQuyen());
         }
+
+        private void frmQuanLy_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
