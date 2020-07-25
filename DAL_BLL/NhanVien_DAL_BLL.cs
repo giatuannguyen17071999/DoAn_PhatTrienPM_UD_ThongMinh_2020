@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using MyLibrary;
@@ -75,7 +76,23 @@ namespace DAL_BLL
             db.SubmitChanges();
             return EStatus.THANH_CONG;
         }
+        public bool GetById(string username)
+        {
+            return db.NHANVIENs.Any(x => x.USERNAME.Equals(username));
+        }
+        public bool EmailIsValid(string emailAddress)
+        {
+            try
+            {
+                var mailAddress = new MailAddress(emailAddress);
 
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+        }
         public EStatus AddNhanVien(NhanVien_DTO nvDto)
         {
             try
