@@ -57,6 +57,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy
             cboxMaPhieu.SelectedIndexChanged += CboxMaPhieu_SelectedIndexChanged;
             btnThemSanPham.Click += BtnThemSanPham_Click;
             gvChiTietPN.PopupMenuShowing += GvChiTietPN_PopupMenuShowing;
+            btnLuu.Click += bntLuu_Click;
         }
 
         private void GvChiTietPN_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)

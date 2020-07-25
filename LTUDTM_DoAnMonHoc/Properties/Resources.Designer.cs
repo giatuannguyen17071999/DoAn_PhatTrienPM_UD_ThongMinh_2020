@@ -63,6 +63,16 @@ namespace LTUDTM_DoAnMonHoc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_new_copy_96 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-new-copy-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lock_300x300 {
             get {
                 object obj = ResourceManager.GetObject("lock-300x300", resourceCulture);
