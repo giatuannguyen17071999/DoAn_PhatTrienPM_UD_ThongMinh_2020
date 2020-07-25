@@ -147,13 +147,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs" />
-    <Compile Include="XtraForm1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="XtraForm1.Designer.cs">
-      <DependentUpon>XtraForm1.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="fdFrmQuanLy\fdBanHang\frmBanHang.resx">
       <DependentUpon>frmBanHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,12 +190,20 @@
       <DependentUpon>frmQuanLy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -239,10 +240,13 @@
     <Content Include="Contents\Images\img2.png" />
     <Content Include="Contents\Images\imgNotFound.png" />
     <Content Include="Contents\Images\logoSieuThi.png" />
-    <None Include="Resources\bocustomer_16x16.png" />
-    <None Include="Resources\bocustomer_32x32.png" />
-    <None Include="Resources\publish_16x16.png" />
+    <None Include="Resources\lock-300x300.png" />
     <None Include="Resources\publish_32x32.png" />
+    <None Include="Resources\publish_16x16.png" />
+    <None Include="Resources\bocustomer_32x32.png" />
+    <None Include="Resources\bocustomer_16x16.png" />
+    <None Include="Resources\Image1.png" />
+    <None Include="Resources\actions_addcircled.bmp" />
     <None Include="Resources\backward.svg" />
     <None Include="Resources\actions_edit.svg" />
     <None Include="Resources\actions_deletecircled.svg" />
