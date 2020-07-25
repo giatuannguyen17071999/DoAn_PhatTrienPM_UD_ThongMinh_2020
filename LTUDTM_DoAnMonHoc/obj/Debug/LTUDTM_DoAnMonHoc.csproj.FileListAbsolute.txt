@@ -13,7 +13,6 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy.frmQuanLyQuyen.resources
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.frmLogin.resources
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.frmQuanLy.resources
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.Properties.Resources.resources
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.csproj.GenerateResource.cache
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.exe.licenses
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.csproj.CoreCompileInputs.cache
@@ -266,3 +265,4 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\es\DevExpress.Office.v20.1.Core.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\ja\DevExpress.Office.v20.1.Core.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\ru\DevExpress.Office.v20.1.Core.resources.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.Properties.Resources.resources

@@ -53,6 +53,7 @@
             // 
             this.btnThoat.Location = new System.Drawing.Point(363, 161);
             this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(75, 23);
             this.btnThoat.TabIndex = 17;
             this.btnThoat.Text = "Thoát";
             // 
@@ -60,6 +61,7 @@
             // 
             this.btnDangNhap.Location = new System.Drawing.Point(232, 161);
             this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(75, 23);
             this.btnDangNhap.TabIndex = 16;
             this.btnDangNhap.Text = "Đăng Nhập";
             // 
@@ -110,6 +112,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = global::LTUDTM_DoAnMonHoc.Properties.Resources.lock_300x300;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Location = new System.Drawing.Point(47, 58);
