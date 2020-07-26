@@ -4,6 +4,7 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\D
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.Data.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.Printing.v20.1.Core.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.Utils.v20.1.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.XtraBars.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.XtraEditors.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.XtraGrid.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.Pdf.v20.1.Core.dll
@@ -11,7 +12,6 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\D
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.Sparkline.v20.1.Core.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.XtraLayout.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.XtraPrinting.v20.1.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.XtraBars.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.RichEdit.v20.1.Core.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.XtraTreeList.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.Office.v20.1.Core.dll
@@ -19,6 +19,7 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\D
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.Data.v20.1.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.Printing.v20.1.Core.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.Utils.v20.1.xml
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.XtraBars.v20.1.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.XtraEditors.v20.1.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.XtraGrid.v20.1.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.Pdf.v20.1.Core.xml
@@ -26,7 +27,6 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\D
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.Sparkline.v20.1.Core.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.XtraLayout.v20.1.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.XtraPrinting.v20.1.xml
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.XtraBars.v20.1.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.RichEdit.v20.1.Core.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.XtraTreeList.v20.1.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.Office.v20.1.Core.xml
@@ -42,6 +42,10 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\d
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\es\DevExpress.Utils.v20.1.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\ja\DevExpress.Utils.v20.1.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\ru\DevExpress.Utils.v20.1.resources.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\de\DevExpress.XtraBars.v20.1.resources.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\es\DevExpress.XtraBars.v20.1.resources.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\ja\DevExpress.XtraBars.v20.1.resources.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\ru\DevExpress.XtraBars.v20.1.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\de\DevExpress.XtraEditors.v20.1.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\es\DevExpress.XtraEditors.v20.1.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\ja\DevExpress.XtraEditors.v20.1.resources.dll
@@ -66,10 +70,6 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\d
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\es\DevExpress.XtraPrinting.v20.1.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\ja\DevExpress.XtraPrinting.v20.1.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\ru\DevExpress.XtraPrinting.v20.1.resources.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\de\DevExpress.XtraBars.v20.1.resources.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\es\DevExpress.XtraBars.v20.1.resources.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\ja\DevExpress.XtraBars.v20.1.resources.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\ru\DevExpress.XtraBars.v20.1.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\de\DevExpress.RichEdit.v20.1.Core.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\es\DevExpress.RichEdit.v20.1.Core.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\ja\DevExpress.RichEdit.v20.1.Core.resources.dll
@@ -88,4 +88,3 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\obj\Debug\M
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\obj\Debug\MyLibrary.csproj.CopyComplete
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\obj\Debug\MyLibrary.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\obj\Debug\MyLibrary.pdb
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\obj\Debug\MyLibrary.csprojAssemblyReference.cache
