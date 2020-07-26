@@ -260,10 +260,10 @@
             this.cboxLocTheoLichSu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cboxLocTheoLichSu.FormattingEnabled = true;
             this.cboxLocTheoLichSu.Items.AddRange(new object[] {
-            "Tất Cả",
             "Hôm Nay",
             "Tháng Này",
-            "Năm Này"});
+            "Năm Này",
+            "Tất Cả"});
             this.cboxLocTheoLichSu.Location = new System.Drawing.Point(3, 3);
             this.cboxLocTheoLichSu.Name = "cboxLocTheoLichSu";
             this.cboxLocTheoLichSu.Size = new System.Drawing.Size(154, 24);

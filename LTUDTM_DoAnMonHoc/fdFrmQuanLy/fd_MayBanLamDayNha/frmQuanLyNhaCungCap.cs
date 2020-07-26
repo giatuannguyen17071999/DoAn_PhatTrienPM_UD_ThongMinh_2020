@@ -28,6 +28,8 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
         private void loadGvNhaCC()
         {
             gv_NhaCC.DataSource = nhaCungCap.layTatCa();
+            gridNhaCC.Columns["MaNCC"].OptionsColumn.AllowEdit = false;
+            gridNhaCC.Columns["MaNCC"].OptionsColumn.ReadOnly = true;
         }
         private bool daNhapLieu()
         {
@@ -44,6 +46,11 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                 return;
             }
         }
+        private void reStart()
+        {
+            txtTenNCC.Text = txtDiaChi.Text = "";
+            btnSua.Enabled = btnXoa.Enabled = btnClear.Enabled = false;
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
             if (!daNhapLieu())
@@ -55,14 +62,19 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
             string result = nhaCungCap.insert(cbNhaCC.Text.Trim(), txtTenNCC.Text.Trim(), txtDiaChi.Text.Trim());
             MessageBox.Show(result);
             loadGvNhaCC();
+            reStart();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            DialogResult resultMes = MessageBox.Show("Bạn có chắc muốn xoá nhà cung cấp này ?", "Are you sure ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (resultMes == DialogResult.No)
+                return;
             kiemTraTruocKhiEditDelete();
             string result = nhaCungCap.delete(cbNhaCC.Text.Trim());
             MessageBox.Show(result);
             loadGvNhaCC();
+            reStart();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -71,6 +83,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
             string result = nhaCungCap.edit(cbNhaCC.Text.Trim(), txtTenNCC.Text.Trim(), txtDiaChi.Text.Trim());
             MessageBox.Show(result);
             loadGvNhaCC();
+            reStart();
         }
 
         private void frmQuanLyNhaCungCung_Load(object sender, EventArgs e)
@@ -78,6 +91,33 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
             nhaCungCap = new NhaCungCap_DAL_BLL();
             loadCbMaNCC();
             loadGvNhaCC();
+            reStart();
         }
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            reStart();
+            cbNhaCC.Focus();
+        }
+        private void gridNhaCC_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            int rowIndex = e.RowHandle;
+            string result = nhaCungCap.edit(
+                gridNhaCC.GetRowCellValue(rowIndex, "MaNCC").ToString(),
+                 gridNhaCC.GetRowCellValue(rowIndex, "TenNCC").ToString(),
+                  gridNhaCC.GetRowCellValue(rowIndex, "DiaChi").ToString()
+                );
+            MessageBox.Show(result);
+            gridNhaCC.SelectRow(rowIndex);
+        }
+
+        private void gridNhaCC_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            cbNhaCC.Text = gridNhaCC.GetRowCellValue(e.RowHandle, "MaNCC").ToString();
+            txtTenNCC.Text = gridNhaCC.GetRowCellValue(e.RowHandle, "TenNCC").ToString();
+            txtDiaChi.Text = gridNhaCC.GetRowCellValue(e.RowHandle, "DiaChi").ToString();
+            btnSua.Enabled = btnXoa.Enabled = btnClear.Enabled = true;
+        }
+
+
     }
 }

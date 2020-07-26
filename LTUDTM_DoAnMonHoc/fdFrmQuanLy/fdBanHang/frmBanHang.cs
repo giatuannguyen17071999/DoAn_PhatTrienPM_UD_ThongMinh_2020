@@ -17,6 +17,7 @@ using System.Runtime.CompilerServices;
 using LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang.frmPhatSinh;
 using System.Collections;
 using DevExpress.Data.Linq.Helpers;
+using DevExpress.Pdf.Native;
 
 namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
 {
@@ -32,6 +33,8 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
         private CTDonHang_DAL_BLL ctDonHangDAL_BLL;
         private KhachHang_DAL_BLL khDAL_BLL;
 
+        private List<CTDonHang> ctDonHangs;
+
         public frmBanHang()
         {
             InitializeComponent();
@@ -46,6 +49,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
             dhDAL_BLL = new DonHang_DAL_BLL();
             ctDonHangDAL_BLL = new CTDonHang_DAL_BLL();
             khDAL_BLL = new KhachHang_DAL_BLL();
+            ctDonHangs = new List<CTDonHang>();
 
             //load
             loadTrvDanhMuc_TheLoai();
@@ -70,6 +74,14 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
 
         private void loadTrvDanhMuc_TheLoai()
         {
+            ImageList iml = new ImageList();
+            Image i1 = Image.FromFile(imgPolder+"cate0_64.png");
+            Image i2 = Image.FromFile(imgPolder + "cate1_48.png");
+            trvDanhMuc_TheLoai.ImageList = iml;
+
+            iml.Images.Add(i1);
+            iml.Images.Add(i2);
+
             List<DanhMuc_DTO> dms = dmDAL_BLL.layTatCa();
             List<LoaiSP_DTO> lsps;
 
@@ -79,6 +91,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
                 tNode = new TreeNode();
                 tNode.Tag = dm;
                 tNode.Text = dm.TenDM;
+                tNode.ImageIndex = 0;
                 //child
                 lsps = loaiDAL_BLL.layTatCa(dm.MaDM);
                 foreach(LoaiSP_DTO lsp in lsps)
@@ -87,6 +100,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
                     tNodeChild.Tag = lsp.MaLoai;
                     tNodeChild.Text = lsp.TenLoaiSP;
                     tNodeChild.Tag = lsp;
+                    tNodeChild.ImageIndex = 1;
                     tNode.Nodes.Add(tNodeChild);
                 }
 
@@ -136,23 +150,22 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
                 if (res == DialogResult.Cancel)
                     return;
                 khChoInHoaDon = frm.khChon;
-                themMotDongHoaDon();
+                themMotDongHoaDon_ChuaLuu();
                 hienThiThongTinDonHang();
                 themMotKhachHangCho(khChoInHoaDon);
             }
 
             Control pnAnh = sender as Control;
             SanPham_DTO sp = (pnAnh.Tag) as SanPham_DTO;
-            themMotChiTietDonHang(sp);
+            themMotChiTietDonHang_ChuaLuu(sp);
             hienThiTongTien_TongSLMua();
             tabCT.SelectedIndex = 1;
         }
 
         private void hienThiTongTien_TongSLMua()
         {
-            decimal? tongTien = dhDAL_BLL.layTongTien(dhChoInHoaDon.MaDH);
-            txtTongTien.Text = tongTien == null ? string.Format("{0:N0}", 0) : string.Format("{0:N0}", tongTien);
-            txtTongSoLuong.Text = string.Format("{0} Cái", dhDAL_BLL.layTongSoLuongCTSanPhamMua(dhChoInHoaDon.MaDH));
+            txtTongTien.Text = string.Format("{0:N0}", dhChoInHoaDon.TONGTIEN);
+            txtTongSoLuong.Text = string.Format("{0} Cái", ctDonHangs.Sum(n => n.SoLuong));
         }
 
         private void hienThiThongTinDonHang()
@@ -164,19 +177,33 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
             lbDiaChiKhachHangGH.Text = khChoInHoaDon.DiaChi;
         }
 
-        private void themMotChiTietDonHang(SanPham_DTO sp)
+        private void themMotChiTietDonHang_ChuaLuu(SanPham_DTO sp)
         {
             CTDonHang ctDon = new CTDonHang();
             ctDon.MaDH = dhChoInHoaDon.MaDH;
             ctDon.MaSP = sp.MaSP;
             ctDon.SoLuong = 1;
             ctDon.DonGia = sp.GiaBan;
-            bool isThem = ctDonHangDAL_BLL.them(ctDon);
+
+            CTDonHang ctTim = ctDonHangs.FirstOrDefault(n => n.MaDH.Equals(ctDon.MaDH) && n.MaSP.Equals(ctDon.MaSP));
+
+            bool isThem = ctTim == null;
             if (!isThem)
             {
                 FunctionStatic.hienThiThongBaoLoi("Lỗi Thêm một chi tiết đơn hàng!");
                 return;
             }
+
+            //Them vao list don hang temp
+            ctDonHangs.Add(ctDon);
+
+            //cap nhat tong tien don hang.
+            decimal tien = int.Parse(ctDon.SoLuong.ToString()) * decimal.Parse(ctDon.DonGia.ToString());
+            if (dhChoInHoaDon.TONGTIEN == null)
+                dhChoInHoaDon.TONGTIEN = tien;
+            else
+                dhChoInHoaDon.TONGTIEN = decimal.Parse(dhChoInHoaDon.TONGTIEN.ToString()) + tien;
+
             FunctionStatic.hienThiThongBaoThanhCong("Thêm một chi tiết đơn hàng thành công!");
             themMotSanPham_vaoGioHang_GiaoDien(sp, 1);
         }
@@ -195,7 +222,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
             lbKhachCho.Text = str;
             lbKhachCho.Top = 4;
             lbKhachCho.Left = 10;
-            lbKhachCho.Click += LbKhachCho_Click; ;
+            lbKhachCho.Click += LbKhachCho_Click;
             lbKhachCho.MouseMove += lbKhachCho_MouseMove;
             lbKhachCho.MouseLeave += lbKhachCho_MouseLeave;
             pnKhachHangDois.Controls.Add(lbKhachCho);
@@ -326,7 +353,8 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
                 return;
 
             SanPham_DTO sp = (sender as Control).Tag as SanPham_DTO;
-            bool isXoa = ctDonHangDAL_BLL.xoa(dhChoInHoaDon.MaDH, sp.MaSP);
+            CTDonHang ctTim = ctDonHangs.FirstOrDefault(n => n.MaDH.Equals(dhChoInHoaDon.MaDH) && n.MaSP.Equals(sp.MaSP));
+            bool isXoa = ctDonHangs.Remove(ctTim);
             if (isXoa)
             {
                 UCSanPham ucTim = laSanPhamTonTaiTrongGioHang(sp.MaSP);
@@ -340,26 +368,50 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
 
         private void taiTrvLichSuGiaoDich(List<DonHang_DTO> donHangs)
         {
+            ImageList iml = new ImageList();
+            trvLichSuGiaoDich.ImageList = iml;
+
+            Image i1 = Image.FromFile(imgPolder + "bill_96.png");
+            Image i2 = Image.FromFile(imgPolder + "khachhang_100.png");
+            Image i3 = Image.FromFile(imgPolder + "product_64.png");
+
+            iml.Images.Add(i1);
+            iml.Images.Add(i2);
+            iml.Images.Add(i3);
+
             trvLichSuGiaoDich.Nodes.Clear();
             int maDH;
             KhachHang_DTO khTmp;
             DonHang_DTO dh;
             List<CTDonHang> ctDons;
+            TreeNode n0, n1, n2;
+
             for (int i = 0; i < donHangs.Count; i++)
             {
                 dh = donHangs[i];
                 maDH = dh.MaDH;
-                trvLichSuGiaoDich.Nodes.Add(dh.ToString());
-                trvLichSuGiaoDich.Nodes[i].Tag = maDH;
+                n0 = new TreeNode(dh.ToString());
+                n0.Tag = maDH;
+                n0.ImageIndex = 0;
+
+                trvLichSuGiaoDich.Nodes.Add(n0);
                 khTmp = khDAL_BLL.layKhachHang(int.Parse(dh.MaKH.ToString()));
-                trvLichSuGiaoDich.Nodes[i].Nodes.Add(khTmp.ToString());
-                trvLichSuGiaoDich.Nodes[i].Nodes[0].Tag = dh.MaDH;
+                n1 = new TreeNode(khTmp.ToString());
+                n1.Tag = dh.MaDH;
+                n1.ImageIndex = 1;
+
+                trvLichSuGiaoDich.Nodes[i].Nodes.Add(n1);
                 ctDons = ctDonHangDAL_BLL.laySanPhamDH_Mua(dh.MaDH);
                 foreach (CTDonHang ct in ctDons)
-                    trvLichSuGiaoDich.Nodes[i].Nodes[0].Nodes.Add(string.Format("[Ma SP: {0} - SL Mua: {1}]", ct.MaSP.Trim(), ct.SoLuong));
+                {
+                    n2 = new TreeNode(string.Format("[Ma SP: {0} - SL Mua: {1}]", ct.MaSP.Trim(), ct.SoLuong));
+                    n2.Tag = dh.MaDH;
+                    n2.ImageIndex = 2;
+                    trvLichSuGiaoDich.Nodes[i].Nodes[0].Nodes.Add(n2);
+                }
             }
 
-            //trvLichSuGiaoDich.ExpandAll();
+            trvLichSuGiaoDich.ExpandAll();
         }
 
         private void taiTrvLichSuGiaoDich()
@@ -378,7 +430,15 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
         private void LbTangSL_Click(object sender, EventArgs e)
         {
             Control lbSlMua = (sender as Control).Tag as Control;
-            int sl = ctDonHangDAL_BLL.tangSoLuong(dhChoInHoaDon.MaDH, lbSlMua.Tag.ToString());
+            string maSP = lbSlMua.Tag.ToString();
+            CTDonHang ctTim = ctDonHangs.First(n => n.MaDH.Equals(dhChoInHoaDon.MaDH) && n.MaSP.Equals(maSP));
+            int sl = int.Parse(ctTim.SoLuong.ToString()) + 1;
+            ctTim.SoLuong = sl;
+            //cap nhat tong tien
+            SanPham_DTO sp = spDAL_BLL.laySanPham(maSP);
+            decimal Ttien = decimal.Parse(dhChoInHoaDon.TONGTIEN.ToString()) + int.Parse(sp.GiaBan.ToString());
+            dhChoInHoaDon.TONGTIEN = Ttien;
+
             hienThiTongTien_TongSLMua();
             lbSlMua.Text = string.Format("SL Mua: {0}", sl);
         }
@@ -386,16 +446,28 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
         private void LbGiamSL_Click(object sender, EventArgs e)
         {
             Control lbSlMua = (sender as Control).Tag as Control;
-            int sl = ctDonHangDAL_BLL.giamSoLuong(dhChoInHoaDon.MaDH, lbSlMua.Tag.ToString());
+            string maSP = lbSlMua.Tag.ToString();
+            CTDonHang ctTim = ctDonHangs.First(n => n.MaDH.Equals(dhChoInHoaDon.MaDH) && n.MaSP.Equals(maSP));
+
+            if (int.Parse(ctTim.SoLuong.ToString()) < 2)
+                return;
+            
+            int sl = int.Parse(ctTim.SoLuong.ToString()) - 1;
+            ctTim.SoLuong = sl;
+            //cap nhat tong tien
+            SanPham_DTO sp = spDAL_BLL.laySanPham(maSP);
+            decimal Ttien = decimal.Parse(dhChoInHoaDon.TONGTIEN.ToString()) - int.Parse(sp.GiaBan.ToString());
+            dhChoInHoaDon.TONGTIEN = Ttien;
+
             hienThiTongTien_TongSLMua();
             lbSlMua.Text = string.Format("SL Mua: {0}", sl);
         }
 
-        private void themMotDongHoaDon()
+        private void themMotDongHoaDon_ChuaLuu()
         {
             dhChoInHoaDon = new DonHang();
             dhChoInHoaDon.MaKH = khChoInHoaDon.MaKH;
-            dhChoInHoaDon = dhDAL_BLL.them(dhChoInHoaDon);
+            dhChoInHoaDon.NgayDat = DateTime.Now;
         }
 
         private void taiSanPhams(List<SanPham_DTO> sanPhams)
@@ -518,9 +590,13 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
 
         private void lamMoiLaiGioHang()
         {
-            List<CTDonHang> list = ctDonHangDAL_BLL.laySanPhamDH_Mua(dhChoInHoaDon.MaDH);
-            foreach (CTDonHang ct in list)
+            decimal tTien = 0;
+            foreach (CTDonHang ct in ctDonHangs)
+            {
                 themMotSanPham_vaoGioHang_GiaoDien(spDAL_BLL.laySanPham(ct.MaSP), int.Parse(ct.SoLuong.ToString()));
+                tTien += int.Parse(ct.SoLuong.ToString()) * decimal.Parse(ct.DonGia.ToString());
+            }
+            dhChoInHoaDon.TONGTIEN = tTien;
             themMotKhachHangCho(khChoInHoaDon);
             hienThiThongTinDonHang();
             hienThiTongTien_TongSLMua();
@@ -540,14 +616,21 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
 
         private void cboxLocTheoLichSu_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //Test
             taiTrvLichSuGiaoDich();
         }
 
         private void btnInHoaDon_Click(object sender, EventArgs e)
         {
+            if (ctDonHangs.Count == 0)
+            {
+                FunctionStatic.hienThiThongBaoLoi("Hóa đơn chưa có sản phẩm nào!");
+                return;
+            }
+
             //in hoa don
             //cap nhat trang thai thanh toan
-            bool isTT = dhDAL_BLL.capNhatTrangThaiThanhToan(dhChoInHoaDon.MaDH, true);
+            bool isTT = dhDAL_BLL.them(dhChoInHoaDon, ctDonHangs);
 
             if (isTT)
             {
@@ -555,6 +638,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
                 khChoInHoaDon = null;
                 ganKhachHangTuChoiMua();
                 taiTrvLichSuGiaoDich();
+                ctDonHangs.Clear();
                 FunctionStatic.hienThiThongBaoThanhCong("In Hoa Don Thanh Cong");
             }
         }

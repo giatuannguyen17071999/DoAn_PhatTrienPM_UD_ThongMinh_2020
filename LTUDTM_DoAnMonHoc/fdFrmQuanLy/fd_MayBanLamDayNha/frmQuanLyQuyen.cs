@@ -35,24 +35,28 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy
                 GhiChu = txtGhiChu.Text
             });
 
-                MessageBox.Show(kq.ToString(), kq.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Them " + kq.ToString(), kq.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LoadGridViewQuyen();
         }
 
         private void LoadGridViewQuyen()
         {
             dgvQuyen.DataSource = _dataQuyen.layTatCa();
+            gvQuyen.Columns["MaQuyen"].OptionsColumn.AllowEdit = false;
+            gvQuyen.Columns["MaQuyen"].OptionsColumn.ReadOnly = true;
         }
 
         private void btnUpdateQuyen_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtMaQuyen.Text)) return;
+            if (!_dataQuyen.GetById(txtMaQuyen.Text)) return;
             var kq = _dataQuyen.UpdateQuyen(new Quyen_DTO()
             {
                 TenQuyen = txtTenQuyen.Text,
                 MaQuyen = txtMaQuyen.Text,
                 GhiChu = txtGhiChu.Text
             });
-            MessageBox.Show(kq.ToString(), kq.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Update " + kq.ToString(), kq.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LoadGridViewQuyen();
         }
 
         private void frmQuanLyQuyen_Load(object sender, EventArgs e)
@@ -62,33 +66,44 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy
 
         private void btnXoaQuyen_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtMaQuyen.Text)) return;
-            var layPhanQuyens = _dataPhanQuyen.layTheoQuyen(txtMaQuyen.Text).Select(x => new PHANQUYEN()
+            if (_dataPhanQuyen.GetById(txtMaQuyen.Text))
             {
-                MAQUYEN = x.MaQuyen,
-                MANHOM = x.MaNhom,
-                COQUYEN = x.CoQuyen
-            }).ToList();
-            if (layPhanQuyens.Count > 0)
-            {
-                if (_dataPhanQuyen.xoaPhanQuyen(layPhanQuyens))
+                var layPhanQuyens = _dataPhanQuyen.layTheoQuyen(txtMaQuyen.Text).Select(x => new PHANQUYEN()
                 {
-                    var kq = _dataQuyen.XoaQuyen(txtMaQuyen.Text);
+                    MAQUYEN = x.MaQuyen,
+                    MANHOM = x.MaNhom,
+                    COQUYEN = x.CoQuyen
+                }).ToList();
+                _dataPhanQuyen.xoaPhanQuyen(layPhanQuyens);
+            }
+            var kq = _dataQuyen.XoaQuyen(txtMaQuyen.Text);
+            MessageBox.Show("Xóa " + kq.ToString(), kq.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LoadGridViewQuyen();
 
-                    MessageBox.Show(kq.ToString(), kq.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Xóa Thất Bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+        }
+        private void gvQuyen_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            var kq = _dataQuyen.UpdateQuyen(new Quyen_DTO()
+            {
+                TenQuyen = gvQuyen.GetRowCellValue(e.RowHandle, "TenQuyen").ToString(),
+                MaQuyen = gvQuyen.GetRowCellValue(e.RowHandle, "MaQuyen").ToString(),
+                GhiChu = gvQuyen.GetRowCellValue(e.RowHandle, "GhiChu").ToString()
+            });
+            MessageBox.Show("Update " + kq.ToString(), kq.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void gvQuyen_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            txtMaQuyen.Text = gvQuyen.GetRowCellValue(e.RowHandle, "MaQuyen").ToString();
+            if (gvQuyen.GetRowCellValue(e.RowHandle, "GhiChu") != null)
+            {
+                txtGhiChu.Text = gvQuyen.GetRowCellValue(e.RowHandle, "GhiChu").ToString();
             }
             else
             {
-                var kq = _dataQuyen.XoaQuyen(txtMaQuyen.Text);
-                MessageBox.Show(kq.ToString(), kq.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtGhiChu.ResetText();
             }
-
-
+            txtTenQuyen.Text = gvQuyen.GetRowCellValue(e.RowHandle, "TenQuyen").ToString();
 
         }
     }

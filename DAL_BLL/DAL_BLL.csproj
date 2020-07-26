@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppControl.cs" />
     <Compile Include="CTDonHang_DAL_BLL.cs" />
     <Compile Include="CT_PhieuNhap_DAL_BLL.cs" />
     <Compile Include="DanhMuc_DAL_BLL.cs" />

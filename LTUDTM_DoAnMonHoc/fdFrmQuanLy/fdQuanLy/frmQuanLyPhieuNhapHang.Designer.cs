@@ -43,8 +43,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dtpNgayNhap = new System.Windows.Forms.DateTimePicker();
             this.cboxMaNhaCC = new System.Windows.Forms.ComboBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnThemPhieuNhap = new System.Windows.Forms.Button();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnThemPhieuNhap = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
@@ -58,9 +58,11 @@
             this.tbDonGia = new ControlDesign.tbNhapSo();
             this.tbSoLuong = new ControlDesign.tbNhapSo();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnThemSanPham = new System.Windows.Forms.Button();
             this.dgvChiTietPN = new DevExpress.XtraGrid.GridControl();
             this.gvChiTietPN = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnThemSanPham = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.popupMenuChiTietPN = new DevExpress.XtraBars.PopupMenu(this.components);
             this.barItemSuaCTPN = new DevExpress.XtraBars.BarButtonItem();
             this.itemPopupXoaCTPN = new DevExpress.XtraBars.BarButtonItem();
@@ -77,7 +79,7 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -85,6 +87,7 @@
             this.tableLayoutPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietPN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvChiTietPN)).BeginInit();
+            this.tableLayoutPanel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenuChiTietPN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManagerCTPhieuNhap)).BeginInit();
             this.SuspendLayout();
@@ -120,13 +123,13 @@
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel10, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 17);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(518, 98);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
@@ -141,7 +144,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(512, 62);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(512, 57);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // tableLayoutPanel4
@@ -165,7 +168,7 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(250, 56);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(250, 51);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // tbMaPhieuNhap
@@ -181,7 +184,7 @@
             // 
             this.tbTongTien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbTongTien.Location = new System.Drawing.Point(189, 31);
+            this.tbTongTien.Location = new System.Drawing.Point(189, 28);
             this.tbTongTien.Name = "tbTongTien";
             this.tbTongTien.ReadOnly = true;
             this.tbTongTien.Size = new System.Drawing.Size(58, 21);
@@ -193,7 +196,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Right;
             this.label1.Location = new System.Drawing.Point(6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 28);
+            this.label1.Size = new System.Drawing.Size(53, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Mã phiếu nhập: ";
             // 
@@ -203,7 +206,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Right;
             this.label2.Location = new System.Drawing.Point(129, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 28);
+            this.label2.Size = new System.Drawing.Size(54, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Mã nhà cung cấp: ";
             // 
@@ -211,9 +214,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label3.Location = new System.Drawing.Point(20, 28);
+            this.label3.Location = new System.Drawing.Point(20, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 28);
+            this.label3.Size = new System.Drawing.Size(39, 26);
             this.label3.TabIndex = 4;
             this.label3.Text = "Ngày Nhập: ";
             // 
@@ -221,9 +224,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label4.Location = new System.Drawing.Point(149, 28);
+            this.label4.Location = new System.Drawing.Point(149, 25);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 28);
+            this.label4.Size = new System.Drawing.Size(34, 26);
             this.label4.TabIndex = 5;
             this.label4.Text = "Tổng Tiền: ";
             // 
@@ -232,7 +235,7 @@
             this.dtpNgayNhap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpNgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayNhap.Location = new System.Drawing.Point(65, 31);
+            this.dtpNgayNhap.Location = new System.Drawing.Point(65, 28);
             this.dtpNgayNhap.Name = "dtpNgayNhap";
             this.dtpNgayNhap.Size = new System.Drawing.Size(56, 21);
             this.dtpNgayNhap.TabIndex = 6;
@@ -247,23 +250,30 @@
             this.cboxMaNhaCC.Size = new System.Drawing.Size(58, 21);
             this.cboxMaNhaCC.TabIndex = 7;
             // 
-            // flowLayoutPanel1
+            // tableLayoutPanel10
             // 
-            this.flowLayoutPanel1.Controls.Add(this.btnThemPhieuNhap);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 71);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(512, 24);
-            this.flowLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanel10.ColumnCount = 3;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.Controls.Add(this.btnThemPhieuNhap, 0, 0);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 66);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 1;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(512, 29);
+            this.tableLayoutPanel10.TabIndex = 1;
             // 
             // btnThemPhieuNhap
             // 
+            this.btnThemPhieuNhap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnThemPhieuNhap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemPhieuNhap.ImageOptions.Image")));
             this.btnThemPhieuNhap.Location = new System.Drawing.Point(3, 3);
             this.btnThemPhieuNhap.Name = "btnThemPhieuNhap";
-            this.btnThemPhieuNhap.Size = new System.Drawing.Size(113, 23);
+            this.btnThemPhieuNhap.Size = new System.Drawing.Size(194, 23);
             this.btnThemPhieuNhap.TabIndex = 0;
-            this.btnThemPhieuNhap.Text = "Thêm phiếu nhập";
-            this.btnThemPhieuNhap.UseVisualStyleBackColor = true;
+            this.btnThemPhieuNhap.Text = "Thêm Phiếu Nhập";
             // 
             // groupBox2
             // 
@@ -302,6 +312,7 @@
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 73F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(512, 73);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
@@ -412,8 +423,8 @@
             this.tableLayoutPanel8.ColumnCount = 2;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel8.Controls.Add(this.btnThemSanPham, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.dgvChiTietPN, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel9, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 82);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
@@ -421,17 +432,6 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(512, 180);
             this.tableLayoutPanel8.TabIndex = 1;
-            // 
-            // btnThemSanPham
-            // 
-            this.btnThemSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThemSanPham.Location = new System.Drawing.Point(3, 3);
-            this.btnThemSanPham.Name = "btnThemSanPham";
-            this.btnThemSanPham.Size = new System.Drawing.Size(45, 61);
-            this.btnThemSanPham.TabIndex = 0;
-            this.btnThemSanPham.Text = "Thêm sản phẩm";
-            this.btnThemSanPham.UseVisualStyleBackColor = true;
             // 
             // dgvChiTietPN
             // 
@@ -451,6 +451,42 @@
             this.gvChiTietPN.OptionsBehavior.Editable = false;
             this.gvChiTietPN.OptionsBehavior.ReadOnly = true;
             // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 1;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel9.Controls.Add(this.btnThemSanPham, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.btnLuu, 0, 1);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 3;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(45, 174);
+            this.tableLayoutPanel9.TabIndex = 2;
+            // 
+            // btnThemSanPham
+            // 
+            this.btnThemSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnThemSanPham.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemSanPham.ImageOptions.Image")));
+            this.btnThemSanPham.Location = new System.Drawing.Point(3, 3);
+            this.btnThemSanPham.Name = "btnThemSanPham";
+            this.btnThemSanPham.Size = new System.Drawing.Size(39, 44);
+            this.btnThemSanPham.TabIndex = 0;
+            this.btnThemSanPham.Text = "Thêm Sản Phẩm";
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
+            this.btnLuu.Location = new System.Drawing.Point(3, 53);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(39, 44);
+            this.btnLuu.TabIndex = 1;
+            this.btnLuu.Text = "Lưu";
+            // 
             // popupMenuChiTietPN
             // 
             this.popupMenuChiTietPN.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
@@ -463,8 +499,8 @@
             // 
             this.barItemSuaCTPN.Caption = "Sửa Chi Tiết Phiếu Này";
             this.barItemSuaCTPN.Id = 3;
-            this.barItemSuaCTPN.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.barItemSuaCTPN.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.barItemSuaCTPN.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barItemSuaCTPN.ImageOptions.Image")));
+            this.barItemSuaCTPN.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barItemSuaCTPN.ImageOptions.LargeImage")));
             this.barItemSuaCTPN.Name = "barItemSuaCTPN";
             this.barItemSuaCTPN.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barItemSuaCTPN_ItemClick);
             // 
@@ -566,7 +602,7 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel10.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
@@ -575,6 +611,7 @@
             this.tableLayoutPanel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietPN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvChiTietPN)).EndInit();
+            this.tableLayoutPanel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.popupMenuChiTietPN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManagerCTPhieuNhap)).EndInit();
             this.ResumeLayout(false);
@@ -598,12 +635,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dtpNgayNhap;
         private System.Windows.Forms.ComboBox cboxMaNhaCC;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button btnThemPhieuNhap;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.Button btnThemSanPham;
         private DevExpress.XtraGrid.GridControl dgvChiTietPN;
         private DevExpress.XtraGrid.Views.Grid.GridView gvChiTietPN;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
@@ -626,5 +660,10 @@
         private DevExpress.XtraBars.Bar bar3;
         private DevExpress.XtraBars.BarButtonItem barItemSuaCTPN;
         private DevExpress.XtraBars.BarButtonItem itemPopupXoaCTPN;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private DevExpress.XtraEditors.SimpleButton btnThemSanPham;
+        private DevExpress.XtraEditors.SimpleButton btnLuu;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        private DevExpress.XtraEditors.SimpleButton btnThemPhieuNhap;
     }
 }

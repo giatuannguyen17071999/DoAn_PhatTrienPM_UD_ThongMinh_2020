@@ -6,18 +6,32 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MyLibrary.fdPopup;
+using System.IO;
+using DevExpress.XtraBars.Ribbon;
 
 namespace MyLibrary
 {
     public class FunctionStatic
     {
         public const string imgPolder = @"../../Contents/Images/";
+        public const string imgNotFound = "imgNotFound.jpg";
 
         public static void hienThiFormMoi(Form frmCha, Form frmDich)
         {
             foreach (Form f in frmCha.MdiChildren)
                 if (f.GetType() == frmDich.GetType())
                     f.Close();
+
+            if (frmDich.Name.Equals("frmBanHang"))
+            {
+                RibbonControl rid = frmCha.Controls["ribbonMain"] as RibbonControl;
+                rid.Minimized = true;
+            }
+            else
+            {
+                RibbonControl rid = frmCha.Controls["ribbonMain"] as RibbonControl;
+                rid.Minimized = false;
+            }
             frmDich.MdiParent = frmCha;
             frmDich.Show();
         }
@@ -54,6 +68,37 @@ namespace MyLibrary
                 ghiChu = frmThemGhiChu.GHICHU;
 
             return ghiChu;
+        }
+
+        public static string chonFileNameHinhAnh()
+        {
+            OpenFileDialog of = new OpenFileDialog();
+            of.Filter = "All Files|*.*|JPEGs|*.jpg|Bitmaps|*.bmp|GIFs|*.gif";
+            DialogResult res = of.ShowDialog();
+            return res == DialogResult.OK ? of.FileName : null;
+        }
+
+        public static string copyHinh(string fNguon)
+        {
+            if (string.IsNullOrEmpty(fNguon))
+                return string.Empty;
+            DateTime dt = DateTime.Now;
+            string fDich = string.Format("sp{0}_{1}_{2}_{3}_{4}_{5}.jpg", dt.Year, dt.Month, dt.Day, dt.Hour, dt.Minute, dt.Second);
+            File.Copy(fNguon, imgPolder + fDich);
+            return fDich;
+        }
+
+        public static void xoaHinh(string tenHinh)
+        {
+            if (File.Exists(imgPolder + tenHinh))
+                File.Delete(imgPolder + tenHinh);
+        }
+
+        public static string capNhatHinh(string tenHinhCu, string fNguon)
+        {
+            if (!tenHinhCu.Equals(imgNotFound))
+                xoaHinh(tenHinhCu);
+            return copyHinh(fNguon);
         }
     }
 }

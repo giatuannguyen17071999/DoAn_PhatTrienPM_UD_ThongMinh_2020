@@ -9,6 +9,16 @@ namespace DTO
 {
     public class SanPham_DTO
     {
+        public const int COL_MASP = 0;
+        public const int COL_MALOAI = 1;
+        public const int COL_TENSP = 2;
+        public const int COL_HINHANH = 3;
+        public const int COL_GIABAN = 4;
+        public const int COL_NGAYTAO = 5;
+        public const int COL_MOTA = 6;
+        public const int COL_SLTON = 7;
+        public const int COL_ISDELETE = 8;
+
         private string maSP,
             tenSP,
             hinh,
@@ -30,6 +40,7 @@ namespace DTO
         public int? SlTon { get => slTon; set => slTon = value; }
         [DisplayName("Mã Loại")]
         public int? MaLoai { get => maLoai; set => maLoai = value; }
+        [DisplayName("Giá Bán")]
         public int? GiaBan { get => giaBan; set => giaBan = value; }
 
         public override string ToString()

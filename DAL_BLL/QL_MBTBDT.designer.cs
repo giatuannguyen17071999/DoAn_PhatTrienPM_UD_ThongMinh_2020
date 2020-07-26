@@ -449,16 +449,6 @@ namespace DAL_BLL
 		
 		private System.Nullable<int> _GiaBan;
 		
-		private string _NhaSanXuat;
-		
-		private string _XuatXu;
-		
-		private string _DungTich;
-		
-		private string _ChatLieu;
-		
-		private string _DoiTuong;
-		
 		private System.Nullable<System.DateTime> _CreatedDate;
 		
 		private string _Description;
@@ -487,16 +477,6 @@ namespace DAL_BLL
     partial void OnHinhChanged();
     partial void OnGiaBanChanging(System.Nullable<int> value);
     partial void OnGiaBanChanged();
-    partial void OnNhaSanXuatChanging(string value);
-    partial void OnNhaSanXuatChanged();
-    partial void OnXuatXuChanging(string value);
-    partial void OnXuatXuChanged();
-    partial void OnDungTichChanging(string value);
-    partial void OnDungTichChanged();
-    partial void OnChatLieuChanging(string value);
-    partial void OnChatLieuChanged();
-    partial void OnDoiTuongChanging(string value);
-    partial void OnDoiTuongChanged();
     partial void OnCreatedDateChanging(System.Nullable<System.DateTime> value);
     partial void OnCreatedDateChanged();
     partial void OnDescriptionChanging(string value);
@@ -615,106 +595,6 @@ namespace DAL_BLL
 					this._GiaBan = value;
 					this.SendPropertyChanged("GiaBan");
 					this.OnGiaBanChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NhaSanXuat", DbType="NVarChar(250)")]
-		public string NhaSanXuat
-		{
-			get
-			{
-				return this._NhaSanXuat;
-			}
-			set
-			{
-				if ((this._NhaSanXuat != value))
-				{
-					this.OnNhaSanXuatChanging(value);
-					this.SendPropertyChanging();
-					this._NhaSanXuat = value;
-					this.SendPropertyChanged("NhaSanXuat");
-					this.OnNhaSanXuatChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_XuatXu", DbType="NVarChar(250)")]
-		public string XuatXu
-		{
-			get
-			{
-				return this._XuatXu;
-			}
-			set
-			{
-				if ((this._XuatXu != value))
-				{
-					this.OnXuatXuChanging(value);
-					this.SendPropertyChanging();
-					this._XuatXu = value;
-					this.SendPropertyChanged("XuatXu");
-					this.OnXuatXuChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DungTich", DbType="NVarChar(250)")]
-		public string DungTich
-		{
-			get
-			{
-				return this._DungTich;
-			}
-			set
-			{
-				if ((this._DungTich != value))
-				{
-					this.OnDungTichChanging(value);
-					this.SendPropertyChanging();
-					this._DungTich = value;
-					this.SendPropertyChanged("DungTich");
-					this.OnDungTichChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ChatLieu", DbType="NVarChar(250)")]
-		public string ChatLieu
-		{
-			get
-			{
-				return this._ChatLieu;
-			}
-			set
-			{
-				if ((this._ChatLieu != value))
-				{
-					this.OnChatLieuChanging(value);
-					this.SendPropertyChanging();
-					this._ChatLieu = value;
-					this.SendPropertyChanged("ChatLieu");
-					this.OnChatLieuChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DoiTuong", DbType="NVarChar(250)")]
-		public string DoiTuong
-		{
-			get
-			{
-				return this._DoiTuong;
-			}
-			set
-			{
-				if ((this._DoiTuong != value))
-				{
-					this.OnDoiTuongChanging(value);
-					this.SendPropertyChanging();
-					this._DoiTuong = value;
-					this.SendPropertyChanged("DoiTuong");
-					this.OnDoiTuongChanged();
 				}
 			}
 		}

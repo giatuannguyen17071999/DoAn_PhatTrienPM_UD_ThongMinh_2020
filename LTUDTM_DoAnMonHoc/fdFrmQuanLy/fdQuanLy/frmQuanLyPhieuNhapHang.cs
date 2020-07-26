@@ -14,6 +14,7 @@ using DTO;
 using DevExpress.XtraBars;
 using DevExpress.Utils;
 using LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy.frmPhatSinh;
+using DevExpress.ClipboardSource.SpreadsheetML;
 
 namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy
 {
@@ -25,6 +26,9 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy
         private CT_PhieuNhap_DAL_BLL ctPN_DAL_BLL;
         private PhieuNhap_DAL_BLL pn_DAL_BLL;
         private int rowCTPNhapSelected;
+
+        private PHIEU_NHAP pnTmp;
+        private List<CT_PHIEU_NHAP> ctPhieuNhapsTmp;
 
         public frmQuanLyPhieuNhapHang()
         {
@@ -39,6 +43,8 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy
             ctPN_DAL_BLL = new CT_PhieuNhap_DAL_BLL();
             pn_DAL_BLL = new PhieuNhap_DAL_BLL();
             rowCTPNhapSelected = -1;
+            pnTmp = null;
+            ctPhieuNhapsTmp = new List<CT_PHIEU_NHAP>();
 
             //load
             loadNhaCC();
@@ -51,6 +57,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy
             cboxMaPhieu.SelectedIndexChanged += CboxMaPhieu_SelectedIndexChanged;
             btnThemSanPham.Click += BtnThemSanPham_Click;
             gvChiTietPN.PopupMenuShowing += GvChiTietPN_PopupMenuShowing;
+            btnLuu.Click += bntLuu_Click;
         }
 
         private void GvChiTietPN_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
@@ -64,7 +71,21 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy
 
         private void BtnThemSanPham_Click(object sender, EventArgs e)
         {
+            if (pnTmp == null)
+            {
+                FunctionStatic.hienThiThongBaoLoi("Chưa có phiếu nhập nào đang chờ!");
+                return;
+            }
+
             var maPN = cboxMaPhieu.SelectedValue;
+            if (maPN == null)
+                return;
+            if (!maPN.ToString().Equals(pnTmp.MAPN))
+            {
+                FunctionStatic.hienThiThongBaoLoi("Phiếu nhập này đã được lưu, không thêm chi tiết được!");
+                return;
+            }
+
             var maSP = cboxMaSanPham.SelectedValue;
             if (maPN == null || maSP == null)
             {
@@ -95,12 +116,17 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy
             ctPN.SL_NHAP = slNhap;
             ctPN.GIANHAP = giaNhap;
 
-            EStatus status = ctPN_DAL_BLL.them(ctPN);
-            if (status != EStatus.THANH_CONG)
+            bool isThem = ctPhieuNhapsTmp.FirstOrDefault(n => n.MAPN.Equals(ctPN.MAPN) && n.MASP.Equals(ctPN.MASP)) == null;
+            if (!isThem)
             {
                 FunctionStatic.hienThiThongBaoLoi("Thêm Phiếu Nhập Không thành công!");
                 return;
             }
+
+            //them phieu vao danh sach temp
+            ctPhieuNhapsTmp.Add(ctPN);
+            //cap nhat tong tien
+            pnTmp.TONGTIEN = decimal.Parse(pnTmp.TONGTIEN.ToString()) + (ctPN.SL_NHAP * ctPN.GIANHAP);
 
             FunctionStatic.hienThiThongBaoThanhCong("Thêm phiếu nhập thành công");
             loadCTPhieuNhap();
@@ -115,13 +141,29 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy
         {
             var maPN = cboxMaPhieu.SelectedValue;
             if (maPN == null) return;
-            dgvChiTietPN.DataSource = ctPN_DAL_BLL.layPhieuNhap_s(maPN.ToString());
-            decimal tongTien = pn_DAL_BLL.layTongTien(maPN.ToString());
-            tbTongTien.Text = string.Format("{0:N0} VND", tongTien);
+            if (pnTmp == null || !pnTmp.MAPN.Equals(maPN.ToString()))
+            {
+                dgvChiTietPN.DataSource = ctPN_DAL_BLL.layPhieuNhap_s(maPN.ToString());
+                decimal tongTien = pn_DAL_BLL.layTongTien(maPN.ToString());
+                tbTongTien.Text = string.Format("{0:N0} VND", tongTien);
+            }
+            else
+            {
+                dgvChiTietPN.DataSource = null;
+                dgvChiTietPN.DataSource = ctPN_DAL_BLL.layPhieuNhap_s(pnTmp, ctPhieuNhapsTmp);
+                decimal tongTien = pnTmp.TONGTIEN == null ? 0 : decimal.Parse(pnTmp.TONGTIEN.ToString());
+                tbTongTien.Text = string.Format("{0:N0} VND", tongTien);
+            }
         }
 
         private void BtnThemPhieuNhap_Click(object sender, EventArgs e)
         {
+            if (pnTmp != null)
+            {
+                FunctionStatic.hienThiThongBaoLoi("Có phiếu nhập đang cần chờ sử lý! Thêm không thành");
+                return;
+            }
+
             string maPN = tbMaPhieuNhap.Text;
             if (string.IsNullOrEmpty(maPN))
             {
@@ -144,15 +186,22 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy
             pn.NGAYNHAP = ngayNhap;
             pn.TONGTIEN = 0;
 
-            EStatus status = pn_DAL_BLL.them(pn);
-            if (status != EStatus.THANH_CONG)
-            {
-                FunctionStatic.hienThiThongBaoLoi("Thêm không thành công!");
-                return;
-            }
+            pnTmp = pn;
 
-            FunctionStatic.hienThiThongBaoThanhCong("Thêm phiếu nhập thành công!");
-            loadCboxMaPN(maPN);
+            FunctionStatic.hienThiThongBaoThanhCong("Có 1 phiếu nhập đang chờ!");
+            List<PhieuNhap_DTO> dataSource = cboxMaPhieu.DataSource as List<PhieuNhap_DTO>;
+            dataSource.Add(new PhieuNhap_DTO
+            {
+                MaPN = pn.MAPN,
+                NgayNhap = pn.NGAYNHAP,
+                NhaCC = pn.NHACC,
+                TongTien = pn.TONGTIEN
+            });
+            cboxMaPhieu.DataSource = null;
+            cboxMaPhieu.DisplayMember = "maPN";
+            cboxMaPhieu.ValueMember = "maPN";
+            cboxMaPhieu.DataSource = dataSource;
+            cboxMaPhieu.SelectedValue = maPN;
         }
 
         private void loadNhaCC()
@@ -229,6 +278,20 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy
 
             FunctionStatic.hienThiThongBaoThanhCong("Sửa Chi tiêt này thành công");
             loadCTPhieuNhap();
+        }
+
+        private void bntLuu_Click(object sender, EventArgs e)
+        {
+            bool isLuu = pn_DAL_BLL.them(pnTmp, ctPhieuNhapsTmp);
+            if (!isLuu)
+            {
+                FunctionStatic.hienThiThongBaoLoi("Lưu Phiếu nhập không Thành công!");
+                return;
+            }
+
+            pnTmp = null;
+            ctPhieuNhapsTmp.Clear();
+            FunctionStatic.hienThiThongBaoThanhCong("Thêm phiếu nhập thành công");
         }
     }
 }

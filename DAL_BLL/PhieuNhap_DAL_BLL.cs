@@ -53,5 +53,22 @@ namespace DAL_BLL
                 return 0;
             return decimal.Parse(pn.TONGTIEN.ToString());
         }
+
+        public bool them(PHIEU_NHAP pn, List<CT_PHIEU_NHAP> ctPNs)
+        {
+            try
+            {
+                db.PHIEU_NHAPs.InsertOnSubmit(pn);
+                db.SubmitChanges();
+                foreach (CT_PHIEU_NHAP ct in ctPNs)
+                    db.CT_PHIEU_NHAPs.InsertOnSubmit(ct);
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }
