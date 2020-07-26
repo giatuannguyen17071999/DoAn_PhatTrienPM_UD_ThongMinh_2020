@@ -50,18 +50,24 @@ namespace DAL_BLL
             return result;
         }
 
-        public void lamMoiTaiTatCaQuyen_CANTHAN()
+        public void lamMoiTaiTatCaQuyen_choNhom()
         {
+            PHANQUYEN pq;
             var nhoms = db.NHOMQUYENs;
             var quyens = db.QUYENs;
             foreach (NHOMQUYEN n in nhoms)
                 foreach (QUYEN q in quyens)
-                    db.PHANQUYENs.InsertOnSubmit(new PHANQUYEN
+                {
+                    pq = db.PHANQUYENs.FirstOrDefault(t => t.MANHOM.Equals(n.MANHOM) && t.MAQUYEN.Equals(q.MAQUYEN));
+                    if (pq == null)
                     {
-                        MANHOM = n.MANHOM,
-                        MAQUYEN = q.MAQUYEN,
-                        COQUYEN = false
-                    });
+                        pq = new PHANQUYEN();
+                        pq.MANHOM = n.MANHOM;
+                        pq.MAQUYEN = q.MAQUYEN;
+                        pq.COQUYEN = false;
+                        db.PHANQUYENs.InsertOnSubmit(pq);
+                    }
+                }    
 
             db.SubmitChanges();
         }
