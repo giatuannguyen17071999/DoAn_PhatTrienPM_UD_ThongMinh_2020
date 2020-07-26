@@ -175,6 +175,7 @@
             this.mnuQuanLyQuyen.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mnuQuanLyQuyen.ImageOptions.LargeImage")));
             this.mnuQuanLyQuyen.Name = "mnuQuanLyQuyen";
             this.mnuQuanLyQuyen.Tag = "SP02";
+            this.mnuQuanLyQuyen.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mnuQuanLyQuyen_ItemClick);
             // 
             // mnuQuanLyNhomQuyen
             // 
