@@ -1,36 +1,3 @@
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.csprojAssemblyReference.cache
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang.frmBanHang.resources
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang.frmPhatSinh.frmChonKhachHang.resources
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy.frmPhanNhanVienVaoNhom.resources
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy.frmPhanQuyenChoNhom.resources
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy.frmPhatSinh.frmSuaCT_PhieuNhap.resources
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha.FormDanhMuc.resources
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha.FormLoaiSanPham.resources
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha.frmQuanLyNhaCungCap.resources
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy.frmQuanLyNhanVien.resources
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy.frmQuanLyNhomQuyen.resources
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy.frmQuanLyPhieuNhapHang.resources
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy.frmQuanLyQuyen.resources
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.frmLogin.resources
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.frmQuanLy.resources
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.csproj.GenerateResource.cache
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.exe.licenses
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.csproj.CoreCompileInputs.cache
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\LTUDTM_DoAnMonHoc.exe.config
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\LTUDTM_DoAnMonHoc.exe
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\LTUDTM_DoAnMonHoc.pdb
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\ControlDesign.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DAL_BLL.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DTO.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\MyLibrary.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\ControlDesign.pdb
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DAL_BLL.pdb
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DAL_BLL.dll.config
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DTO.pdb
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\MyLibrary.pdb
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.csproj.CopyComplete
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.exe
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.pdb
 C:\Users\giatu\OneDrive\Documents\GitHub\1.DoAn\DoAn_PhatTrienPM_UD_ThongMinh_2020\LTUDTM_DoAnMonHoc\bin\Debug\LTUDTM_DoAnMonHoc.exe.config
 C:\Users\giatu\OneDrive\Documents\GitHub\1.DoAn\DoAn_PhatTrienPM_UD_ThongMinh_2020\LTUDTM_DoAnMonHoc\bin\Debug\LTUDTM_DoAnMonHoc.exe
 C:\Users\giatu\OneDrive\Documents\GitHub\1.DoAn\DoAn_PhatTrienPM_UD_ThongMinh_2020\LTUDTM_DoAnMonHoc\bin\Debug\LTUDTM_DoAnMonHoc.pdb
@@ -169,6 +136,11 @@ C:\Users\giatu\OneDrive\Documents\GitHub\1.DoAn\DoAn_PhatTrienPM_UD_ThongMinh_20
 C:\Users\giatu\OneDrive\Documents\GitHub\1.DoAn\DoAn_PhatTrienPM_UD_ThongMinh_2020\LTUDTM_DoAnMonHoc\bin\Debug\es\DevExpress.XtraTreeList.v19.2.resources.dll
 C:\Users\giatu\OneDrive\Documents\GitHub\1.DoAn\DoAn_PhatTrienPM_UD_ThongMinh_2020\LTUDTM_DoAnMonHoc\bin\Debug\ja\DevExpress.XtraTreeList.v19.2.resources.dll
 C:\Users\giatu\OneDrive\Documents\GitHub\1.DoAn\DoAn_PhatTrienPM_UD_ThongMinh_2020\LTUDTM_DoAnMonHoc\bin\Debug\ru\DevExpress.XtraTreeList.v19.2.resources.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\LTUDTM_DoAnMonHoc.exe.config
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\LTUDTM_DoAnMonHoc.exe
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\LTUDTM_DoAnMonHoc.pdb
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\ControlDesign.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DAL_BLL.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.Data.Desktop.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.Data.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.Dialogs.v20.1.Core.dll
@@ -183,11 +155,18 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.XtraLayout.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.XtraRichEdit.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.XtraTreeList.v20.1.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DTO.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\MyLibrary.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.Sparkline.v20.1.Core.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.XtraPrinting.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.RichEdit.v20.1.Core.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.Office.v20.1.Core.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.Images.v20.1.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\ControlDesign.pdb
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DAL_BLL.pdb
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DAL_BLL.dll.config
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DTO.pdb
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\MyLibrary.pdb
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.Data.Desktop.v20.1.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.Data.v20.1.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.Pdf.v20.1.Core.xml
@@ -265,5 +244,26 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\es\DevExpress.Office.v20.1.Core.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\ja\DevExpress.Office.v20.1.Core.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\ru\DevExpress.Office.v20.1.Core.resources.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.Properties.Resources.resources
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.csprojAssemblyReference.cache
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang.frmBanHang.resources
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang.frmPhatSinh.frmChonKhachHang.resources
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy.frmPhanNhanVienVaoNhom.resources
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy.frmPhanQuyenChoNhom.resources
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy.frmPhatSinh.frmSuaCT_PhieuNhap.resources
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha.FormDanhMuc.resources
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha.FormLoaiSanPham.resources
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha.frmQuanLyNhaCungCap.resources
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy.frmQuanLyNhanVien.resources
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy.frmQuanLyNhomQuyen.resources
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy.frmQuanLyPhieuNhapHang.resources
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy.frmQuanLyQuyen.resources
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha.frmQuanLySanPham.resources
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.frmLogin.resources
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.frmQuanLy.resources
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.Properties.Resources.resources
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.csproj.GenerateResource.cache
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.exe.licenses
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.csproj.CoreCompileInputs.cache
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.csproj.CopyComplete
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.exe
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.pdb
