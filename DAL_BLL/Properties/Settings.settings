@@ -5,10 +5,10 @@
     <Setting Name="QL_MUABAN_TBDTConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=VIETSACLO-PC\SQLEXPRESS;Initial Catalog=QL_MUABAN_TBDT;User ID=sa;Password=vietsaclo1999&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=DESKTOP-58F1T8S\GIATUAN;Initial Catalog=QL_MUABAN_TBDT;User ID=sa;Password=17071999&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=VIETSACLO-PC\SQLEXPRESS;Initial Catalog=QL_MUABAN_TBDT;User ID=sa;Password=vietsaclo1999</Value>
+      <Value Profile="(Default)">Data Source=DESKTOP-58F1T8S\GIATUAN;Initial Catalog=QL_MUABAN_TBDT;User ID=sa;Password=17071999</Value>
     </Setting>
   </Settings>
 </SettingsFile>
