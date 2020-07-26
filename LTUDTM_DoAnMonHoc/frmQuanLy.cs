@@ -85,5 +85,10 @@ namespace LTUDTM_DoAnMonHoc
         {
             FunctionStatic.hienThiFormMoi(this, new frmQuanLyQuyen());
         }
+
+        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FunctionStatic.hienThiFormMoi(this, new frnQuanLyKhachHang());
+        }
     }
 }

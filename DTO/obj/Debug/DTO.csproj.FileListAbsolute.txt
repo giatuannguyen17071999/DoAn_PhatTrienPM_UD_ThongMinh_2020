@@ -4,3 +4,14 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DTO\obj\Debug\DTO.csp
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DTO\obj\Debug\DTO.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DTO\obj\Debug\DTO.pdb
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\lockh\Desktop\DoAn_PhatTrienPM_UD_ThongMinh_2020-master\DoAn_PhatTrienPM_UD_ThongMinh_2020-master\DTO\bin\Debug\DTO.dll
+C:\Users\lockh\Desktop\DoAn_PhatTrienPM_UD_ThongMinh_2020-master\DoAn_PhatTrienPM_UD_ThongMinh_2020-master\DTO\bin\Debug\DTO.pdb
+C:\Users\lockh\Desktop\DoAn_PhatTrienPM_UD_ThongMinh_2020-master\DoAn_PhatTrienPM_UD_ThongMinh_2020-master\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\lockh\Desktop\DoAn_PhatTrienPM_UD_ThongMinh_2020-master\DoAn_PhatTrienPM_UD_ThongMinh_2020-master\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\lockh\Desktop\DoAn_PhatTrienPM_UD_ThongMinh_2020-master\DoAn_PhatTrienPM_UD_ThongMinh_2020-master\DTO\obj\Debug\DTO.dll
+C:\Users\lockh\Desktop\DoAn_PhatTrienPM_UD_ThongMinh_2020-master\DoAn_PhatTrienPM_UD_ThongMinh_2020-master\DTO\obj\Debug\DTO.pdb
+C:\Users\lockh\Desktop\test\DoAn_PhatTrienPM_UD_ThongMinh_2020\DTO\bin\Debug\DTO.dll
+C:\Users\lockh\Desktop\test\DoAn_PhatTrienPM_UD_ThongMinh_2020\DTO\bin\Debug\DTO.pdb
+C:\Users\lockh\Desktop\test\DoAn_PhatTrienPM_UD_ThongMinh_2020\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\lockh\Desktop\test\DoAn_PhatTrienPM_UD_ThongMinh_2020\DTO\obj\Debug\DTO.dll
+C:\Users\lockh\Desktop\test\DoAn_PhatTrienPM_UD_ThongMinh_2020\DTO\obj\Debug\DTO.pdb

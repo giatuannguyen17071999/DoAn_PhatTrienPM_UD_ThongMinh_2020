@@ -68,18 +68,9 @@ namespace DAL_BLL
 
         #region Phan Cua Long
 
-        public IQueryable<PhanNhanVienVaoNhomQuyen_DTO> layTheoMaUser(string uName)
+        public List<PHANNHANVIEN_VAONHOMQUYEN> layTheoMaUser(string uName)
         {
-            return db.PHANNHANVIEN_VAONHOMQUYENs.Where(n => n.USERNAME.Equals(uName)).Select(p => new PhanNhanVienVaoNhomQuyen_DTO
-            {
-                UserName = p.USERNAME,
-                MaNhom = p.MANHOM,
-                GhiChu = p.GHICHU
-            });
-        }
-        public bool GetById(string username)
-        {
-            return db.PHANNHANVIEN_VAONHOMQUYENs.Any(x => x.USERNAME.Equals(username));
+            return db.PHANNHANVIEN_VAONHOMQUYENs.Where(n => n.USERNAME.Equals(uName)).ToList();
         }
         public bool XoaNhieuNhomQuyen(List<PHANNHANVIEN_VAONHOMQUYEN> lst)
         {
@@ -89,8 +80,9 @@ namespace DAL_BLL
                 db.SubmitChanges();
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                string tmp = e.Message;
                 return false;
             }
         }

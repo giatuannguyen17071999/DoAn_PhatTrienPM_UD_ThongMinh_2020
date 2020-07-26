@@ -332,6 +332,7 @@
             this.mnuQuanLyLoaiSanPham,
             this.mnuSanPham});
             this.ribbonMain.Location = new System.Drawing.Point(0, 0);
+            this.ribbonMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonMain.MaxItemId = 23;
             this.ribbonMain.Name = "ribbonMain";
             this.ribbonMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -339,7 +340,7 @@
             this.ribbonPageCategory4,
             this.ribbonPageCategory1,
             this.ribbonPageCategory3});
-            this.ribbonMain.Size = new System.Drawing.Size(1010, 150);
+            this.ribbonMain.Size = new System.Drawing.Size(1178, 183);
             // 
             // barButtonItem5
             // 
@@ -348,6 +349,7 @@
             this.barButtonItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
             this.barButtonItem5.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
             this.barButtonItem5.Name = "barButtonItem5";
+            this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
             // 
             // barButtonItem6
             // 
@@ -434,11 +436,12 @@
             // 
             // frmQuanLy
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1010, 443);
+            this.ClientSize = new System.Drawing.Size(1178, 545);
             this.Controls.Add(this.ribbonMain);
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmQuanLy";
             this.Text = "frmQuanLy";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

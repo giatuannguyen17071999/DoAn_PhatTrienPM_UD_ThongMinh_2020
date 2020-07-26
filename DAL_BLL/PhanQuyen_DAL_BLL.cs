@@ -44,15 +44,13 @@ namespace DAL_BLL
 
         #region Phần Của Long
 
-        public IQueryable<PhanQuyen_DTO> layTheoQuyen(string ma)
+        public List<PHANQUYEN> layTheoQuyen(string ma)
         {
-            return db.PHANQUYENs.Where(x => x.MAQUYEN.Equals(ma)).Select(x => new PhanQuyen_DTO()
-            {
-                MaQuyen = x.MAQUYEN,
-                MaNhom = x.MANHOM,
-                CoQuyen = x.COQUYEN
-            });
+            return db.PHANQUYENs.Where(x => x.MAQUYEN.Equals(ma)).ToList();
         }
+
+
+
         public bool GetById(string mq)
         {
             return db.PHANQUYENs.Any(x => x.MAQUYEN.Equals(mq));
