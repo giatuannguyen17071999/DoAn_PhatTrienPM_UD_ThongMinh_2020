@@ -61,5 +61,24 @@ namespace LTUDTM_DoAnMonHoc
         {
             FunctionStatic.hienThiFormMoi(this, new FormLoaiSanPham());
         }
+
+        private void mnuSanPham_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FunctionStatic.hienThiFormMoi(this, new frmQuanLySanPham());
+        }
+
+        private void xtraTabbedMdiManager_SelectedPageChanged(object sender, EventArgs e)
+        {
+            Form frm = xtraTabbedMdiManager.SelectedPage.MdiChild;
+            if (frm.Name.Equals("frmBanHang"))
+                ribbonMain.Minimized = true;
+            else
+                ribbonMain.Minimized = false;
+        }
+
+        private void mnuQuanLyNhanVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FunctionStatic.hienThiFormMoi(this, new frmQuanLyNhanVien());
+        }
     }
 }

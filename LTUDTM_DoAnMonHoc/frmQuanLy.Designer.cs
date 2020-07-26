@@ -47,6 +47,7 @@
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.mnuQuanLyDanhMuc = new DevExpress.XtraBars.BarButtonItem();
             this.mnuQuanLyLoaiSanPham = new DevExpress.XtraBars.BarButtonItem();
+            this.mnuSanPham = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonGroup1 = new DevExpress.XtraBars.BarButtonGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -153,6 +154,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem11);
             this.ribbonPageGroup1.ItemLinks.Add(this.mnuQuanLyDanhMuc);
             this.ribbonPageGroup1.ItemLinks.Add(this.mnuQuanLyLoaiSanPham);
+            this.ribbonPageGroup1.ItemLinks.Add(this.mnuSanPham);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // mnuQuanLyNhanVien
@@ -163,6 +165,7 @@
             this.mnuQuanLyNhanVien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mnuQuanLyNhanVien.ImageOptions.LargeImage")));
             this.mnuQuanLyNhanVien.Name = "mnuQuanLyNhanVien";
             this.mnuQuanLyNhanVien.Tag = "SP01";
+            this.mnuQuanLyNhanVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mnuQuanLyNhanVien_ItemClick);
             // 
             // mnuQuanLyQuyen
             // 
@@ -213,12 +216,21 @@
             // 
             // mnuQuanLyLoaiSanPham
             // 
-            this.mnuQuanLyLoaiSanPham.Caption = "Quản Lý Sản Phẩm";
+            this.mnuQuanLyLoaiSanPham.Caption = "Quản Lý Loại Sản Phẩm";
             this.mnuQuanLyLoaiSanPham.Id = 21;
             this.mnuQuanLyLoaiSanPham.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("mnuQuanLyLoaiSanPham.ImageOptions.Image")));
             this.mnuQuanLyLoaiSanPham.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mnuQuanLyLoaiSanPham.ImageOptions.LargeImage")));
             this.mnuQuanLyLoaiSanPham.Name = "mnuQuanLyLoaiSanPham";
             this.mnuQuanLyLoaiSanPham.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mnuQuanLyLoaiSanPham_ItemClick);
+            // 
+            // mnuSanPham
+            // 
+            this.mnuSanPham.Caption = "Quản lý Sản Phẩm";
+            this.mnuSanPham.Id = 22;
+            this.mnuSanPham.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("mnuSanPham.ImageOptions.Image")));
+            this.mnuSanPham.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mnuSanPham.ImageOptions.LargeImage")));
+            this.mnuSanPham.Name = "mnuSanPham";
+            this.mnuSanPham.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mnuSanPham_ItemClick);
             // 
             // barSubItem1
             // 
@@ -316,9 +328,10 @@
             this.barButtonItem10,
             this.barButtonItem11,
             this.mnuQuanLyDanhMuc,
-            this.mnuQuanLyLoaiSanPham});
+            this.mnuQuanLyLoaiSanPham,
+            this.mnuSanPham});
             this.ribbonMain.Location = new System.Drawing.Point(0, 0);
-            this.ribbonMain.MaxItemId = 22;
+            this.ribbonMain.MaxItemId = 23;
             this.ribbonMain.Name = "ribbonMain";
             this.ribbonMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory2,
@@ -400,6 +413,7 @@
             // xtraTabbedMdiManager
             // 
             this.xtraTabbedMdiManager.MdiParent = this;
+            this.xtraTabbedMdiManager.SelectedPageChanged += new System.EventHandler(this.xtraTabbedMdiManager_SelectedPageChanged);
             // 
             // barButtonItem8
             // 
@@ -477,5 +491,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
         private DevExpress.XtraBars.BarButtonItem mnuQuanLyDanhMuc;
         private DevExpress.XtraBars.BarButtonItem mnuQuanLyLoaiSanPham;
+        private DevExpress.XtraBars.BarButtonItem mnuSanPham;
     }
 }
