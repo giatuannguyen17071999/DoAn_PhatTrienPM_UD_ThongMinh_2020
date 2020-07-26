@@ -115,7 +115,6 @@
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::LTUDTM_DoAnMonHoc.Properties.Resources.lock_300x300;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Location = new System.Drawing.Point(47, 58);

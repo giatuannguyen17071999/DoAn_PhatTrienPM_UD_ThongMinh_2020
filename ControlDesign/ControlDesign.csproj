@@ -55,6 +55,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="UCSanPham.resx">
+      <DependentUpon>UCSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{38D72ADD-2BEC-461E-A101-DD1C2A06865F}</Project>
       <Name>DTO</Name>
@@ -63,11 +68,6 @@
       <Project>{DE5BF0E8-4EEA-41CA-9FCF-9510DD339C6B}</Project>
       <Name>MyLibrary</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="UCSanPham.resx">
-      <DependentUpon>UCSanPham.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
