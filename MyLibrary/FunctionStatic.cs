@@ -15,6 +15,33 @@ namespace MyLibrary
     {
         public const string imgPolder = @"../../Contents/Images/";
         public const string imgNotFound = "imgNotFound.jpg";
+        public const string GIOI_THIEU_UNG_DUNG =
+            "TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP THỰC PHẨM\n" +
+            "THÀNH PHỐ HỒ CHÍ MINH\n" +
+            "Đồ án môn công nghệ phần mềm\n" +
+            "Năm Học 2020\n" +
+            "CÁC THÀNH VIÊN TRONG NHÓM\n" +
+            "1. NGUYỄN QUỐC VIỆT\n" +
+            "2. BÙI VŨ TRƯỜNG\n" +
+            "3. TRẦN BẢO LONG\n" +
+            "4. LÝ XUÂN THÀNH\n" +
+            "5. NGUYỄN TRẦN GIA TUẤN";
+
+        public const string GIOI_THIEU_TRUONG = 
+            "TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP THỰC PHẨM\n" +
+            "THÀNH PHỐ HỒ CHÍ MINH";
+
+        public const string GIOI_THIEU_TEN_MON = 
+            "Đồ án môn công nghệ phần mềm\n" +
+            "Năm Học 2020";
+
+        public const string GIOI_THIEU_THANH_VIEN =
+            "CÁC THÀNH VIÊN TRONG NHÓM\n" +
+            "1. NGUYỄN QUỐC VIỆT\n" +
+            "2. BÙI VŨ TRƯỜNG\n" +
+            "3. TRẦN BẢO LONG\n" +
+            "4. LÝ XUÂN THÀNH\n" +
+            "5. NGUYỄN TRẦN GIA TUẤN";
 
         public static void hienThiFormMoi(Form frmCha, Form frmDich)
         {
@@ -22,7 +49,7 @@ namespace MyLibrary
                 if (f.GetType() == frmDich.GetType())
                     f.Close();
 
-            if (frmDich.Name.Equals("frmBanHang"))
+            if (frmDich.Name.Equals("frmBanHang") || frmDich.Name.Equals("frmThongTin"))
             {
                 RibbonControl rid = frmCha.Controls["ribbonMain"] as RibbonControl;
                 rid.Minimized = true;

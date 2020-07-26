@@ -34,6 +34,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy
             dgvUser.DataSource = _dataNv.layTatCa();
             gvUser.Columns["UserName"].OptionsColumn.AllowEdit = false;
             gvUser.Columns["UserName"].OptionsColumn.ReadOnly = true;
+            dgvUser.Enabled = false;
         }
 
         private void btnThemUser_Click(object sender, EventArgs e)

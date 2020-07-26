@@ -129,3 +129,5 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.csproj.CopyComplete
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.exe
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.pdb
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha.frmThongTin.resources
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy.frmPhatSinh.frmLoading.resources

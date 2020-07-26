@@ -39,6 +39,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy
             rowQuyenNhomCoSelected = rowQuyenNhomChuaCoSelected = -1;
 
             //load tại đây
+            nQuyen_DAL_BLL.lamMoiTaiTatCaQuyen_choNhom();
             loadNhomQuyen();
             loadQuyenChoNhom();
 

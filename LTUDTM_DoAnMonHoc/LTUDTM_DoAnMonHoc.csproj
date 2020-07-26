@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -85,6 +85,12 @@
     <Compile Include="fdFrmQuanLy\fdQuanLy\frmPhanQuyenChoNhom.Designer.cs">
       <DependentUpon>frmPhanQuyenChoNhom.cs</DependentUpon>
     </Compile>
+    <Compile Include="fdFrmQuanLy\fdQuanLy\frmPhatSinh\frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fdFrmQuanLy\fdQuanLy\frmPhatSinh\frmLoading.Designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </Compile>
     <Compile Include="fdFrmQuanLy\fdQuanLy\frmPhatSinh\frmSuaCT_PhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,12 @@
     <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLySanPham.Designer.cs">
       <DependentUpon>frmQuanLySanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmThongTin.Designer.cs">
+      <DependentUpon>frmThongTin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fdFrmQuanLy\fdQuanLy\frmPhanQuyenChoNhom.resx">
       <DependentUpon>frmPhanQuyenChoNhom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fdFrmQuanLy\fdQuanLy\frmPhatSinh\frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fdFrmQuanLy\fdQuanLy\frmPhatSinh\frmSuaCT_PhieuNhap.resx">
       <DependentUpon>frmSuaCT_PhieuNhap.cs</DependentUpon>
@@ -192,6 +207,9 @@
     <EmbeddedResource Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLySanPham.resx">
       <DependentUpon>frmQuanLySanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmThongTin.resx">
+      <DependentUpon>frmThongTin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,13 +219,18 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -234,6 +257,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\backGroundGioiThieu1.jpg" />
+    <None Include="Resources\backGroundGioiThieu.jpg" />
+    <None Include="Contents\Images\iconBanTBDT.jpg" />
+    <None Include="Contents\Images\iconBanTBDT.png" />
+    <None Include="Contents\Images\backGroundGioiThieu.png" />
+    <None Include="Contents\Images\backGroundGioiThieu.jpg" />
     <Content Include="Contents\Images\iconBaoCaoBanHang.png" />
     <Content Include="Contents\Images\iconChaoMungUser.png" />
     <Content Include="Contents\Images\iconInfo1.png" />
@@ -242,7 +271,6 @@
     <Content Include="Contents\Images\iconPhanTichBanHang.png" />
     <Content Include="Contents\Images\img1.jpg" />
     <Content Include="Contents\Images\img2.png" />
-    <Content Include="Contents\Images\imgNotFound.png" />
     <Content Include="Contents\Images\logoSieuThi.png" />
     <None Include="Resources\icons8-new-copy-96.png" />
     <None Include="Resources\lock-300x300.png" />
@@ -258,6 +286,7 @@
     <None Include="Resources\actions_addcircled.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

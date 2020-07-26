@@ -12,14 +12,23 @@ using LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy;
 using MyLibrary;
 using LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang;
 using LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha;
+using DevExpress.XtraBars.Ribbon;
+using DevExpress.XtraBars;
+using DAL_BLL;
+using LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy.frmPhatSinh;
+using System.Threading;
 
 namespace LTUDTM_DoAnMonHoc
 {
     public partial class frmQuanLy : DevExpress.XtraEditors.XtraForm
     {
-        public frmQuanLy()
+        private AppControl appCtr;
+        public NHANVIEN nVien;
+
+        public frmQuanLy(NHANVIEN nVien)
         {
             InitializeComponent();
+            this.nVien = nVien;
         }
 
         private void mnuPhanNhanVienVaoNhom_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -69,8 +78,10 @@ namespace LTUDTM_DoAnMonHoc
 
         private void xtraTabbedMdiManager_SelectedPageChanged(object sender, EventArgs e)
         {
+            if (xtraTabbedMdiManager.SelectedPage == null)
+                return;
             Form frm = xtraTabbedMdiManager.SelectedPage.MdiChild;
-            if (frm.Name.Equals("frmBanHang"))
+            if (frm.Name.Equals("frmBanHang") || frm.Name.Equals("frmThongTin"))
                 ribbonMain.Minimized = true;
             else
                 ribbonMain.Minimized = false;
@@ -84,6 +95,63 @@ namespace LTUDTM_DoAnMonHoc
         private void mnuQuanLyQuyen_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FunctionStatic.hienThiFormMoi(this, new frmQuanLyQuyen());
+        }
+
+        private void frmQuanLy_Load(object sender, EventArgs e)
+        {
+            CheckForIllegalCrossThreadCalls = false;
+            appCtr = new AppControl();
+
+            FunctionStatic.hienThiFormMoi(this, new frmThongTin());
+            loadPhanQuyen();
+            barItemWellcomUser.Caption = string.Format("Chào Mừng: [ {0} ]", nVien.TENNHANVIEN);
+        }
+
+        private void mnuThongTin_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FunctionStatic.hienThiFormMoi(this, new frmThongTin());
+        }
+
+        private void loadPhanQuyen()
+        {
+            Thread th = new Thread(new ThreadStart(()=>
+            {
+                foreach (RibbonPageCategory cate in ribbonMain.PageCategories)
+                    foreach (RibbonPage page in cate.Pages)
+                        foreach (RibbonPageGroup group in page.Groups)
+                            foreach (BarItemLink item in group.ItemLinks)
+                                if (item.Item is BarButtonItem)
+                                {
+                                    BarButtonItem button = (BarButtonItem)item.Item;
+                                    if (button.Tag != null)
+                                    {
+                                        string tag = button.Tag.ToString();
+                                        button.Enabled = false;
+
+                                        PHANQUYEN pq;
+                                        bool isSet = false;
+                                        var nhoms = appCtr.getPnvNhomQuyenDAL_BLL().layTheoMaUser("admin");
+                                        foreach (var n in nhoms)
+                                        {
+                                            var quyens = appCtr.getQDAL_BLL().layTatCa();
+                                            foreach (var q in quyens)
+                                            {
+                                                pq = appCtr.getPqDAL_BLL().layTheoKhoaChinh(n.MaNhom, q.MaQuyen);
+                                                if (pq != null && pq.COQUYEN == true && pq.MAQUYEN.Equals(tag))
+                                                {
+                                                    button.Enabled = true;
+                                                    isSet = true;
+                                                    break;
+                                                }
+                                            }
+                                            if (isSet)
+                                                break;
+                                        }
+                                    }
+                                }
+            }));
+
+            th.Start();
         }
     }
 }
