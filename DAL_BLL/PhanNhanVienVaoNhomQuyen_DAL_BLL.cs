@@ -20,6 +20,11 @@ namespace DAL_BLL
 
         #region Phan Cua Viet
 
+        public List<PHANNHANVIEN_VAONHOMQUYEN> layTheoUserName(string uName)
+        {
+            return db.PHANNHANVIEN_VAONHOMQUYENs.Where(n => n.USERNAME.Equals(uName)).ToList();
+        }
+
         public PhanNhanVienVaoNhomQuyen_DTO layTheoKhoaChinh(string uName, string maNhom)
         {
             PHANNHANVIEN_VAONHOMQUYEN p = db.PHANNHANVIEN_VAONHOMQUYENs.FirstOrDefault(n => n.USERNAME.Equals(uName) && n.MANHOM.Equals(maNhom));

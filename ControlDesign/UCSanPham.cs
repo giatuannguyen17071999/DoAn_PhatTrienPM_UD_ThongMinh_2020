@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DTO;
 using MyLibrary;
+using DTO;
 
 namespace ControlDesign
 {
@@ -39,7 +39,7 @@ namespace ControlDesign
             pnAnh.Top = 10;
             pnAnh.Left = 10;
             pnAnh.BackColor = Color.Red;
-            Image img = Image.FromFile(imgPolder + FunctionStatic.imgNotFound);
+            Image img = Image.FromFile(imgPolder + sanPham.Hinh);
             pnAnh.BackgroundImage = img;
             pnAnh.BackgroundImageLayout = ImageLayout.Stretch;
             pnAnh.Tag = sanPham;

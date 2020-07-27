@@ -48,6 +48,7 @@
             this.cbHienThiMatKhau.TabIndex = 15;
             this.cbHienThiMatKhau.Text = "Hiển Thị Mật Khẩu";
             this.cbHienThiMatKhau.UseVisualStyleBackColor = true;
+            this.cbHienThiMatKhau.CheckedChanged += new System.EventHandler(this.cbHienThiMatKhau_CheckedChanged);
             // 
             // btnThoat
             // 
@@ -56,6 +57,7 @@
             this.btnThoat.Size = new System.Drawing.Size(75, 23);
             this.btnThoat.TabIndex = 17;
             this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnDangNhap
             // 
@@ -64,6 +66,7 @@
             this.btnDangNhap.Size = new System.Drawing.Size(75, 23);
             this.btnDangNhap.TabIndex = 16;
             this.btnDangNhap.Text = "Đăng Nhập";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // tbMatKhau
             // 
@@ -112,7 +115,6 @@
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::LTUDTM_DoAnMonHoc.Properties.Resources.lock_300x300;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Location = new System.Drawing.Point(47, 58);

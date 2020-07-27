@@ -22,6 +22,11 @@ namespace DAL_BLL
 
         #region Phần Của Việt
 
+        public NHANVIEN layNhanVien(string uName)
+        {
+            return db.NHANVIENs.FirstOrDefault(n => n.USERNAME.Equals(uName));
+        }
+
         public List<NhanVien_DTO> layTatCa()
         {
             List<NhanVien_DTO> result = new List<NhanVien_DTO>();

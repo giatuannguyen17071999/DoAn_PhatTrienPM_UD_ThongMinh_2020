@@ -19,6 +19,11 @@ namespace DAL_BLL
 
         #region Phần của Việt
 
+        public PHANQUYEN layTheoKhoaChinh(string maNhom, string maQuyen)
+        {
+            return db.PHANQUYENs.FirstOrDefault(n => n.MANHOM.Equals(maNhom) && n.MAQUYEN.Equals(maQuyen));
+        }
+
         public void them(PhanQuyen_DTO pQuyen)
         {
             db.PHANQUYENs.InsertOnSubmit(new PHANQUYEN
