@@ -96,14 +96,13 @@ namespace LTUDTM_DoAnMonHoc
         {
             FunctionStatic.hienThiFormMoi(this, new frmQuanLyQuyen());
         }
-
         private void frmQuanLy_Load(object sender, EventArgs e)
         {
             CheckForIllegalCrossThreadCalls = false;
             appCtr = new AppControl();
 
             FunctionStatic.hienThiFormMoi(this, new frmThongTin());
-            loadPhanQuyen();
+            //loadPhanQuyen();
             barItemWellcomUser.Caption = string.Format("Chào Mừng: [ {0} ]", nVien.TENNHANVIEN);
         }
 
@@ -136,7 +135,7 @@ namespace LTUDTM_DoAnMonHoc
                                             var quyens = appCtr.getQDAL_BLL().layTatCa();
                                             foreach (var q in quyens)
                                             {
-                                                pq = appCtr.getPqDAL_BLL().layTheoKhoaChinh(n.MaNhom, q.MaQuyen);
+                                                pq = appCtr.getPqDAL_BLL().layTheoKhoaChinh(n.MANHOM, q.MaQuyen);
                                                 if (pq != null && pq.COQUYEN == true && pq.MAQUYEN.Equals(tag))
                                                 {
                                                     button.Enabled = true;

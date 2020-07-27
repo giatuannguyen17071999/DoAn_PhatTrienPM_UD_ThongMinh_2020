@@ -12,9 +12,11 @@ namespace DAL_BLL
     public class NhanVien_DAL_BLL
     {
         private QL_MBTBDTDataContext db;
+        private PhanNhanVienVaoNhomQuyen_DAL_BLL _dataPvnq;
 
         public NhanVien_DAL_BLL()
         {
+            _dataPvnq = new PhanNhanVienVaoNhomQuyen_DAL_BLL();
             db = new QL_MBTBDTDataContext();
         }
 
@@ -58,17 +60,30 @@ namespace DAL_BLL
 
         public EStatus XoaNhanVien(string username)
         {
+
             var nv = db.NHANVIENs.SingleOrDefault(x => x.USERNAME.Equals(username));
             if (nv == null)
             {
-                return EStatus.LOI;
+                return EStatus.THAT_BAI;
+            }
+
+            var layNhomQuyen = _dataPvnq.layTheoMaUser(username);
+            if (layNhomQuyen.Any())
+            {
+                if (!_dataPvnq.XoaNhieuNhomQuyen(layNhomQuyen))
+                {
+                    return EStatus.THAT_BAI;
+                }
             }
             db.NHANVIENs.DeleteOnSubmit(nv);
-            db.SubmitChanges();
+
             return EStatus.THANH_CONG;
 
         }
-
+        public void SaveChanged()
+        {
+            db.SubmitChanges();
+        }
         public EStatus UpdateNhanVien(NhanVien_DTO nvDto)
         {
             var nv = db.NHANVIENs.SingleOrDefault(x => x.USERNAME == nvDto.UserName);
@@ -78,7 +93,6 @@ namespace DAL_BLL
             nv.EMAIL = nvDto.Email;
             nv.HOATDONG = nvDto.HoatDong;
             nv.TENNHANVIEN = nvDto.TenNhanVien;
-            db.SubmitChanges();
             return EStatus.THANH_CONG;
         }
         public bool GetById(string username)
@@ -111,7 +125,6 @@ namespace DAL_BLL
                     TENNHANVIEN = nvDto.TenNhanVien,
                     USERNAME = nvDto.UserName
                 });
-                db.SubmitChanges();
                 return EStatus.THANH_CONG;
             }
             catch (Exception)

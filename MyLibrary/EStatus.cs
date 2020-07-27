@@ -11,6 +11,7 @@ namespace MyLibrary
         LOI,
         THANH_CONG,
         TRUNG_KHOA,
-        SAI_CAU_TRUC
+        SAI_CAU_TRUC,
+        THAT_BAI
     }
 }

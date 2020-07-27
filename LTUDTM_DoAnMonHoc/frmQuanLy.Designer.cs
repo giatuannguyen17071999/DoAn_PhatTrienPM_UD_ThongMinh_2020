@@ -508,11 +508,12 @@
             // 
             // frmQuanLy
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1010, 443);
+            this.ClientSize = new System.Drawing.Size(1178, 545);
             this.Controls.Add(this.ribbonMain);
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmQuanLy";
             this.Text = "frmQuanLy";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
