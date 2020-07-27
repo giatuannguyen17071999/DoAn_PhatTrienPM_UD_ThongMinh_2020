@@ -60,7 +60,7 @@
             this.ribbonPageCategory2 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
             this.ribbonMain = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.mnuKhachHang = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barItemGiaoDienBanHang = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
@@ -69,6 +69,7 @@
             this.barListItem1 = new DevExpress.XtraBars.BarListItem();
             this.barStaticItemUserName = new DevExpress.XtraBars.BarStaticItem();
             this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
+            this.barItemWellcomUser = new DevExpress.XtraBars.BarStaticItem();
             this.ribbonPageCategory4 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -77,7 +78,6 @@
             this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
-            this.barItemWellcomUser = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -346,7 +346,7 @@
             this.barButtonItem4,
             this.ribbonGalleryBarItem1,
             this.barButtonItem3,
-            this.barButtonItem5,
+            this.mnuKhachHang,
             this.barButtonItem6,
             this.barItemGiaoDienBanHang,
             this.barButtonItem7,
@@ -364,6 +364,7 @@
             this.barButtonItem13,
             this.barItemWellcomUser});
             this.ribbonMain.Location = new System.Drawing.Point(0, 0);
+            this.ribbonMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ribbonMain.MaxItemId = 29;
             this.ribbonMain.Name = "ribbonMain";
             this.ribbonMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -374,14 +375,15 @@
             this.ribbonMain.PageHeaderItemLinks.Add(this.barItemWellcomUser);
             this.ribbonMain.Size = new System.Drawing.Size(1010, 150);
             // 
-            // barButtonItem5
+            // mnuKhachHang
             // 
-            this.barButtonItem5.Caption = "Thêm mới khách hàng";
-            this.barButtonItem5.Id = 12;
-            this.barButtonItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
-            this.barButtonItem5.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
-            this.barButtonItem5.Name = "barButtonItem5";
-            this.barButtonItem5.Tag = "MH_QL_KHACH_HANG";
+            this.mnuKhachHang.Caption = "Thêm mới khách hàng";
+            this.mnuKhachHang.Id = 12;
+            this.mnuKhachHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
+            this.mnuKhachHang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
+            this.mnuKhachHang.Name = "mnuKhachHang";
+            this.mnuKhachHang.Tag = "MH_QL_KHACH_HANG";
+            this.mnuKhachHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mnuKhachHang_ItemClick);
             // 
             // barButtonItem6
             // 
@@ -443,6 +445,15 @@
             this.barButtonItem13.Id = 27;
             this.barButtonItem13.Name = "barButtonItem13";
             // 
+            // barItemWellcomUser
+            // 
+            this.barItemWellcomUser.Caption = "barStaticItem1";
+            this.barItemWellcomUser.Id = 28;
+            this.barItemWellcomUser.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barItemWellcomUser.ImageOptions.Image")));
+            this.barItemWellcomUser.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barItemWellcomUser.ImageOptions.LargeImage")));
+            this.barItemWellcomUser.Name = "barItemWellcomUser";
+            this.barItemWellcomUser.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
             // ribbonPageCategory4
             // 
             this.ribbonPageCategory4.Name = "ribbonPageCategory4";
@@ -460,7 +471,7 @@
             // 
             // ribbonPageGroup5
             // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem5);
+            this.ribbonPageGroup5.ItemLinks.Add(this.mnuKhachHang);
             this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem6);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             // 
@@ -497,23 +508,13 @@
             this.barButtonItem9.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.LargeImage")));
             this.barButtonItem9.Name = "barButtonItem9";
             // 
-            // barItemWellcomUser
-            // 
-            this.barItemWellcomUser.Caption = "barStaticItem1";
-            this.barItemWellcomUser.Id = 28;
-            this.barItemWellcomUser.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barStaticItem1.ImageOptions.Image")));
-            this.barItemWellcomUser.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barStaticItem1.ImageOptions.LargeImage")));
-            this.barItemWellcomUser.Name = "barItemWellcomUser";
-            this.barItemWellcomUser.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
             // frmQuanLy
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1178, 545);
+            this.ClientSize = new System.Drawing.Size(1010, 443);
             this.Controls.Add(this.ribbonMain);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmQuanLy";
             this.Text = "frmQuanLy";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -551,7 +552,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonMain;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
+        private DevExpress.XtraBars.BarButtonItem mnuKhachHang;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.BarButtonItem barItemGiaoDienBanHang;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory4;

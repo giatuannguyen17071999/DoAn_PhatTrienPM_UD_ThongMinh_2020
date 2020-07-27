@@ -152,5 +152,10 @@ namespace LTUDTM_DoAnMonHoc
 
             th.Start();
         }
+
+        private void mnuKhachHang_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FunctionStatic.hienThiFormMoi(this, new frnQuanLyKhachHang());
+        }
     }
 }
