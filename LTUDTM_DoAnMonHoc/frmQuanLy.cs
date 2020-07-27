@@ -96,6 +96,7 @@ namespace LTUDTM_DoAnMonHoc
         {
             FunctionStatic.hienThiFormMoi(this, new frmQuanLyQuyen());
         }
+
         private void frmQuanLy_Load(object sender, EventArgs e)
         {
             CheckForIllegalCrossThreadCalls = false;
@@ -135,7 +136,7 @@ namespace LTUDTM_DoAnMonHoc
                                             var quyens = appCtr.getQDAL_BLL().layTatCa();
                                             foreach (var q in quyens)
                                             {
-                                                pq = appCtr.getPqDAL_BLL().layTheoKhoaChinh(n.MANHOM, q.MaQuyen);
+                                                pq = appCtr.getPqDAL_BLL().layTheoKhoaChinh(n.MaNhom, q.MaQuyen);
                                                 if (pq != null && pq.COQUYEN == true && pq.MAQUYEN.Equals(tag))
                                                 {
                                                     button.Enabled = true;
@@ -155,8 +156,7 @@ namespace LTUDTM_DoAnMonHoc
 
         private void mnuKhachHang_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //sdf
-            FunctionStatic.hienThiFormMoi(this, new frnQuanLyKhachHang());
+            //FunctionStatic.hienThiFormMoi(this, new frnQuanLyKhachHang());
         }
     }
 }

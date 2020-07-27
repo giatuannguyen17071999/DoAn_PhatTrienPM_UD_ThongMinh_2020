@@ -12,14 +12,11 @@ namespace DAL_BLL
     public class DonHang_DAL_BLL
     {
         private QL_MBTBDTDataContext db;
-        private CTDonHang_DAL_BLL dbBillDetail;
+
         public DonHang_DAL_BLL()
         {
             db = new QL_MBTBDTDataContext();
-            dbBillDetail = new CTDonHang_DAL_BLL();
         }
-
-        #region Phần Của Việt
 
         public DonHang them(DonHang dh )
         {
@@ -129,32 +126,5 @@ namespace DAL_BLL
                 return false;
             }
         }
-
-        #endregion
-
-
-        #region Phần Của Long
-
-        public bool XoaHoaDon(List<DonHang> lstDonHangs)
-        {
-            try
-            {
-
-                lstDonHangs.ForEach(x => dbBillDetail.xoa(x.MaDH));
-                db.DonHangs.DeleteAllOnSubmit(lstDonHangs);
-                db.SubmitChanges();
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
-
-        public List<DonHang> LayDonHangs(int maKH)
-        {
-            return db.DonHangs.Where(x => x.MaKH == maKH).ToList();
-        }
-        #endregion
     }
 }
