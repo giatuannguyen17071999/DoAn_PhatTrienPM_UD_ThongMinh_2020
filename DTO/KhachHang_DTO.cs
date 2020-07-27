@@ -10,9 +10,8 @@ namespace DTO
     public class KhachHang_DTO
     {
         private int maKH;
-        private string taiKhoan, matKhau, hoTen, gioiTinh, DienThoai, diaChi,email;
+        private string taiKhoan, matKhau, hoTen, gioiTinh, DienThoai, diaChi;
         private bool status;
-        private DateTime ngaysinh;
 
         [DisplayName("Mã Khách Hàng")]
         public int MaKH { get => maKH; set => maKH = value; }
@@ -22,8 +21,6 @@ namespace DTO
         public string MatKhau { get => matKhau; set => matKhau = value; }
         [DisplayName("Họ Tên")]
         public string HoTen { get => hoTen; set => hoTen = value; }
-        [DisplayName("Email")]
-        public string Email { get => email; set => email = value; }
         [DisplayName("Giới Tính")]
         public string GioiTinh { get => gioiTinh; set => gioiTinh = value; }
         [DisplayName("Điện Thoại")]
@@ -32,8 +29,7 @@ namespace DTO
         public string DiaChi { get => diaChi; set => diaChi = value; }
         [DisplayName("Trạng Thái")]
         public bool Status { get => status; set => status = value; }
-        [DisplayName("Trạng Thái")]
-        public DateTime NgaySinh { get => ngaysinh; set => ngaysinh = value; }
+
         public override string ToString()
         {
             return string.Format("[maKH: {0}; tenKH: {1}; SDT: {2} ]", MaKH, HoTen, DienThoai);

@@ -67,8 +67,9 @@ namespace DAL_BLL
 
         public void xoa(int maDH)
         {
-                db.CTDonHangs.DeleteAllOnSubmit(db.CTDonHangs.Where(n => n.MaDH.Equals(maDH)));
-                db.SubmitChanges();
+            foreach (CTDonHang ct in db.CTDonHangs.Where(n => n.MaDH.Equals(maDH)))
+                db.CTDonHangs.DeleteOnSubmit(ct);
+            db.SubmitChanges();
         }
 
         public List<CTDonHang> laySanPhamDH_Mua(int maDH)

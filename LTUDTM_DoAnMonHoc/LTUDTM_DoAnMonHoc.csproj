@@ -147,12 +147,6 @@
     <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLySanPham.Designer.cs">
       <DependentUpon>frmQuanLySanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frnQuanLyKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frnQuanLyKhachHang.Designer.cs">
-      <DependentUpon>frnQuanLyKhachHang.cs</DependentUpon>
-    </Compile>
     <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmThongTin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,9 +208,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLySanPham.resx">
       <DependentUpon>frmQuanLySanPham.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fdFrmQuanLy\fd_MayBanLamDayNha\frnQuanLyKhachHang.resx">
-      <DependentUpon>frnQuanLyKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmThongTin.resx">
       <DependentUpon>frmThongTin.cs</DependentUpon>
@@ -297,7 +288,6 @@
     <None Include="Resources\actions_addcircled.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
