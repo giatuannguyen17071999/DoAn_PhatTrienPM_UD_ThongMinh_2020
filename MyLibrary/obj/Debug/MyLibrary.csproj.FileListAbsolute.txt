@@ -82,6 +82,7 @@ C:\Users\VIETSACLO-PC\Desktop\long\MyLibrary\bin\Debug\de\DevExpress.Office.v20.
 C:\Users\VIETSACLO-PC\Desktop\long\MyLibrary\bin\Debug\es\DevExpress.Office.v20.1.Core.resources.dll
 C:\Users\VIETSACLO-PC\Desktop\long\MyLibrary\bin\Debug\ja\DevExpress.Office.v20.1.Core.resources.dll
 C:\Users\VIETSACLO-PC\Desktop\long\MyLibrary\bin\Debug\ru\DevExpress.Office.v20.1.Core.resources.dll
+C:\Users\VIETSACLO-PC\Desktop\long\MyLibrary\obj\Debug\MyLibrary.csprojAssemblyReference.cache
 C:\Users\VIETSACLO-PC\Desktop\long\MyLibrary\obj\Debug\MyLibrary.fdPopup.frmThemGhiChu.resources
 C:\Users\VIETSACLO-PC\Desktop\long\MyLibrary\obj\Debug\MyLibrary.csproj.GenerateResource.cache
 C:\Users\VIETSACLO-PC\Desktop\long\MyLibrary\obj\Debug\MyLibrary.csproj.CoreCompileInputs.cache
