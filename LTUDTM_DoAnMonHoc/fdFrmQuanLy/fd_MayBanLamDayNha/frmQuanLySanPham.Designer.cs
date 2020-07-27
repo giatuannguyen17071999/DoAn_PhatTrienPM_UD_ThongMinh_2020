@@ -102,6 +102,7 @@
             this.gvSanPham.GridControl = this.dgvSanPham;
             this.gvSanPham.Name = "gvSanPham";
             this.gvSanPham.OptionsBehavior.Editable = false;
+            this.gvSanPham.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gvSanPham_CellValueChanged);
             // 
             // tableLayoutPanel2
             // 

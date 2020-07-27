@@ -154,14 +154,17 @@ namespace DAL_BLL
             };
         }
 
-        public bool them(SanPham sp)
+        public EStatus them(SanPham sp)
         {
             SanPham spTim = db.SanPhams.FirstOrDefault(n => n.MaSP.Equals(sp.MaSP));
             if (spTim != null)
-                return false;
+                return EStatus.TRUNG_KHOA;
+            spTim = db.SanPhams.FirstOrDefault(n => n.TenSP.Equals(sp.TenSP));
+            if (spTim != null)
+                return EStatus.TRUNG_TEN;
             db.SanPhams.InsertOnSubmit(sp);
             db.SubmitChanges();
-            return true;
+            return EStatus.THANH_CONG;
         }
 
         public bool xoa(string maSP)
@@ -176,11 +179,11 @@ namespace DAL_BLL
             return true;
         }
 
-        public bool sua(SanPham sp)
+        public EStatus sua(SanPham sp)
         {
             SanPham spTim = db.SanPhams.FirstOrDefault(n => n.MaSP.Equals(sp.MaSP));
             if (spTim == null)
-                return false;
+                return EStatus.THAT_BAI;
 
             spTim.TenSP = sp.TenSP;
             spTim.SL_TON = sp.SL_TON;
@@ -195,7 +198,7 @@ namespace DAL_BLL
 
             db.SubmitChanges();
 
-            return true;
+            return EStatus.THANH_CONG;
         }
     }
 }

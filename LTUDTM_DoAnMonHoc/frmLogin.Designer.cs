@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.cbHienThiMatKhau = new System.Windows.Forms.CheckBox();
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.btnDangNhap = new DevExpress.XtraEditors.SimpleButton();
@@ -52,6 +53,7 @@
             // 
             // btnThoat
             // 
+            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
             this.btnThoat.Location = new System.Drawing.Point(363, 161);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 23);
@@ -61,9 +63,10 @@
             // 
             // btnDangNhap
             // 
+            this.btnDangNhap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDangNhap.ImageOptions.Image")));
             this.btnDangNhap.Location = new System.Drawing.Point(232, 161);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(75, 23);
+            this.btnDangNhap.Size = new System.Drawing.Size(89, 23);
             this.btnDangNhap.TabIndex = 16;
             this.btnDangNhap.Text = "Đăng Nhập";
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
@@ -115,6 +118,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = global::LTUDTM_DoAnMonHoc.Properties.Resources.lock_300x300;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Location = new System.Drawing.Point(47, 58);

@@ -37,6 +37,8 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
             reloadSanPham();
             loadMaLoai();
             setReadOnly(true);
+            //gvSanPham.Columns[0].OptionsColumn.AllowEdit = false;
+            //gvSanPham.Columns[0].OptionsColumn.ReadOnly = true;
 
             //event
             gvSanPham.RowClick += GvSanPham_RowClick;
@@ -152,7 +154,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (!isThem && tbTenSP.ReadOnly == true)
+            if (!isThem && tbSoLuongTon.ReadOnly == true)
             {
                 FunctionStatic.hienThiThongBaoLoi("Không có tác vụ nào để lưu");
                 return;
@@ -166,7 +168,17 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
 
             SanPham sp = new SanPham();
             sp.MaSP = tbMaSP.Text;
+            if (string.IsNullOrEmpty(sp.MaSP))
+            {
+                FunctionStatic.hienThiThongBaoLoi("Mã sản phẩm khác rỗng!");
+                return;
+            }
             sp.TenSP = tbTenSP.Text;
+            if (string.IsNullOrEmpty(sp.TenSP))
+            {
+                FunctionStatic.hienThiThongBaoLoi("Tên sản phẩm khác rỗng!");
+                return;
+            }
             sp.SL_TON = int.Parse(tbSoLuongTon.Text);
             sp.GiaBan = int.Parse(tbGiaBan.Text);
             sp.MaLoai = int.Parse(cboxLoaiSP.SelectedValue.ToString());
@@ -180,10 +192,15 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                     sp.Hinh = FunctionStatic.imgNotFound;
                 else
                     sp.Hinh = FunctionStatic.copyHinh(picHinhAnh.Tag.ToString());
-                bool task = appCtr.getSpDAL_BLL().them(sp);
-                if (!task)
+                EStatus task = appCtr.getSpDAL_BLL().them(sp);
+                if (task == EStatus.TRUNG_KHOA)
                 {
-                    FunctionStatic.hienThiThongBaoLoi("Thêm thất bại!");
+                    FunctionStatic.hienThiThongBaoLoi("Thêm thất bại => trùng mã!");
+                    return;
+                }
+                if (task == EStatus.TRUNG_TEN)
+                {
+                    FunctionStatic.hienThiThongBaoLoi("Thêm thất bại => trùng tên!");
                     return;
                 }
                 FunctionStatic.hienThiThongBaoThanhCong("Thêm thành công!");
@@ -198,12 +215,19 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                     sp.Hinh = FunctionStatic.imgNotFound;
                 else
                     sp.Hinh = picHinhAnh.Tag.ToString();
-                bool task = appCtr.getSpDAL_BLL().sua(sp);
-                if (!task)
+
+                EStatus task = appCtr.getSpDAL_BLL().sua(sp);
+                if (task == EStatus.THAT_BAI)
                 {
-                    FunctionStatic.hienThiThongBaoLoi("Sửa thất bại!");
+                    FunctionStatic.hienThiThongBaoLoi("Sửa thất bại => không tìm thấy!");
                     return;
                 }
+                if (task == EStatus.TRUNG_TEN)
+                {
+                    FunctionStatic.hienThiThongBaoLoi("Sửa thất bại => trùng tên!");
+                    return;
+                }
+
                 FunctionStatic.hienThiThongBaoThanhCong("Sửa thành công!");
                 reloadSanPham();
                 btnSua.Text = "Sửa Sản Phẩm";
@@ -250,6 +274,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                 btnSua.Text = "Hủy";
                 btnXoa.Enabled = btnThem.Enabled = btnDong.Enabled = dgvSanPham.Enabled = false;
                 tbMaSP.ReadOnly = true;
+                tbTenSP.ReadOnly = true;
                 bindding(false);
                 isThem = false;
                 tbTenSP.Focus();
@@ -303,6 +328,16 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
         private void tbMaSP_MouseClick(object sender, MouseEventArgs e)
         {
             //setSelectAll(sender);
+        }
+
+        private void gvSanPham_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            string maSP = FunctionStatic.layTextGridView(gvSanPham, rowSelected, SanPham_DTO.COL_MASP);
+            DialogResult res = FunctionStatic.hienThiCauHoiYesNo("Bạn có muốn cập nhật sản phẩm có mã: [ "+maSP+" ]?");
+            if (res != DialogResult.Yes)
+                return;
+
+            FunctionStatic.hienThiThongBaoThanhCong("Chua lam cap nhat");
         }
     }
 }

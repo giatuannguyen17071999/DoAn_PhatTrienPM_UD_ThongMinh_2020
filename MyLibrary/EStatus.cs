@@ -12,6 +12,7 @@ namespace MyLibrary
         THANH_CONG,
         TRUNG_KHOA,
         SAI_CAU_TRUC,
-        THAT_BAI
+        THAT_BAI,
+        TRUNG_TEN
     }
 }

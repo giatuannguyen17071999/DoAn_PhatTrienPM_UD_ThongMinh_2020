@@ -108,7 +108,7 @@
             // 
             this.txtPassword.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPassword.Enabled = false;
-            this.txtPassword.Location = new System.Drawing.Point(549, 3);
+            this.txtPassword.Location = new System.Drawing.Point(469, 3);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(195, 21);
             this.txtPassword.TabIndex = 12;
@@ -118,7 +118,7 @@
             // 
             this.txtTenNV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTenNV.Enabled = false;
-            this.txtTenNV.Location = new System.Drawing.Point(159, 43);
+            this.txtTenNV.Location = new System.Drawing.Point(136, 36);
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.Size = new System.Drawing.Size(194, 21);
             this.txtTenNV.TabIndex = 11;
@@ -130,7 +130,7 @@
             this.lblMaNV.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaNV.Location = new System.Drawing.Point(3, 0);
             this.lblMaNV.Name = "lblMaNV";
-            this.lblMaNV.Size = new System.Drawing.Size(150, 40);
+            this.lblMaNV.Size = new System.Drawing.Size(127, 33);
             this.lblMaNV.TabIndex = 0;
             this.lblMaNV.Text = "UserName:";
             // 
@@ -171,7 +171,7 @@
             // 
             this.txtUserName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtUserName.Enabled = false;
-            this.txtUserName.Location = new System.Drawing.Point(159, 3);
+            this.txtUserName.Location = new System.Drawing.Point(136, 3);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(194, 21);
             this.txtUserName.TabIndex = 10;
@@ -198,7 +198,7 @@
             // 
             this.txtEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtEmail.Enabled = false;
-            this.txtEmail.Location = new System.Drawing.Point(549, 43);
+            this.txtEmail.Location = new System.Drawing.Point(469, 36);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(195, 21);
             this.txtEmail.TabIndex = 14;
@@ -359,13 +359,13 @@
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.dgvUser, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 142);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 116);
             this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 316F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(788, 316);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(673, 255);
             this.tableLayoutPanel8.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -384,7 +384,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(72, 310);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(61, 249);
             this.tableLayoutPanel2.TabIndex = 16;
             // 
             // btnThemUser
@@ -393,7 +393,7 @@
             this.btnThemUser.Location = new System.Drawing.Point(3, 4);
             this.btnThemUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThemUser.Name = "btnThemUser";
-            this.btnThemUser.Size = new System.Drawing.Size(66, 69);
+            this.btnThemUser.Size = new System.Drawing.Size(55, 54);
             this.btnThemUser.TabIndex = 0;
             this.btnThemUser.Text = "Add";
             this.btnThemUser.UseVisualStyleBackColor = true;
@@ -403,9 +403,9 @@
             // 
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSave.Enabled = false;
-            this.btnSave.Location = new System.Drawing.Point(3, 234);
+            this.btnSave.Location = new System.Drawing.Point(3, 189);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(66, 73);
+            this.btnSave.Size = new System.Drawing.Size(55, 57);
             this.btnSave.TabIndex = 14;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -414,9 +414,9 @@
             // btnUpdateUser
             // 
             this.btnUpdateUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnUpdateUser.Location = new System.Drawing.Point(3, 80);
+            this.btnUpdateUser.Location = new System.Drawing.Point(3, 65);
             this.btnUpdateUser.Name = "btnUpdateUser";
-            this.btnUpdateUser.Size = new System.Drawing.Size(66, 71);
+            this.btnUpdateUser.Size = new System.Drawing.Size(55, 56);
             this.btnUpdateUser.TabIndex = 14;
             this.btnUpdateUser.Text = "Update";
             this.btnUpdateUser.UseVisualStyleBackColor = true;
@@ -425,9 +425,9 @@
             // btnXoaUser
             // 
             this.btnXoaUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnXoaUser.Location = new System.Drawing.Point(3, 157);
+            this.btnXoaUser.Location = new System.Drawing.Point(3, 127);
             this.btnXoaUser.Name = "btnXoaUser";
-            this.btnXoaUser.Size = new System.Drawing.Size(66, 71);
+            this.btnXoaUser.Size = new System.Drawing.Size(55, 56);
             this.btnXoaUser.TabIndex = 15;
             this.btnXoaUser.Text = "Delete";
             this.btnXoaUser.UseVisualStyleBackColor = true;
@@ -437,13 +437,13 @@
             // 
             this.dgvUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvUser.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvUser.Location = new System.Drawing.Point(81, 4);
+            this.dgvUser.Location = new System.Drawing.Point(70, 4);
             this.dgvUser.MainView = this.gvUser;
             this.dgvUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.txtPasswordChar});
-            this.dgvUser.Size = new System.Drawing.Size(704, 308);
+            this.dgvUser.Size = new System.Drawing.Size(600, 247);
             this.dgvUser.TabIndex = 1;
             this.dgvUser.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvUser});
