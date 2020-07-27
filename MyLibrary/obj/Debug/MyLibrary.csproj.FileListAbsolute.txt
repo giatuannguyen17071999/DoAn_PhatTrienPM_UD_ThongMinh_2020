@@ -88,4 +88,3 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\obj\Debug\M
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\obj\Debug\MyLibrary.csproj.CopyComplete
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\obj\Debug\MyLibrary.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\obj\Debug\MyLibrary.pdb
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\obj\Debug\MyLibrary.csprojAssemblyReference.cache
