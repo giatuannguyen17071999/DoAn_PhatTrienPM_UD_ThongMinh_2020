@@ -155,6 +155,7 @@ namespace LTUDTM_DoAnMonHoc
 
         private void mnuKhachHang_ItemClick(object sender, ItemClickEventArgs e)
         {
+            //sdf
             FunctionStatic.hienThiFormMoi(this, new frnQuanLyKhachHang());
         }
     }
