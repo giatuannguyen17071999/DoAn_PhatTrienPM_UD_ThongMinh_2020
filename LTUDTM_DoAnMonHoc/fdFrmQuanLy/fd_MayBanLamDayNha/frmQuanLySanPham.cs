@@ -14,6 +14,7 @@ using DevExpress.ClipboardSource.SpreadsheetML;
 using DTO;
 using System.IO;
 using DevExpress.XtraEditors.Filtering.Templates;
+using LTUDTM_DoAnMonHoc.fdExcelExport;
 
 namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
 {
@@ -37,8 +38,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
             reloadSanPham();
             loadMaLoai();
             setReadOnly(true);
-            //gvSanPham.Columns[0].OptionsColumn.AllowEdit = false;
-            //gvSanPham.Columns[0].OptionsColumn.ReadOnly = true;
+            gvSanPham.Columns[SanPham_DTO.COL_STT].Visible = false;
 
             //event
             gvSanPham.RowClick += GvSanPham_RowClick;
@@ -148,6 +148,10 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
             {
                 initTask();
                 btnThem.Text = "Hủy";
+                tbMaSP.ReadOnly = true;
+                tbMaSP.Text = appCtr.getSpDAL_BLL().phatSinhMaTuDong();
+                tbGiaBan.ReadOnly = tbSoLuongTon.ReadOnly = true;
+                tbGiaBan.Text = tbSoLuongTon.Text = "Cập nhật khi nhập hàng!";
                 btnXoa.Enabled = btnSua.Enabled = btnDong.Enabled = dgvSanPham.Enabled = false;
             }
         }
@@ -157,12 +161,6 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
             if (!isThem && tbSoLuongTon.ReadOnly == true)
             {
                 FunctionStatic.hienThiThongBaoLoi("Không có tác vụ nào để lưu");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(tbSoLuongTon.Text) || string.IsNullOrEmpty(tbGiaBan.Text))
-            {
-                FunctionStatic.hienThiThongBaoLoi("Nhập Sai số lượng hoặc đơn giá");
                 return;
             }
 
@@ -179,8 +177,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                 FunctionStatic.hienThiThongBaoLoi("Tên sản phẩm khác rỗng!");
                 return;
             }
-            sp.SL_TON = int.Parse(tbSoLuongTon.Text);
-            sp.GiaBan = int.Parse(tbGiaBan.Text);
+            
             sp.MaLoai = int.Parse(cboxLoaiSP.SelectedValue.ToString());
             sp.CreatedDate = dtpNgayTao.Value;
             sp.Description = tbMoTa.Text;
@@ -192,6 +189,8 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                     sp.Hinh = FunctionStatic.imgNotFound;
                 else
                     sp.Hinh = FunctionStatic.copyHinh(picHinhAnh.Tag.ToString());
+                
+                sp.GiaBan = sp.SL_TON = 0;
                 EStatus task = appCtr.getSpDAL_BLL().them(sp);
                 if (task == EStatus.TRUNG_KHOA)
                 {
@@ -216,6 +215,14 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                 else
                     sp.Hinh = picHinhAnh.Tag.ToString();
 
+                if (string.IsNullOrEmpty(tbSoLuongTon.Text) || string.IsNullOrEmpty(tbGiaBan.Text))
+                {
+                    FunctionStatic.hienThiThongBaoLoi("Nhập Sai số lượng hoặc đơn giá");
+                    return;
+                }
+
+                sp.SL_TON = int.Parse(tbSoLuongTon.Text);
+                sp.GiaBan = int.Parse(tbGiaBan.Text);
                 EStatus task = appCtr.getSpDAL_BLL().sua(sp);
                 if (task == EStatus.THAT_BAI)
                 {
@@ -273,8 +280,8 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                 initTask();
                 btnSua.Text = "Hủy";
                 btnXoa.Enabled = btnThem.Enabled = btnDong.Enabled = dgvSanPham.Enabled = false;
-                tbMaSP.ReadOnly = true;
                 tbTenSP.ReadOnly = true;
+                tbMaSP.ReadOnly = true;
                 bindding(false);
                 isThem = false;
                 tbTenSP.Focus();
@@ -338,6 +345,15 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                 return;
 
             FunctionStatic.hienThiThongBaoThanhCong("Chua lam cap nhat");
+        }
+
+        private void btnXuatExel_Click(object sender, EventArgs e)
+        {
+            ExcelExport ex = new ExcelExport();
+            string fileName = "SanPhams";
+            bool isEx = ex.ExportSanPhams(appCtr.getSpDAL_BLL().latTaCa(), ref fileName, false);
+            if (isEx)
+                ex.OpenFile(fileName);
         }
     }
 }

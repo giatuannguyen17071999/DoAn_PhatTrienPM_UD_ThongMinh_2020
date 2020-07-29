@@ -17,7 +17,7 @@ namespace DTO
         public const int COL_NGAYTAO = 5;
         public const int COL_MOTA = 6;
         public const int COL_SLTON = 7;
-        public const int COL_ISDELETE = 8;
+        public const int COL_STT = 8;
 
         private string maSP,
             tenSP,
@@ -42,10 +42,13 @@ namespace DTO
         public int? MaLoai { get => maLoai; set => maLoai = value; }
         [DisplayName("Giá Bán")]
         public int? GiaBan { get => giaBan; set => giaBan = value; }
+        public int STT { get => sTT; set => sTT = value; }
 
         public override string ToString()
         {
             return string.Format("[ maSP:{0}; tenSP:{1}; donGia:{2} ]", maSP, tenSP, giaBan);
         }
+
+        private int sTT;
     }
 }

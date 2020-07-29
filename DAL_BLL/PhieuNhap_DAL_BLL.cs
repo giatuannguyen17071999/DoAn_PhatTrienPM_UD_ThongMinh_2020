@@ -70,5 +70,24 @@ namespace DAL_BLL
                 return false;
             }
         }
+
+        public string phatSinhMaTuDong()
+        {
+            return FunctionStatic.phatSinhMaSP("PN", 20, timMaxIndex() + 1);
+        }
+
+        private int timMaxIndex()
+        {
+            int max = 0;
+            int g;
+            foreach (PHIEU_NHAP sp in db.PHIEU_NHAPs)
+            {
+                g = int.Parse(sp.MAPN.Substring(2));
+                if (g > max)
+                    max = g;
+            }
+
+            return max;
+        }
     }
 }

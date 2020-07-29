@@ -18,6 +18,8 @@ using LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang.frmPhatSinh;
 using System.Collections;
 using DevExpress.Data.Linq.Helpers;
 using DevExpress.Pdf.Native;
+using LTUDTM_DoAnMonHoc.Report;
+using DevExpress.XtraReports.UI;
 
 namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
 {
@@ -32,12 +34,14 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
         private DonHang_DAL_BLL dhDAL_BLL;
         private CTDonHang_DAL_BLL ctDonHangDAL_BLL;
         private KhachHang_DAL_BLL khDAL_BLL;
+        private NHANVIEN nvLamViec;
 
         private List<CTDonHang> ctDonHangs;
 
-        public frmBanHang()
+        public frmBanHang(NHANVIEN nvLamViec)
         {
             InitializeComponent();
+            this.nvLamViec = nvLamViec;
         }
 
         private void frmBanHang_Load(object sender, EventArgs e)
@@ -121,8 +125,8 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
             pnThongKeHomNay.BackgroundImageLayout = ImageLayout.Center;
             pnBaoCaoHomNay.BackgroundImage = Image.FromFile(imgPolder + "iconBaoCaoBanHang.png");
             pnBaoCaoHomNay.BackgroundImageLayout = ImageLayout.Center;
-            pnIconChaoMung.BackgroundImage = Image.FromFile(imgPolder + "iconChaoMungUser.png");
-            pnIconChaoMung.BackgroundImageLayout = ImageLayout.Center;
+            //pnIconChaoMung.BackgroundImage = Image.FromFile(imgPolder + "iconChaoMungUser.png");
+            //pnIconChaoMung.BackgroundImageLayout = ImageLayout.Center;
             lbKhachHangDoi.TextAlign = ContentAlignment.MiddleCenter;
             lbKhachHangDoi.Text = "Khách Hàng Đang Chờ In Hóa Đơn";
             rdoDuoi2Trieu.Checked = true;
@@ -143,6 +147,14 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
 
         private void Ctr_Click(object sender, EventArgs e)
         {
+            Control pnAnh = sender as Control;
+            SanPham_DTO sp = (pnAnh.Tag) as SanPham_DTO;
+            if (sp.SlTon == null || sp.SlTon == 0)
+            {
+                FunctionStatic.hienThiThongBaoLoi("Sản Phẩm Này Đã Hết Hàng!");
+                return;
+            }
+
             if (khChoInHoaDon == null)
             {
                 frmChonKhachHang frm = new frmChonKhachHang();
@@ -155,8 +167,6 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
                 themMotKhachHangCho(khChoInHoaDon);
             }
 
-            Control pnAnh = sender as Control;
-            SanPham_DTO sp = (pnAnh.Tag) as SanPham_DTO;
             themMotChiTietDonHang_ChuaLuu(sp);
             hienThiTongTien_TongSLMua();
             tabCT.SelectedIndex = 1;
@@ -431,11 +441,19 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
         {
             Control lbSlMua = (sender as Control).Tag as Control;
             string maSP = lbSlMua.Tag.ToString();
+            SanPham_DTO sp = spDAL_BLL.laySanPham(maSP);
             CTDonHang ctTim = ctDonHangs.First(n => n.MaDH.Equals(dhChoInHoaDon.MaDH) && n.MaSP.Equals(maSP));
             int sl = int.Parse(ctTim.SoLuong.ToString()) + 1;
+
+            if (sl > sp.SlTon)
+            {
+                FunctionStatic.hienThiThongBaoLoi("Đã Vượt Quá Số Lượng Tồn!");
+                return;
+            }
+
             ctTim.SoLuong = sl;
             //cap nhat tong tien
-            SanPham_DTO sp = spDAL_BLL.laySanPham(maSP);
+            
             decimal Ttien = decimal.Parse(dhChoInHoaDon.TONGTIEN.ToString()) + int.Parse(sp.GiaBan.ToString());
             dhChoInHoaDon.TONGTIEN = Ttien;
 
@@ -610,7 +628,11 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
             {
                 int maDH = int.Parse(node.Tag.ToString());
                 foreach (CTDonHang ct in ctDonHangDAL_BLL.laySanPhamDH_Mua(maDH))
-                    lstBLichSuGiaoDich.Items.Add(spDAL_BLL.laySanPham(ct.MaSP).ToString());
+                {
+                    SanPham_DTO sp = spDAL_BLL.laySanPham(ct.MaSP);
+                    if (sp != null)
+                        lstBLichSuGiaoDich.Items.Add(sp);
+                }
             }
         }
 
@@ -630,17 +652,43 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
 
             //in hoa don
             //cap nhat trang thai thanh toan
+            dhChoInHoaDon.DaThanhToan = true;
             bool isTT = dhDAL_BLL.them(dhChoInHoaDon, ctDonHangs);
+            dhDAL_BLL.taoView(dhChoInHoaDon.MaDH);
 
             if (isTT)
             {
-                dhChoInHoaDon = null;
-                khChoInHoaDon = null;
+                inHoaDon();
+                
                 ganKhachHangTuChoiMua();
                 taiTrvLichSuGiaoDich();
                 ctDonHangs.Clear();
-                FunctionStatic.hienThiThongBaoThanhCong("In Hoa Don Thanh Cong");
+                taiSanPhams(spDAL_BLL.latTaCa());
+                //FunctionStatic.hienThiThongBaoThanhCong("In Hoa Don Thanh Cong");
             }
+            else
+            {
+                FunctionStatic.hienThiThongBaoLoi("Loi Gi do");
+            }
+        }
+
+        private void inHoaDon()
+        {
+            rptInHoaDon rpt = new rptInHoaDon();
+            DateTime dt = DateTime.Now;
+            rpt.Parameters["parNgayThangNam"].Value = string.Format("Thành Phố Hồ Chí Minh, Ngày {0}, Tháng {1}, Năm {2}", dt.Day, dt.Month, dt.Year) ;
+            rpt.Parameters["parHoaDon"].Value = string.Format("Hóa Đơn: {0}", dhChoInHoaDon.MaDH) ;
+            rpt.Parameters["parTenKH"].Value =khChoInHoaDon.HoTen;
+            rpt.Parameters["parSDT"].Value = khChoInHoaDon.DienThoai1 ;
+            rpt.Parameters["parTongTien"].Value = dhChoInHoaDon.TONGTIEN;
+            rpt.Parameters["parGioiTinh"].Value = khChoInHoaDon.GioiTinh;
+            string tienChu = FunctionStatic.So_chu(double.Parse(dhChoInHoaDon.TONGTIEN.ToString()));
+            rpt.Parameters["parTienChu"].Value = tienChu;
+            rpt.Parameters["parNguoiLap"].Value = nvLamViec.TENNHANVIEN;
+            rpt.ShowPreview();
+
+            dhChoInHoaDon = null;
+            khChoInHoaDon = null;
         }
     }
 }

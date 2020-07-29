@@ -43,6 +43,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dtpNgayNhap = new System.Windows.Forms.DateTimePicker();
             this.cboxMaNhaCC = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbPhieuNhapCho = new System.Windows.Forms.Label();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.btnThemPhieuNhap = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -79,6 +81,7 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -139,6 +142,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel11, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -177,6 +181,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbMaPhieuNhap.Location = new System.Drawing.Point(65, 3);
             this.tbMaPhieuNhap.Name = "tbMaPhieuNhap";
+            this.tbMaPhieuNhap.ReadOnly = true;
             this.tbMaPhieuNhap.Size = new System.Drawing.Size(56, 21);
             this.tbMaPhieuNhap.TabIndex = 0;
             // 
@@ -250,6 +255,39 @@
             this.cboxMaNhaCC.Size = new System.Drawing.Size(58, 21);
             this.cboxMaNhaCC.TabIndex = 7;
             // 
+            // tableLayoutPanel11
+            // 
+            this.tableLayoutPanel11.ColumnCount = 2;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.Controls.Add(this.lbPhieuNhapCho, 0, 0);
+            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(259, 3);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 2;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(250, 51);
+            this.tableLayoutPanel11.TabIndex = 1;
+            // 
+            // lbPhieuNhapCho
+            // 
+            this.lbPhieuNhapCho.AutoSize = true;
+            this.lbPhieuNhapCho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.lbPhieuNhapCho.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbPhieuNhapCho.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbPhieuNhapCho.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbPhieuNhapCho.Font = new System.Drawing.Font("Tahoma", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lbPhieuNhapCho.ForeColor = System.Drawing.Color.Maroon;
+            this.lbPhieuNhapCho.Location = new System.Drawing.Point(3, 0);
+            this.lbPhieuNhapCho.Name = "lbPhieuNhapCho";
+            this.lbPhieuNhapCho.Size = new System.Drawing.Size(119, 25);
+            this.lbPhieuNhapCho.TabIndex = 0;
+            this.lbPhieuNhapCho.Text = "Phieu";
+            this.lbPhieuNhapCho.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbPhieuNhapCho.Visible = false;
+            this.lbPhieuNhapCho.Click += new System.EventHandler(this.lbPhieuNhapCho_Click);
+            // 
             // tableLayoutPanel10
             // 
             this.tableLayoutPanel10.ColumnCount = 3;
@@ -267,6 +305,7 @@
             // 
             // btnThemPhieuNhap
             // 
+            this.btnThemPhieuNhap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThemPhieuNhap.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnThemPhieuNhap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemPhieuNhap.ImageOptions.Image")));
             this.btnThemPhieuNhap.Location = new System.Drawing.Point(3, 3);
@@ -469,6 +508,7 @@
             // 
             // btnThemSanPham
             // 
+            this.btnThemSanPham.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThemSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnThemSanPham.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemSanPham.ImageOptions.Image")));
             this.btnThemSanPham.Location = new System.Drawing.Point(3, 3);
@@ -479,6 +519,7 @@
             // 
             // btnLuu
             // 
+            this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLuu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
             this.btnLuu.Location = new System.Drawing.Point(3, 53);
@@ -602,6 +643,8 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel11.ResumeLayout(false);
+            this.tableLayoutPanel11.PerformLayout();
             this.tableLayoutPanel10.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
@@ -665,5 +708,7 @@
         private DevExpress.XtraEditors.SimpleButton btnLuu;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private DevExpress.XtraEditors.SimpleButton btnThemPhieuNhap;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
+        private System.Windows.Forms.Label lbPhieuNhapCho;
     }
 }

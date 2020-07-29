@@ -28,6 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBanHang));
+            DevExpress.XtraReports.UserDesigner.XRDesignPanelListener xrDesignPanelListener1 = new DevExpress.XtraReports.UserDesigner.XRDesignPanelListener();
+            this.xrDesignBarManager1 = new DevExpress.XtraReports.UserDesigner.XRDesignBarManager(this.components);
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.recentlyUsedItemsComboBox1 = new DevExpress.XtraReports.UserDesigner.RecentlyUsedItemsComboBox();
+            this.designRepositoryItemComboBox1 = new DevExpress.XtraReports.UserDesigner.DesignRepositoryItemComboBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -38,7 +48,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.cboxLocTheoLichSu = new System.Windows.Forms.ComboBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -47,11 +57,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.txtTongSoLuong = new System.Windows.Forms.TextBox();
-            this.btnInHoaDon = new System.Windows.Forms.Button();
+            this.btnInHoaDon = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnMuaThem = new System.Windows.Forms.Button();
-            this.btnXoaTatCa = new System.Windows.Forms.Button();
+            this.btnXoaTatCa = new DevExpress.XtraEditors.SimpleButton();
+            this.btnMuaThem = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
@@ -79,7 +89,6 @@
             this.pnThongKeHomNay = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.pnIconChaoMung = new System.Windows.Forms.Panel();
             this.lbChaoMung = new System.Windows.Forms.Label();
             this.pnTacVus = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -101,6 +110,10 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabCT = new System.Windows.Forms.TabControl();
+            this.reportDesigner1 = new DevExpress.XtraReports.UserDesigner.XRDesignMdiController(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.xrDesignBarManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recentlyUsedItemsComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.designRepositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -136,7 +149,78 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabCT.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reportDesigner1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // xrDesignBarManager1
+            // 
+            this.xrDesignBarManager1.DockControls.Add(this.barDockControlTop);
+            this.xrDesignBarManager1.DockControls.Add(this.barDockControlBottom);
+            this.xrDesignBarManager1.DockControls.Add(this.barDockControlLeft);
+            this.xrDesignBarManager1.DockControls.Add(this.barDockControlRight);
+            this.xrDesignBarManager1.FontNameBox = this.recentlyUsedItemsComboBox1;
+            this.xrDesignBarManager1.FontNameEdit = null;
+            this.xrDesignBarManager1.FontSizeBox = this.designRepositoryItemComboBox1;
+            this.xrDesignBarManager1.FontSizeEdit = null;
+            this.xrDesignBarManager1.Form = this;
+            this.xrDesignBarManager1.FormattingToolbar = null;
+            this.xrDesignBarManager1.HintStaticItem = null;
+            this.xrDesignBarManager1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("xrDesignBarManager1.ImageStream")));
+            this.xrDesignBarManager1.LayoutToolbar = null;
+            this.xrDesignBarManager1.MaxItemId = 76;
+            this.xrDesignBarManager1.Toolbar = null;
+            this.xrDesignBarManager1.TransparentEditorsMode = DevExpress.Utils.DefaultBoolean.True;
+            this.xrDesignBarManager1.Updates.AddRange(new string[] {
+            "Toolbox"});
+            this.xrDesignBarManager1.ZoomItem = null;
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Manager = this.xrDesignBarManager1;
+            this.barDockControlTop.Size = new System.Drawing.Size(762, 0);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 595);
+            this.barDockControlBottom.Manager = this.xrDesignBarManager1;
+            this.barDockControlBottom.Size = new System.Drawing.Size(762, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlLeft.Manager = this.xrDesignBarManager1;
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 595);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(762, 0);
+            this.barDockControlRight.Manager = this.xrDesignBarManager1;
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 595);
+            // 
+            // recentlyUsedItemsComboBox1
+            // 
+            this.recentlyUsedItemsComboBox1.AppearanceDropDown.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.recentlyUsedItemsComboBox1.AppearanceDropDown.Options.UseFont = true;
+            this.recentlyUsedItemsComboBox1.AutoHeight = false;
+            this.recentlyUsedItemsComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.recentlyUsedItemsComboBox1.Name = "recentlyUsedItemsComboBox1";
+            // 
+            // designRepositoryItemComboBox1
+            // 
+            this.designRepositoryItemComboBox1.AutoHeight = false;
+            this.designRepositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.designRepositoryItemComboBox1.Name = "designRepositoryItemComboBox1";
             // 
             // splitContainer1
             // 
@@ -246,7 +330,7 @@
             this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel16.Controls.Add(this.cboxLocTheoLichSu, 0, 0);
-            this.tableLayoutPanel16.Controls.Add(this.button5, 1, 0);
+            this.tableLayoutPanel16.Controls.Add(this.simpleButton1, 1, 0);
             this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 26);
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
@@ -270,18 +354,16 @@
             this.cboxLocTheoLichSu.TabIndex = 0;
             this.cboxLocTheoLichSu.SelectedIndexChanged += new System.EventHandler(this.cboxLocTheoLichSu_SelectedIndexChanged);
             // 
-            // button5
+            // simpleButton1
             // 
-            this.button5.BackColor = System.Drawing.Color.LightCoral;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button5.Location = new System.Drawing.Point(163, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(63, 42);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Xóa Lịch Sử";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
+            this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(163, 3);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(63, 35);
+            this.simpleButton1.TabIndex = 1;
+            this.simpleButton1.Text = "Xóa Lịch Sử";
             // 
             // tableLayoutPanel10
             // 
@@ -387,15 +469,13 @@
             // 
             // btnInHoaDon
             // 
-            this.btnInHoaDon.BackColor = System.Drawing.Color.Khaki;
             this.btnInHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnInHoaDon.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInHoaDon.ImageOptions.Image")));
             this.btnInHoaDon.Location = new System.Drawing.Point(119, 142);
             this.btnInHoaDon.Name = "btnInHoaDon";
             this.btnInHoaDon.Size = new System.Drawing.Size(108, 41);
             this.btnInHoaDon.TabIndex = 2;
             this.btnInHoaDon.Text = "In Hóa Đơn";
-            this.btnInHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInHoaDon.UseVisualStyleBackColor = false;
             this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
             // 
             // panel2
@@ -417,8 +497,8 @@
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel12.Controls.Add(this.btnMuaThem, 0, 0);
             this.tableLayoutPanel12.Controls.Add(this.btnXoaTatCa, 2, 0);
+            this.tableLayoutPanel12.Controls.Add(this.btnMuaThem, 0, 0);
             this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 168);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 1;
@@ -426,33 +506,27 @@
             this.tableLayoutPanel12.Size = new System.Drawing.Size(228, 39);
             this.tableLayoutPanel12.TabIndex = 2;
             // 
-            // btnMuaThem
-            // 
-            this.btnMuaThem.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnMuaThem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMuaThem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMuaThem.Location = new System.Drawing.Point(3, 3);
-            this.btnMuaThem.Name = "btnMuaThem";
-            this.btnMuaThem.Size = new System.Drawing.Size(70, 33);
-            this.btnMuaThem.TabIndex = 0;
-            this.btnMuaThem.Text = "Mua Thêm";
-            this.btnMuaThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMuaThem.UseVisualStyleBackColor = false;
-            this.btnMuaThem.Click += new System.EventHandler(this.btnMuaThem_Click);
-            // 
             // btnXoaTatCa
             // 
-            this.btnXoaTatCa.BackColor = System.Drawing.Color.Firebrick;
             this.btnXoaTatCa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnXoaTatCa.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnXoaTatCa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaTatCa.ImageOptions.Image")));
             this.btnXoaTatCa.Location = new System.Drawing.Point(155, 3);
             this.btnXoaTatCa.Name = "btnXoaTatCa";
             this.btnXoaTatCa.Size = new System.Drawing.Size(70, 33);
-            this.btnXoaTatCa.TabIndex = 0;
+            this.btnXoaTatCa.TabIndex = 1;
             this.btnXoaTatCa.Text = "Xóa Tất Cả";
-            this.btnXoaTatCa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnXoaTatCa.UseVisualStyleBackColor = false;
             this.btnXoaTatCa.Click += new System.EventHandler(this.btnXoaTatCa_Click);
+            // 
+            // btnMuaThem
+            // 
+            this.btnMuaThem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMuaThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnMuaThem.ImageOptions.Image")));
+            this.btnMuaThem.Location = new System.Drawing.Point(3, 3);
+            this.btnMuaThem.Name = "btnMuaThem";
+            this.btnMuaThem.Size = new System.Drawing.Size(70, 33);
+            this.btnMuaThem.TabIndex = 2;
+            this.btnMuaThem.Text = "Mua Thêm";
+            this.btnMuaThem.Click += new System.EventHandler(this.btnMuaThem_Click);
             // 
             // groupBox1
             // 
@@ -752,7 +826,6 @@
             this.tableLayoutPanel8.ColumnCount = 2;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Controls.Add(this.pnIconChaoMung, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.lbChaoMung, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(295, 3);
@@ -761,18 +834,6 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(140, 48);
             this.tableLayoutPanel8.TabIndex = 2;
-            // 
-            // pnIconChaoMung
-            // 
-            this.pnIconChaoMung.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnIconChaoMung.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnIconChaoMung.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnIconChaoMung.Location = new System.Drawing.Point(3, 3);
-            this.pnIconChaoMung.Name = "pnIconChaoMung";
-            this.pnIconChaoMung.Size = new System.Drawing.Size(64, 42);
-            this.pnIconChaoMung.TabIndex = 0;
-            this.pnIconChaoMung.MouseLeave += new System.EventHandler(this.pnThongKeHomNay_MouseLeave);
-            this.pnIconChaoMung.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnThongKeHomNay_MouseMove);
             // 
             // lbChaoMung
             // 
@@ -1013,15 +1074,30 @@
             this.tabCT.Size = new System.Drawing.Size(762, 595);
             this.tabCT.TabIndex = 1;
             // 
+            // reportDesigner1
+            // 
+            this.reportDesigner1.ContainerControl = null;
+            xrDesignPanelListener1.DesignControl = this.xrDesignBarManager1;
+            this.reportDesigner1.DesignPanelListeners.AddRange(new DevExpress.XtraReports.UserDesigner.XRDesignPanelListener[] {
+            xrDesignPanelListener1});
+            this.reportDesigner1.Form = this;
+            // 
             // frmBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(762, 595);
             this.Controls.Add(this.tabCT);
+            this.Controls.Add(this.barDockControlLeft);
+            this.Controls.Add(this.barDockControlRight);
+            this.Controls.Add(this.barDockControlBottom);
+            this.Controls.Add(this.barDockControlTop);
             this.Name = "frmBanHang";
             this.Text = "frmBanHang";
             this.Load += new System.EventHandler(this.frmBanHang_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.xrDesignBarManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recentlyUsedItemsComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.designRepositoryItemComboBox1)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -1064,7 +1140,9 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabCT.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.reportDesigner1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1080,7 +1158,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
         private System.Windows.Forms.ComboBox cboxLocTheoLichSu;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -1089,11 +1166,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.TextBox txtTongSoLuong;
-        private System.Windows.Forms.Button btnInHoaDon;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
-        private System.Windows.Forms.Button btnMuaThem;
-        private System.Windows.Forms.Button btnXoaTatCa;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
         private System.Windows.Forms.Label label3;
@@ -1119,7 +1193,6 @@
         private System.Windows.Forms.Panel pnThongKeHomNay;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.Panel pnIconChaoMung;
         private System.Windows.Forms.Label lbChaoMung;
         private System.Windows.Forms.Panel pnTacVus;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
@@ -1143,5 +1216,17 @@
         private System.Windows.Forms.TreeView trvDanhMuc_TheLoai;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbDiaChiKhachHangGH;
+        private DevExpress.XtraEditors.SimpleButton btnInHoaDon;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnXoaTatCa;
+        private DevExpress.XtraEditors.SimpleButton btnMuaThem;
+        private DevExpress.XtraReports.UserDesigner.XRDesignMdiController reportDesigner1;
+        private DevExpress.XtraReports.UserDesigner.XRDesignBarManager xrDesignBarManager1;
+        private DevExpress.XtraBars.BarDockControl barDockControlTop;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraReports.UserDesigner.RecentlyUsedItemsComboBox recentlyUsedItemsComboBox1;
+        private DevExpress.XtraReports.UserDesigner.DesignRepositoryItemComboBox designRepositoryItemComboBox1;
     }
 }

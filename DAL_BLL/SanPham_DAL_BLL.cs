@@ -141,6 +141,8 @@ namespace DAL_BLL
         public SanPham_DTO laySanPham(string maSP)
         {
             var sp = db.SanPhams.FirstOrDefault(n => n.MaSP.Equals(maSP) && n.ISDELETE == false);
+            if (sp == null)
+                return null;
             return new SanPham_DTO
             {
                 MaSP = sp.MaSP.Trim(),
@@ -199,6 +201,25 @@ namespace DAL_BLL
             db.SubmitChanges();
 
             return EStatus.THANH_CONG;
+        }
+
+        public string phatSinhMaTuDong()
+        {
+            return FunctionStatic.phatSinhMaSP("SP", 20, timMaxIndex() + 1);
+        }
+
+        private int timMaxIndex()
+        {
+            int max = 0;
+            int g;
+            foreach(SanPham sp in db.SanPhams)
+            {
+                g = int.Parse(sp.MaSP.Substring(2));
+                if (g > max)
+                    max = g;
+            }
+
+            return max;
         }
     }
 }

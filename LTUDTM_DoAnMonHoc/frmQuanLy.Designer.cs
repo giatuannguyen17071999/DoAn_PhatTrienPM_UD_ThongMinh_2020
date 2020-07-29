@@ -53,7 +53,7 @@
             this.ribbonPageKhuVucQuanLy = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.mnuNhap = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.mnuThongTin = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -105,6 +105,7 @@
             this.btnDangXuat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.ImageOptions.LargeImage")));
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Tag = "MH_DANG_XUAT";
+            this.btnDangXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDangXuat_ItemClick);
             // 
             // ribbonPageCategory3
             // 
@@ -276,19 +277,20 @@
             // 
             // ribbonPageGroup4
             // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup4.ItemLinks.Add(this.mnuNhap);
             this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup4.ItemLinks.Add(this.mnuThongTin);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             // 
-            // barButtonItem1
+            // mnuNhap
             // 
-            this.barButtonItem1.Caption = "Nhập...";
-            this.barButtonItem1.Id = 6;
-            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.barButtonItem1.Name = "barButtonItem1";
-            this.barButtonItem1.Tag = "MH_NHAP";
+            this.mnuNhap.Caption = "Nhập...";
+            this.mnuNhap.Id = 6;
+            this.mnuNhap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("mnuNhap.ImageOptions.Image")));
+            this.mnuNhap.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mnuNhap.ImageOptions.LargeImage")));
+            this.mnuNhap.Name = "mnuNhap";
+            this.mnuNhap.Tag = "MH_NHAP";
+            this.mnuNhap.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mnuNhap_ItemClick);
             // 
             // barButtonItem2
             // 
@@ -340,7 +342,7 @@
             this.mnuQuanLyNhanVien,
             this.mnuQuanLyQuyen,
             this.mnuQuanLyNhomQuyen,
-            this.barButtonItem1,
+            this.mnuNhap,
             this.barButtonItem2,
             this.btnDangXuat,
             this.barButtonItem4,
@@ -379,8 +381,8 @@
             // 
             this.mnuKhachHang.Caption = "Thêm mới khách hàng";
             this.mnuKhachHang.Id = 12;
-            this.mnuKhachHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
-            this.mnuKhachHang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
+            this.mnuKhachHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("mnuKhachHang.ImageOptions.Image")));
+            this.mnuKhachHang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mnuKhachHang.ImageOptions.LargeImage")));
             this.mnuKhachHang.Name = "mnuKhachHang";
             this.mnuKhachHang.Tag = "MH_QL_KHACH_HANG";
             this.mnuKhachHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mnuKhachHang_ItemClick);
@@ -544,7 +546,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageKhuVucQuanLy;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem mnuNhap;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory2;

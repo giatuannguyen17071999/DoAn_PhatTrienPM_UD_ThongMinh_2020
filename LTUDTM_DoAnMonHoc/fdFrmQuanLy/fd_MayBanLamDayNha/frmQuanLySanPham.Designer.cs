@@ -33,11 +33,12 @@
             this.dgvSanPham = new DevExpress.XtraGrid.GridControl();
             this.gvSanPham = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnDong = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
-            this.btnDong = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXuatExel = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
@@ -106,19 +107,21 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 7;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.tableLayoutPanel2.ColumnCount = 8;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel2.Controls.Add(this.btnDong, 6, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnThem, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnXoa, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnSua, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnLuu, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnDong, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnXuatExel, 5, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 338);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -127,13 +130,23 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(507, 32);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
+            // btnDong
+            // 
+            this.btnDong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.ImageOptions.Image")));
+            this.btnDong.Location = new System.Drawing.Point(381, 3);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(57, 26);
+            this.btnDong.TabIndex = 8;
+            this.btnDong.Text = "Đóng Form";
+            // 
             // btnThem
             // 
             this.btnThem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(75, 3);
+            this.btnThem.Location = new System.Drawing.Point(66, 3);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(66, 26);
+            this.btnThem.Size = new System.Drawing.Size(57, 26);
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm Sản Phẩm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -142,9 +155,9 @@
             // 
             this.btnXoa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(147, 3);
+            this.btnXoa.Location = new System.Drawing.Point(129, 3);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(66, 26);
+            this.btnXoa.Size = new System.Drawing.Size(57, 26);
             this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "Xóa Sản Phẩm";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -153,9 +166,9 @@
             // 
             this.btnSua.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(219, 3);
+            this.btnSua.Location = new System.Drawing.Point(192, 3);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(66, 26);
+            this.btnSua.Size = new System.Drawing.Size(57, 26);
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa Sản Phẩm";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -164,23 +177,23 @@
             // 
             this.btnLuu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(291, 3);
+            this.btnLuu.Location = new System.Drawing.Point(255, 3);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(66, 26);
+            this.btnLuu.Size = new System.Drawing.Size(57, 26);
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "Lưu Sản Phẩm";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // btnDong
+            // btnXuatExel
             // 
-            this.btnDong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.ImageOptions.Image")));
-            this.btnDong.Location = new System.Drawing.Point(363, 3);
-            this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(66, 26);
-            this.btnDong.TabIndex = 4;
-            this.btnDong.Text = "Đóng Form";
-            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
+            this.btnXuatExel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnXuatExel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXuatExel.ImageOptions.Image")));
+            this.btnXuatExel.Location = new System.Drawing.Point(318, 3);
+            this.btnXuatExel.Name = "btnXuatExel";
+            this.btnXuatExel.Size = new System.Drawing.Size(57, 26);
+            this.btnXuatExel.TabIndex = 9;
+            this.btnXuatExel.Text = "Xuất Excel";
+            this.btnXuatExel.Click += new System.EventHandler(this.btnXuatExel_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -472,7 +485,6 @@
         private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraEditors.SimpleButton btnSua;
         private DevExpress.XtraEditors.SimpleButton btnLuu;
-        private DevExpress.XtraEditors.SimpleButton btnDong;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Label label4;
@@ -493,5 +505,7 @@
         private ControlDesign.tbNhapSo tbSoLuongTon;
         private ControlDesign.tbNhapSo tbGiaBan;
         private System.Windows.Forms.DateTimePicker dtpNgayTao;
+        private DevExpress.XtraEditors.SimpleButton btnDong;
+        private DevExpress.XtraEditors.SimpleButton btnXuatExel;
     }
 }

@@ -21,6 +21,12 @@ namespace DAL_BLL
 
         #region Phần Của Việt
 
+        public int taoView(int maDH)
+        {
+            string query = string.Format("ALTER VIEW V_CTHOADON_IN AS SELECT C.MaSP, S.TenSP, C.SoLuong, C.DonGia FROM SanPham S, CTDonHang C WHERE S.MaSP = C.MaSP AND MaDH = {0}", maDH);
+            return db.ExecuteCommand(query);
+        }
+
         public DonHang them(DonHang dh )
         {
             db.DonHangs.InsertOnSubmit(dh);

@@ -17,6 +17,12 @@ using DevExpress.XtraBars;
 using DAL_BLL;
 using LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy.frmPhatSinh;
 using System.Threading;
+using LTUDTM_DoAnMonHoc.Report;
+using DevExpress.XtraReports.UI;
+using DevExpress.XtraReports.Parameters;
+using DevExpress.Utils.Text;
+using DevExpress.XtraRichEdit.Import.Doc;
+using DevExpress.CodeParser;
 
 namespace LTUDTM_DoAnMonHoc
 {
@@ -48,7 +54,7 @@ namespace LTUDTM_DoAnMonHoc
 
         private void barItemGiaoDienBanHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FunctionStatic.hienThiFormMoi(this, new frmBanHang());
+            FunctionStatic.hienThiFormMoi(this, new frmBanHang(nVien));
         }
 
         private void mnuQuanLyNhomQuyen_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -156,6 +162,27 @@ namespace LTUDTM_DoAnMonHoc
         private void mnuKhachHang_ItemClick(object sender, ItemClickEventArgs e)
         {
             FunctionStatic.hienThiFormMoi(this, new frnQuanLyKhachHang());
+        }
+
+        private void mnuNhap_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            
+        }
+
+        private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            dangXuat();
+        }
+
+        public void dangXuat()
+        {
+            DialogResult res = FunctionStatic.hienThiCauHoiYesNo("Xác nhận đăng xuất?");
+            if (res != DialogResult.Yes)
+                return;
+            Hide();
+            frmLogin frm = new frmLogin();
+            frm.ShowDialog();
+            Close();
         }
     }
 }
