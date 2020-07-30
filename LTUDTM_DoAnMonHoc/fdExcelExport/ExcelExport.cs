@@ -985,7 +985,7 @@ namespace LTUDTM_DoAnMonHoc.fdExcelExport
            
         //    replacer.Add(V_TONGSO, "100");
 
-            //BuildReplacerCurrentDate(ref replacer, dataSource.Count);
+            BuildReplacerCurrentDate(ref replacer, dataSource.Count);
 
             return OutSimpleReport(dataSource, replacer, fileName, isPrintPreview, ref fileName);
         }

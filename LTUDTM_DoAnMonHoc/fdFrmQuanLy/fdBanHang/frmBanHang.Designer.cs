@@ -28,14 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBanHang));
-            DevExpress.XtraReports.UserDesigner.XRDesignPanelListener xrDesignPanelListener1 = new DevExpress.XtraReports.UserDesigner.XRDesignPanelListener();
-            this.xrDesignBarManager1 = new DevExpress.XtraReports.UserDesigner.XRDesignBarManager(this.components);
-            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.recentlyUsedItemsComboBox1 = new DevExpress.XtraReports.UserDesigner.RecentlyUsedItemsComboBox();
             this.designRepositoryItemComboBox1 = new DevExpress.XtraReports.UserDesigner.DesignRepositoryItemComboBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -103,15 +96,13 @@
             this.tbTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.trvDanhMuc_TheLoai = new System.Windows.Forms.TreeView();
-            this.pnSanPhams = new System.Windows.Forms.Panel();
+            this.pnSanPhams = new System.Windows.Forms.FlowLayoutPanel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.ttripLblShowThoiGianPhienLamViec = new System.Windows.Forms.ToolStripStatusLabel();
             this.ttripProgessBarTienTrinhTaiSanPhams = new System.Windows.Forms.ToolStripProgressBar();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabCT = new System.Windows.Forms.TabControl();
-            this.reportDesigner1 = new DevExpress.XtraReports.UserDesigner.XRDesignMdiController(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.xrDesignBarManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.recentlyUsedItemsComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.designRepositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -149,62 +140,7 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabCT.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.reportDesigner1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // xrDesignBarManager1
-            // 
-            this.xrDesignBarManager1.DockControls.Add(this.barDockControlTop);
-            this.xrDesignBarManager1.DockControls.Add(this.barDockControlBottom);
-            this.xrDesignBarManager1.DockControls.Add(this.barDockControlLeft);
-            this.xrDesignBarManager1.DockControls.Add(this.barDockControlRight);
-            this.xrDesignBarManager1.FontNameBox = this.recentlyUsedItemsComboBox1;
-            this.xrDesignBarManager1.FontNameEdit = null;
-            this.xrDesignBarManager1.FontSizeBox = this.designRepositoryItemComboBox1;
-            this.xrDesignBarManager1.FontSizeEdit = null;
-            this.xrDesignBarManager1.Form = this;
-            this.xrDesignBarManager1.FormattingToolbar = null;
-            this.xrDesignBarManager1.HintStaticItem = null;
-            this.xrDesignBarManager1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("xrDesignBarManager1.ImageStream")));
-            this.xrDesignBarManager1.LayoutToolbar = null;
-            this.xrDesignBarManager1.MaxItemId = 76;
-            this.xrDesignBarManager1.Toolbar = null;
-            this.xrDesignBarManager1.TransparentEditorsMode = DevExpress.Utils.DefaultBoolean.True;
-            this.xrDesignBarManager1.Updates.AddRange(new string[] {
-            "Toolbox"});
-            this.xrDesignBarManager1.ZoomItem = null;
-            // 
-            // barDockControlTop
-            // 
-            this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Manager = this.xrDesignBarManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(762, 0);
-            // 
-            // barDockControlBottom
-            // 
-            this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 595);
-            this.barDockControlBottom.Manager = this.xrDesignBarManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(762, 0);
-            // 
-            // barDockControlLeft
-            // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlLeft.Manager = this.xrDesignBarManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 595);
-            // 
-            // barDockControlRight
-            // 
-            this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(762, 0);
-            this.barDockControlRight.Manager = this.xrDesignBarManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 595);
             // 
             // recentlyUsedItemsComboBox1
             // 
@@ -1074,28 +1010,15 @@
             this.tabCT.Size = new System.Drawing.Size(762, 595);
             this.tabCT.TabIndex = 1;
             // 
-            // reportDesigner1
-            // 
-            this.reportDesigner1.ContainerControl = null;
-            xrDesignPanelListener1.DesignControl = this.xrDesignBarManager1;
-            this.reportDesigner1.DesignPanelListeners.AddRange(new DevExpress.XtraReports.UserDesigner.XRDesignPanelListener[] {
-            xrDesignPanelListener1});
-            this.reportDesigner1.Form = this;
-            // 
             // frmBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(762, 595);
             this.Controls.Add(this.tabCT);
-            this.Controls.Add(this.barDockControlLeft);
-            this.Controls.Add(this.barDockControlRight);
-            this.Controls.Add(this.barDockControlBottom);
-            this.Controls.Add(this.barDockControlTop);
             this.Name = "frmBanHang";
             this.Text = "frmBanHang";
             this.Load += new System.EventHandler(this.frmBanHang_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.xrDesignBarManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.recentlyUsedItemsComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.designRepositoryItemComboBox1)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -1140,9 +1063,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabCT.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.reportDesigner1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1206,7 +1127,6 @@
         private System.Windows.Forms.ComboBox cboxTimKiem;
         private System.Windows.Forms.TextBox tbTimKiem;
         private System.Windows.Forms.Button btnTimKiem;
-        private System.Windows.Forms.Panel pnSanPhams;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel ttripLblShowThoiGianPhienLamViec;
         private System.Windows.Forms.ToolStripProgressBar ttripProgessBarTienTrinhTaiSanPhams;
@@ -1220,13 +1140,8 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton btnXoaTatCa;
         private DevExpress.XtraEditors.SimpleButton btnMuaThem;
-        private DevExpress.XtraReports.UserDesigner.XRDesignMdiController reportDesigner1;
-        private DevExpress.XtraReports.UserDesigner.XRDesignBarManager xrDesignBarManager1;
-        private DevExpress.XtraBars.BarDockControl barDockControlTop;
-        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
-        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
-        private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraReports.UserDesigner.RecentlyUsedItemsComboBox recentlyUsedItemsComboBox1;
         private DevExpress.XtraReports.UserDesigner.DesignRepositoryItemComboBox designRepositoryItemComboBox1;
+        private System.Windows.Forms.FlowLayoutPanel pnSanPhams;
     }
 }
