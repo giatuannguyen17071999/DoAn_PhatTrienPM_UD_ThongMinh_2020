@@ -885,7 +885,7 @@ namespace LTUDTM_DoAnMonHoc.fdExcelExport
                     arrByte = File.ReadAllBytes("DanhMucKhoa.xls").ToArray();
                     break;
                 case T_SanPhams:
-                    arrByte = File.ReadAllBytes("SanPhams.xlsx").ToArray();
+                    arrByte = File.ReadAllBytes("SanPhams.xls").ToArray();
                     break;
                 #endregion
             }
@@ -967,7 +967,7 @@ namespace LTUDTM_DoAnMonHoc.fdExcelExport
         public bool ExportSanPhams(List<SanPham_DTO> dataSource, ref string fileName, bool isPrintPreview)
         {
             // Check if data is null
-            if (dataSource == null || (dataSource != null && dataSource.Count == 0))
+            if (dataSource == null || (dataSource.Count == 0))
             {
                 return false;
             }
