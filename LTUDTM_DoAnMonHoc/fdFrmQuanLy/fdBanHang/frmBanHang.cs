@@ -253,10 +253,11 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
             DialogResult res = FunctionStatic.hienThiCauHoiYesNo("Bạn Có Chắc Muốn Xóa Khách Hàng Đang Chờ Này Không?");
             if (res == DialogResult.Yes)
             {
-                ctDonHangDAL_BLL.xoa(dhChoInHoaDon.MaDH);
-                dhDAL_BLL.xoa(dhChoInHoaDon.MaDH);
+                //ctDonHangDAL_BLL.xoa(dhChoInHoaDon.MaDH);
+                //dhDAL_BLL.xoa(dhChoInHoaDon.MaDH);
                 dhChoInHoaDon = null;
                 khChoInHoaDon = null;
+                ctDonHangs.Clear();
                 ganKhachHangTuChoiMua();
             }
         }
@@ -591,8 +592,10 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
             DialogResult res = FunctionStatic.hienThiCauHoiYesNo("Bạn chắc muốn xóa tất cả chi tiết đơn hàng này?");
             if (res == DialogResult.No)
                 return;
-            ctDonHangDAL_BLL.xoa(dhChoInHoaDon.MaDH);
+            //ctDonHangDAL_BLL.xoa(dhChoInHoaDon.MaDH);
             pnGioHang.Controls.Clear();
+            ctDonHangs.Clear();
+            dhChoInHoaDon.TONGTIEN = 0;
             hienThiTongTien_TongSLMua();
         }
 

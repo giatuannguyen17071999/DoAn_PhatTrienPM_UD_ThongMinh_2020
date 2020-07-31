@@ -1010,6 +1010,8 @@ namespace DAL_BLL
 		
 		private string _TenDM;
 		
+		private System.Nullable<bool> _ISDELETE;
+		
 		private EntitySet<LoaiSP> _LoaiSPs;
 		
     #region Extensibility Method Definitions
@@ -1020,6 +1022,8 @@ namespace DAL_BLL
     partial void OnMaDMChanged();
     partial void OnTenDMChanging(string value);
     partial void OnTenDMChanged();
+    partial void OnISDELETEChanging(System.Nullable<bool> value);
+    partial void OnISDELETEChanged();
     #endregion
 		
 		public DanhMuc()
@@ -1064,6 +1068,26 @@ namespace DAL_BLL
 					this._TenDM = value;
 					this.SendPropertyChanged("TenDM");
 					this.OnTenDMChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ISDELETE", DbType="Bit")]
+		public System.Nullable<bool> ISDELETE
+		{
+			get
+			{
+				return this._ISDELETE;
+			}
+			set
+			{
+				if ((this._ISDELETE != value))
+				{
+					this.OnISDELETEChanging(value);
+					this.SendPropertyChanging();
+					this._ISDELETE = value;
+					this.SendPropertyChanged("ISDELETE");
+					this.OnISDELETEChanged();
 				}
 			}
 		}
@@ -1731,6 +1755,8 @@ namespace DAL_BLL
 		
 		private string _TenLoaiSP;
 		
+		private System.Nullable<bool> _ISDELETE;
+		
 		private EntitySet<SanPham> _SanPhams;
 		
 		private EntityRef<DanhMuc> _DanhMuc;
@@ -1745,6 +1771,8 @@ namespace DAL_BLL
     partial void OnMaDMChanged();
     partial void OnTenLoaiSPChanging(string value);
     partial void OnTenLoaiSPChanged();
+    partial void OnISDELETEChanging(System.Nullable<bool> value);
+    partial void OnISDELETEChanged();
     #endregion
 		
 		public LoaiSP()
@@ -1814,6 +1842,26 @@ namespace DAL_BLL
 					this._TenLoaiSP = value;
 					this.SendPropertyChanged("TenLoaiSP");
 					this.OnTenLoaiSPChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ISDELETE", DbType="Bit")]
+		public System.Nullable<bool> ISDELETE
+		{
+			get
+			{
+				return this._ISDELETE;
+			}
+			set
+			{
+				if ((this._ISDELETE != value))
+				{
+					this.OnISDELETEChanging(value);
+					this.SendPropertyChanging();
+					this._ISDELETE = value;
+					this.SendPropertyChanged("ISDELETE");
+					this.OnISDELETEChanged();
 				}
 			}
 		}

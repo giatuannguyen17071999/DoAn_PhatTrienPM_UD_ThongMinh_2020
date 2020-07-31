@@ -19,7 +19,7 @@ namespace DAL_BLL
         public List<LoaiSP_DTO> layTatCa()
         {
             List<LoaiSP_DTO> result = new List<LoaiSP_DTO>();
-            foreach (LoaiSP l in db.LoaiSPs)
+            foreach (LoaiSP l in db.LoaiSPs.Where(n => n.ISDELETE != true))
                 result.Add(new LoaiSP_DTO
                 {
                     MaLoai = l.MaLoai,
@@ -33,7 +33,7 @@ namespace DAL_BLL
         public List<LoaiSP_DTO> layTatCa(int maDM)
         {
             List<LoaiSP_DTO> result = new List<LoaiSP_DTO>();
-            foreach (LoaiSP l in db.LoaiSPs.Where(n => n.MaDM == maDM))
+            foreach (LoaiSP l in db.LoaiSPs.Where(n => n.MaDM == maDM && n.ISDELETE != true))
                 result.Add(new LoaiSP_DTO
                 {
                     MaLoai = l.MaLoai,
@@ -46,7 +46,7 @@ namespace DAL_BLL
 
         public IQueryable<LoaiSP> layTatCaLoaiSP()
         {
-            return from lsp in db.LoaiSPs select lsp;
+            return from lsp in db.LoaiSPs where lsp.ISDELETE != true select lsp;
         }
 
         public LoaiSP LoaiSanPhamTheoMaLoaiSP(int MaLoaiSP)
@@ -59,7 +59,7 @@ namespace DAL_BLL
             LoaiSP lsp = db.LoaiSPs.Where(m => m.MaLoai.Equals(MaLoaiSP)).FirstOrDefault();
             if (lsp != null)
             {
-                db.LoaiSPs.DeleteOnSubmit(lsp);
+                lsp.ISDELETE = true;
                 db.SubmitChanges();
                 return true;
             }
@@ -83,12 +83,18 @@ namespace DAL_BLL
         public bool ThemLoaiSanPham(String TenLoaiSanPham, String MaDM)
         {
             if (TimTenTrung(TenLoaiSanPham) == 1)
-                return false;
+            {
+                LoaiSP lsp = db.LoaiSPs.FirstOrDefault(n => n.TenLoaiSP.Equals(TenLoaiSanPham));
+                lsp.ISDELETE = false;
+                db.SubmitChanges();
+                return true;
+            }
             else
             {
                 LoaiSP lsp = new LoaiSP();
                 lsp.TenLoaiSP = TenLoaiSanPham;
                 lsp.MaDM = int.Parse(MaDM);
+                lsp.ISDELETE = false;
                 db.LoaiSPs.InsertOnSubmit(lsp);
                 db.SubmitChanges();
                 return true;

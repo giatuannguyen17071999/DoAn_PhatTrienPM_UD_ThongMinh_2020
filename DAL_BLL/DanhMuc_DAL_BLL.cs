@@ -19,7 +19,7 @@ namespace DAL_BLL
         public List<DanhMuc_DTO> layTatCa()
         {
             List<DanhMuc_DTO> result = new List<DanhMuc_DTO>();
-            foreach (DanhMuc dm in db.DanhMucs)
+            foreach (DanhMuc dm in db.DanhMucs.Where(n => n.ISDELETE != true))
                 result.Add(new DanhMuc_DTO
                 {
                     MaDM = dm.MaDM,
@@ -42,7 +42,7 @@ namespace DAL_BLL
             DanhMuc dm = db.DanhMucs.Where(m => m.MaDM.Equals(MaDM)).FirstOrDefault();
             if (dm != null)
             {
-                db.DanhMucs.DeleteOnSubmit(dm);
+                dm.ISDELETE = true;
                 db.SubmitChanges();
                 return true;
             }
@@ -65,11 +65,17 @@ namespace DAL_BLL
         public bool ThemDanhMuc(String TenDanhMuc)
         {
             if (TimTenTrung(TenDanhMuc) == 1)
-                return false;
+            {
+                DanhMuc dm = db.DanhMucs.FirstOrDefault(n => n.TenDM.Equals(TenDanhMuc));
+                dm.ISDELETE = false;
+                db.SubmitChanges();
+                return true;
+            }
             else
             {
                 DanhMuc dm = new DanhMuc();
                 dm.TenDM = TenDanhMuc;
+                dm.ISDELETE = false;
                 db.DanhMucs.InsertOnSubmit(dm);
                 db.SubmitChanges();
                 return true;

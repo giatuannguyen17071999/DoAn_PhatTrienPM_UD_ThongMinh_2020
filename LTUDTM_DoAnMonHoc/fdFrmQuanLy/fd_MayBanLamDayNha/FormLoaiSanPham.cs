@@ -188,6 +188,8 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
         private void gvHienThiDuLieu_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             rowHienTai = e.FocusedRowHandle;
+            if (rowHienTai < 0)
+                return;
             txtTenLoaiSP.Text = gvHienThiDuLieu.GetRowCellValue(rowHienTai, "TenLoaiSP").ToString();
             String MaLoaiSP = gvHienThiDuLieu.GetRowCellValue(rowHienTai, "MaLoai").ToString();
             lsp = new LoaiSP();

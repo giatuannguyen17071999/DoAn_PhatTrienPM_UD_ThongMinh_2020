@@ -77,16 +77,18 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
         private void gvHienThiDuLieu_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             rowHienTai = e.FocusedRowHandle;
+            if (rowHienTai < 0)
+                return;
             txtTenDanhMuc.Text = gvHienThiDuLieu.GetRowCellValue(rowHienTai, "TenDM").ToString();
         }
 
         private void barbtnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             String MaDM = gvHienThiDuLieu.GetRowCellValue(rowHienTai, "MaDM").ToString();
-            bool kq = danhmucs.XoaDanhMuc(MaDM);
             DialogResult quyetdinh = XtraMessageBox.Show("Bạn Muốn Xóa Không ? ", "Thông Báo ", MessageBoxButtons.YesNo);
             if(quyetdinh==DialogResult.Yes)
             {
+                bool kq = danhmucs.XoaDanhMuc(MaDM);
                 if (kq)
                 {
                     XtraMessageBox.Show("Đã Xóa Thành Công");
