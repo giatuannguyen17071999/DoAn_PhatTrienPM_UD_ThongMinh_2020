@@ -223,24 +223,6 @@ C:\Users\lockh\Desktop\QL_TBDD\DoAn_PhatTrienPM_UD_ThongMinh_2020\LTUDTM_DoAnMon
 C:\Users\lockh\Desktop\QL_TBDD\DoAn_PhatTrienPM_UD_ThongMinh_2020\LTUDTM_DoAnMonHoc\bin\Debug\es\DevExpress.Diagram.v20.1.Core.resources.dll
 C:\Users\lockh\Desktop\QL_TBDD\DoAn_PhatTrienPM_UD_ThongMinh_2020\LTUDTM_DoAnMonHoc\bin\Debug\ja\DevExpress.Diagram.v20.1.Core.resources.dll
 C:\Users\lockh\Desktop\QL_TBDD\DoAn_PhatTrienPM_UD_ThongMinh_2020\LTUDTM_DoAnMonHoc\bin\Debug\ru\DevExpress.Diagram.v20.1.Core.resources.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\LTUDTM_DoAnMonHoc.exe.config
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\LTUDTM_DoAnMonHoc.exe
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\LTUDTM_DoAnMonHoc.pdb
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\ControlDesign.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DAL_BLL.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DTO.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\MyLibrary.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\Syncfusion.Compression.Base.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\Syncfusion.DocIO.Base.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\Syncfusion.XlsIO.Base.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\ControlDesign.pdb
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DAL_BLL.pdb
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DAL_BLL.dll.config
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DTO.pdb
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\MyLibrary.pdb
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\Syncfusion.Compression.Base.xml
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\Syncfusion.DocIO.Base.xml
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\Syncfusion.XlsIO.Base.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.csprojAssemblyReference.cache
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang.frmBanHang.resources
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang.frmPhatSinh.frmChonKhachHang.resources
@@ -265,9 +247,11 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.csproj.GenerateResource.cache
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.exe.licenses
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.csproj.CoreCompileInputs.cache
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.csproj.CopyComplete
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.exe
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.pdb
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\LTUDTM_DoAnMonHoc.exe.config
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\LTUDTM_DoAnMonHoc.exe
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\LTUDTM_DoAnMonHoc.pdb
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\ControlDesign.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DAL_BLL.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.Charts.v20.1.Core.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.CodeParser.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.Data.Desktop.v20.1.dll
@@ -303,9 +287,19 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.XtraRichEdit.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.XtraTreeList.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.XtraVerticalGrid.v20.1.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DTO.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\MyLibrary.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\Syncfusion.Compression.Base.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\Syncfusion.DocIO.Base.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\Syncfusion.XlsIO.Base.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.XtraDiagram.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.Diagram.v20.1.Core.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.Images.v20.1.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\ControlDesign.pdb
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DAL_BLL.pdb
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DAL_BLL.dll.config
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DTO.pdb
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\MyLibrary.pdb
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.Data.Desktop.v20.1.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.Data.v20.1.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.DataAccess.v20.1.xml
@@ -336,6 +330,9 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.XtraRichEdit.v20.1.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.XtraTreeList.v20.1.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.XtraVerticalGrid.v20.1.xml
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\Syncfusion.Compression.Base.xml
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\Syncfusion.DocIO.Base.xml
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\Syncfusion.XlsIO.Base.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.XtraDiagram.v20.1.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\DevExpress.Diagram.v20.1.Core.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\de\DevExpress.Data.v20.1.resources.dll
@@ -454,3 +451,6 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\es\DevExpress.Diagram.v20.1.Core.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\ja\DevExpress.Diagram.v20.1.Core.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\bin\Debug\ru\DevExpress.Diagram.v20.1.Core.resources.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.csproj.CopyComplete
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.exe
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\LTUDTM_DoAnMonHoc\obj\Debug\LTUDTM_DoAnMonHoc.pdb

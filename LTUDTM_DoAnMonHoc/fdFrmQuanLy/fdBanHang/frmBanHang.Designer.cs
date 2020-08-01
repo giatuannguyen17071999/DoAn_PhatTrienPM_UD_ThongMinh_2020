@@ -83,6 +83,7 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.lbChaoMung = new System.Windows.Forms.Label();
+            this.lbHienThiSoLuongSanPham = new System.Windows.Forms.Label();
             this.pnTacVus = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -92,7 +93,6 @@
             this.rdoDuoi2Trieu = new System.Windows.Forms.RadioButton();
             this.rdoDuoi5Trieu = new System.Windows.Forms.RadioButton();
             this.rdoTren5Trieu = new System.Windows.Forms.RadioButton();
-            this.cboxTimKiem = new System.Windows.Forms.ComboBox();
             this.tbTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.trvDanhMuc_TheLoai = new System.Windows.Forms.TreeView();
@@ -103,6 +103,9 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabCT = new System.Windows.Forms.TabControl();
+            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
+            this.cboxTimKiem = new System.Windows.Forms.ComboBox();
+            this.cbCongThemGiaTien = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.recentlyUsedItemsComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.designRepositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -140,6 +143,7 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabCT.SuspendLayout();
+            this.tableLayoutPanel18.SuspendLayout();
             this.SuspendLayout();
             // 
             // recentlyUsedItemsComboBox1
@@ -763,6 +767,7 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.Controls.Add(this.lbChaoMung, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.lbHienThiSoLuongSanPham, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(295, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
@@ -778,6 +783,16 @@
             this.lbChaoMung.Name = "lbChaoMung";
             this.lbChaoMung.Size = new System.Drawing.Size(64, 48);
             this.lbChaoMung.TabIndex = 1;
+            // 
+            // lbHienThiSoLuongSanPham
+            // 
+            this.lbHienThiSoLuongSanPham.AutoSize = true;
+            this.lbHienThiSoLuongSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbHienThiSoLuongSanPham.Location = new System.Drawing.Point(3, 0);
+            this.lbHienThiSoLuongSanPham.Name = "lbHienThiSoLuongSanPham";
+            this.lbHienThiSoLuongSanPham.Size = new System.Drawing.Size(64, 48);
+            this.lbHienThiSoLuongSanPham.TabIndex = 2;
+            this.lbHienThiSoLuongSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnTacVus
             // 
@@ -839,8 +854,8 @@
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.4124F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.5876F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(103, 371);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
@@ -852,17 +867,17 @@
             this.tableLayoutPanel_rdo_drop_search.Controls.Add(this.rdoDuoi2Trieu, 0, 0);
             this.tableLayoutPanel_rdo_drop_search.Controls.Add(this.rdoDuoi5Trieu, 0, 1);
             this.tableLayoutPanel_rdo_drop_search.Controls.Add(this.rdoTren5Trieu, 0, 2);
-            this.tableLayoutPanel_rdo_drop_search.Controls.Add(this.cboxTimKiem, 1, 0);
             this.tableLayoutPanel_rdo_drop_search.Controls.Add(this.tbTimKiem, 1, 1);
             this.tableLayoutPanel_rdo_drop_search.Controls.Add(this.btnTimKiem, 1, 2);
+            this.tableLayoutPanel_rdo_drop_search.Controls.Add(this.tableLayoutPanel18, 1, 0);
             this.tableLayoutPanel_rdo_drop_search.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel_rdo_drop_search.Location = new System.Drawing.Point(3, 262);
+            this.tableLayoutPanel_rdo_drop_search.Location = new System.Drawing.Point(3, 216);
             this.tableLayoutPanel_rdo_drop_search.Name = "tableLayoutPanel_rdo_drop_search";
             this.tableLayoutPanel_rdo_drop_search.RowCount = 3;
-            this.tableLayoutPanel_rdo_drop_search.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel_rdo_drop_search.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel_rdo_drop_search.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel_rdo_drop_search.Size = new System.Drawing.Size(97, 106);
+            this.tableLayoutPanel_rdo_drop_search.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.39474F));
+            this.tableLayoutPanel_rdo_drop_search.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.65789F));
+            this.tableLayoutPanel_rdo_drop_search.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.28947F));
+            this.tableLayoutPanel_rdo_drop_search.Size = new System.Drawing.Size(97, 152);
             this.tableLayoutPanel_rdo_drop_search.TabIndex = 1;
             // 
             // rdoDuoi2Trieu
@@ -871,7 +886,7 @@
             this.rdoDuoi2Trieu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rdoDuoi2Trieu.Location = new System.Drawing.Point(3, 3);
             this.rdoDuoi2Trieu.Name = "rdoDuoi2Trieu";
-            this.rdoDuoi2Trieu.Size = new System.Drawing.Size(42, 29);
+            this.rdoDuoi2Trieu.Size = new System.Drawing.Size(42, 63);
             this.rdoDuoi2Trieu.TabIndex = 0;
             this.rdoDuoi2Trieu.TabStop = true;
             this.rdoDuoi2Trieu.Text = "Dưới 2 Triệu";
@@ -882,12 +897,12 @@
             // 
             this.rdoDuoi5Trieu.AutoSize = true;
             this.rdoDuoi5Trieu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rdoDuoi5Trieu.Location = new System.Drawing.Point(3, 38);
+            this.rdoDuoi5Trieu.Location = new System.Drawing.Point(3, 72);
             this.rdoDuoi5Trieu.Name = "rdoDuoi5Trieu";
-            this.rdoDuoi5Trieu.Size = new System.Drawing.Size(42, 29);
+            this.rdoDuoi5Trieu.Size = new System.Drawing.Size(42, 33);
             this.rdoDuoi5Trieu.TabIndex = 0;
             this.rdoDuoi5Trieu.TabStop = true;
-            this.rdoDuoi5Trieu.Text = "Dưới 5 Triệu";
+            this.rdoDuoi5Trieu.Text = "Dưới 5 Triệu Trên 2 Triệu";
             this.rdoDuoi5Trieu.UseVisualStyleBackColor = true;
             this.rdoDuoi5Trieu.CheckedChanged += new System.EventHandler(this.rdoDuoi2Trieu_CheckedChanged);
             // 
@@ -895,28 +910,19 @@
             // 
             this.rdoTren5Trieu.AutoSize = true;
             this.rdoTren5Trieu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rdoTren5Trieu.Location = new System.Drawing.Point(3, 73);
+            this.rdoTren5Trieu.Location = new System.Drawing.Point(3, 111);
             this.rdoTren5Trieu.Name = "rdoTren5Trieu";
-            this.rdoTren5Trieu.Size = new System.Drawing.Size(42, 30);
+            this.rdoTren5Trieu.Size = new System.Drawing.Size(42, 38);
             this.rdoTren5Trieu.TabIndex = 0;
             this.rdoTren5Trieu.TabStop = true;
             this.rdoTren5Trieu.Text = "Trên 5 Triệu";
             this.rdoTren5Trieu.UseVisualStyleBackColor = true;
             this.rdoTren5Trieu.CheckedChanged += new System.EventHandler(this.rdoDuoi2Trieu_CheckedChanged);
             // 
-            // cboxTimKiem
-            // 
-            this.cboxTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cboxTimKiem.FormattingEnabled = true;
-            this.cboxTimKiem.Location = new System.Drawing.Point(51, 3);
-            this.cboxTimKiem.Name = "cboxTimKiem";
-            this.cboxTimKiem.Size = new System.Drawing.Size(43, 21);
-            this.cboxTimKiem.TabIndex = 3;
-            // 
             // tbTimKiem
             // 
             this.tbTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbTimKiem.Location = new System.Drawing.Point(51, 38);
+            this.tbTimKiem.Location = new System.Drawing.Point(51, 72);
             this.tbTimKiem.Name = "tbTimKiem";
             this.tbTimKiem.Size = new System.Drawing.Size(43, 21);
             this.tbTimKiem.TabIndex = 4;
@@ -924,9 +930,9 @@
             // btnTimKiem
             // 
             this.btnTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnTimKiem.Location = new System.Drawing.Point(51, 73);
+            this.btnTimKiem.Location = new System.Drawing.Point(51, 111);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(43, 30);
+            this.btnTimKiem.Size = new System.Drawing.Size(43, 38);
             this.btnTimKiem.TabIndex = 5;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -935,9 +941,10 @@
             // trvDanhMuc_TheLoai
             // 
             this.trvDanhMuc_TheLoai.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.trvDanhMuc_TheLoai.FullRowSelect = true;
             this.trvDanhMuc_TheLoai.Location = new System.Drawing.Point(3, 3);
             this.trvDanhMuc_TheLoai.Name = "trvDanhMuc_TheLoai";
-            this.trvDanhMuc_TheLoai.Size = new System.Drawing.Size(97, 253);
+            this.trvDanhMuc_TheLoai.Size = new System.Drawing.Size(97, 207);
             this.trvDanhMuc_TheLoai.TabIndex = 2;
             this.trvDanhMuc_TheLoai.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.trvDanhMuc_TheLoai_AfterSelect);
             // 
@@ -1010,6 +1017,43 @@
             this.tabCT.Size = new System.Drawing.Size(762, 595);
             this.tabCT.TabIndex = 1;
             // 
+            // tableLayoutPanel18
+            // 
+            this.tableLayoutPanel18.ColumnCount = 1;
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel18.Controls.Add(this.cboxTimKiem, 0, 0);
+            this.tableLayoutPanel18.Controls.Add(this.cbCongThemGiaTien, 0, 2);
+            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(51, 3);
+            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
+            this.tableLayoutPanel18.RowCount = 3;
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(43, 63);
+            this.tableLayoutPanel18.TabIndex = 6;
+            // 
+            // cboxTimKiem
+            // 
+            this.cboxTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cboxTimKiem.FormattingEnabled = true;
+            this.cboxTimKiem.Location = new System.Drawing.Point(3, 3);
+            this.cboxTimKiem.Name = "cboxTimKiem";
+            this.cboxTimKiem.Size = new System.Drawing.Size(37, 21);
+            this.cboxTimKiem.TabIndex = 3;
+            // 
+            // cbCongThemGiaTien
+            // 
+            this.cbCongThemGiaTien.AutoSize = true;
+            this.cbCongThemGiaTien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbCongThemGiaTien.Location = new System.Drawing.Point(3, 43);
+            this.cbCongThemGiaTien.Name = "cbCongThemGiaTien";
+            this.cbCongThemGiaTien.Size = new System.Drawing.Size(37, 17);
+            this.cbCongThemGiaTien.TabIndex = 5;
+            this.cbCongThemGiaTien.Text = "+ Giá Tiền";
+            this.cbCongThemGiaTien.UseVisualStyleBackColor = true;
+            // 
             // frmBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1050,6 +1094,7 @@
             this.panel4.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel8.PerformLayout();
             this.pnTacVus.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -1063,6 +1108,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabCT.ResumeLayout(false);
+            this.tableLayoutPanel18.ResumeLayout(false);
+            this.tableLayoutPanel18.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1124,7 +1171,6 @@
         private System.Windows.Forms.RadioButton rdoDuoi2Trieu;
         private System.Windows.Forms.RadioButton rdoDuoi5Trieu;
         private System.Windows.Forms.RadioButton rdoTren5Trieu;
-        private System.Windows.Forms.ComboBox cboxTimKiem;
         private System.Windows.Forms.TextBox tbTimKiem;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.StatusStrip statusStrip1;
@@ -1143,5 +1189,9 @@
         private DevExpress.XtraReports.UserDesigner.RecentlyUsedItemsComboBox recentlyUsedItemsComboBox1;
         private DevExpress.XtraReports.UserDesigner.DesignRepositoryItemComboBox designRepositoryItemComboBox1;
         private System.Windows.Forms.FlowLayoutPanel pnSanPhams;
+        private System.Windows.Forms.Label lbHienThiSoLuongSanPham;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
+        private System.Windows.Forms.ComboBox cboxTimKiem;
+        private System.Windows.Forms.CheckBox cbCongThemGiaTien;
     }
 }

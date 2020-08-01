@@ -69,11 +69,36 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
 
         private void BtnTimKiem_Click(object sender, EventArgs e)
         {
-            string cboxSelect = (cboxTimKiem.SelectedItem as KeyValue).Key;
-            if (cboxSelect.Equals("masp"))
-                taiSanPhams(spDAL_BLL.timKiemSanPham(SanPham_DAL_BLL.ETimKim.TIM_THEO_MA, tbTimKiem.Text));
+            List<SanPham_DTO> sanPhams = null;
+            if (!cbCongThemGiaTien.Checked)
+            {
+                string cboxSelect = (cboxTimKiem.SelectedItem as KeyValue).Key;
+                if (cboxSelect.Equals("masp"))
+                    sanPhams = spDAL_BLL.timKiemSanPham(SanPham_DAL_BLL.ETimKim.TIM_THEO_MA, tbTimKiem.Text);
+                else
+                    sanPhams = spDAL_BLL.timKiemSanPham(SanPham_DAL_BLL.ETimKim.TIM_THEM_TEN, tbTimKiem.Text);
+            }
             else
-                taiSanPhams(spDAL_BLL.timKiemSanPham(SanPham_DAL_BLL.ETimKim.TIM_THEM_TEN, tbTimKiem.Text));
+            {
+                int cGia = 0;
+                if (rdoDuoi5Trieu.Checked)
+                    cGia = 1;
+                else if (rdoTren5Trieu.Checked)
+                    cGia = 2;
+                
+                string cboxSelect = (cboxTimKiem.SelectedItem as KeyValue).Key;
+                if (cboxSelect.Equals("masp"))
+                    sanPhams = spDAL_BLL.timKiemSanPham(SanPham_DAL_BLL.ETimKim.TIM_THEO_MA, tbTimKiem.Text);
+                else
+                    sanPhams = spDAL_BLL.timKiemSanPham(SanPham_DAL_BLL.ETimKim.TIM_THEM_TEN, tbTimKiem.Text);
+                spDAL_BLL.locTiep_TheoGia(ref sanPhams, cGia);
+            }
+
+            if (sanPhams == null)
+                return;
+            lbHienThiSoLuongSanPham.Text = string.Format("Đã Hiển Thị [{0}] Sản Phẩm Cho [{1}]", sanPhams.Count, "Tìm Kiếm");
+            taiSanPhams(sanPhams);
+            trvDanhMuc_TheLoai.SelectedNode = null;
         }
 
         private void loadTrvDanhMuc_TheLoai()
@@ -570,16 +595,21 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
 
         private void trvDanhMuc_TheLoai_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            List<SanPham_DTO> sanPhams = null;
             if (e.Node.Level == 1)
             {
                 LoaiSP_DTO lsp = e.Node.Tag as LoaiSP_DTO;
-                taiSanPhams(spDAL_BLL.latTaCa(lsp.MaLoai));
+                sanPhams = spDAL_BLL.latTaCa(lsp.MaLoai);
             }
             else if (e.Node.Level == 0)
             {
                 DanhMuc_DTO dm = e.Node.Tag as DanhMuc_DTO;
-                taiSanPhams(spDAL_BLL.locTheoDanhMuc(dm.MaDM));
+                sanPhams = spDAL_BLL.locTheoDanhMuc(dm.MaDM);
             }
+            if (sanPhams == null)
+                return;
+            lbHienThiSoLuongSanPham.Text = string.Format("Đã Hiển Thị [{0}] Sản Phẩm Cho [{1}]", sanPhams.Count, e.Node.Text);
+            taiSanPhams(sanPhams);
         }
 
         private void btnMuaThem_Click(object sender, EventArgs e)

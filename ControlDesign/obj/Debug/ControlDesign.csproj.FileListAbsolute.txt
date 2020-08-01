@@ -97,15 +97,6 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\bin\Deb
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\bin\Debug\ControlDesign.pdb
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\bin\Debug\DTO.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\bin\Debug\MyLibrary.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\bin\Debug\DTO.pdb
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\bin\Debug\MyLibrary.pdb
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\obj\Debug\ControlDesign.csprojAssemblyReference.cache
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\obj\Debug\ControlDesign.UCSanPham.resources
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\obj\Debug\ControlDesign.csproj.GenerateResource.cache
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\obj\Debug\ControlDesign.csproj.CoreCompileInputs.cache
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\obj\Debug\ControlDesign.csproj.CopyComplete
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\obj\Debug\ControlDesign.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\obj\Debug\ControlDesign.pdb
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\bin\Debug\DevExpress.XtraBars.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\bin\Debug\DevExpress.XtraGrid.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\bin\Debug\DevExpress.Utils.v20.1.dll
@@ -121,6 +112,8 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\bin\Deb
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\bin\Debug\DevExpress.RichEdit.v20.1.Core.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\bin\Debug\DevExpress.XtraTreeList.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\bin\Debug\DevExpress.Office.v20.1.Core.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\bin\Debug\DTO.pdb
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\bin\Debug\MyLibrary.pdb
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\bin\Debug\DevExpress.XtraBars.v20.1.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\bin\Debug\DevExpress.XtraGrid.v20.1.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\bin\Debug\DevExpress.Utils.v20.1.xml
@@ -188,3 +181,10 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\bin\Deb
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\bin\Debug\es\DevExpress.Office.v20.1.Core.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\bin\Debug\ja\DevExpress.Office.v20.1.Core.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\bin\Debug\ru\DevExpress.Office.v20.1.Core.resources.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\obj\Debug\ControlDesign.csprojAssemblyReference.cache
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\obj\Debug\ControlDesign.UCSanPham.resources
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\obj\Debug\ControlDesign.csproj.GenerateResource.cache
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\obj\Debug\ControlDesign.csproj.CoreCompileInputs.cache
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\obj\Debug\ControlDesign.csproj.CopyComplete
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\obj\Debug\ControlDesign.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\ControlDesign\obj\Debug\ControlDesign.pdb

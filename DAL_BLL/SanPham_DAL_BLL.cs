@@ -99,6 +99,15 @@ namespace DAL_BLL
             return result;
         }
 
+        public void locTiep_TheoGia(ref List<SanPham_DTO> list ,int cGia)
+        {
+            if (cGia == 0)
+                list = list.Where(n => n.GiaBan < 2000000).ToList();
+            else if (cGia == 1)
+                list = list.Where(n => n.GiaBan < 5000000).ToList();
+            else list = list.Where(n => n.GiaBan >= 5000000).ToList();
+        }
+
         public List<SanPham_DTO> latTaCa(int maLoai)
         {
             List<SanPham_DTO> result = new List<SanPham_DTO>();

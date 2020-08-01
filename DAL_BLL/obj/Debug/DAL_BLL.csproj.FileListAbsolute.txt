@@ -189,18 +189,13 @@ C:\Users\lockh\Desktop\QL_TBDD\DoAn_PhatTrienPM_UD_ThongMinh_2020\DAL_BLL\bin\De
 C:\Users\lockh\Desktop\QL_TBDD\DoAn_PhatTrienPM_UD_ThongMinh_2020\DAL_BLL\bin\Debug\es\DevExpress.Office.v20.1.Core.resources.dll
 C:\Users\lockh\Desktop\QL_TBDD\DoAn_PhatTrienPM_UD_ThongMinh_2020\DAL_BLL\bin\Debug\ja\DevExpress.Office.v20.1.Core.resources.dll
 C:\Users\lockh\Desktop\QL_TBDD\DoAn_PhatTrienPM_UD_ThongMinh_2020\DAL_BLL\bin\Debug\ru\DevExpress.Office.v20.1.Core.resources.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\obj\Debug\DAL_BLL.csprojAssemblyReference.cache
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\obj\Debug\DAL_BLL.csproj.CoreCompileInputs.cache
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\DAL_BLL.dll.config
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\DAL_BLL.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\DAL_BLL.pdb
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\DTO.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\MyLibrary.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\DTO.pdb
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\MyLibrary.pdb
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\obj\Debug\DAL_BLL.csprojAssemblyReference.cache
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\obj\Debug\DAL_BLL.csproj.CoreCompileInputs.cache
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\obj\Debug\DAL_BLL.csproj.CopyComplete
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\obj\Debug\DAL_BLL.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\obj\Debug\DAL_BLL.pdb
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\DevExpress.XtraBars.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\DevExpress.XtraGrid.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\DevExpress.Utils.v20.1.dll
@@ -216,6 +211,8 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\Dev
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\DevExpress.RichEdit.v20.1.Core.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\DevExpress.XtraTreeList.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\DevExpress.Office.v20.1.Core.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\DTO.pdb
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\MyLibrary.pdb
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\DevExpress.XtraBars.v20.1.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\DevExpress.XtraGrid.v20.1.xml
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\DevExpress.Utils.v20.1.xml
@@ -283,3 +280,6 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\de\
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\es\DevExpress.Office.v20.1.Core.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\ja\DevExpress.Office.v20.1.Core.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\ru\DevExpress.Office.v20.1.Core.resources.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\obj\Debug\DAL_BLL.csproj.CopyComplete
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\obj\Debug\DAL_BLL.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\obj\Debug\DAL_BLL.pdb

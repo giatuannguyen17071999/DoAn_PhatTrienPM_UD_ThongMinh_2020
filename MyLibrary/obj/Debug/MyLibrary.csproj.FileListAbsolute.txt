@@ -182,11 +182,6 @@ C:\Users\lockh\Desktop\QL_TBDD\DoAn_PhatTrienPM_UD_ThongMinh_2020\MyLibrary\bin\
 C:\Users\lockh\Desktop\QL_TBDD\DoAn_PhatTrienPM_UD_ThongMinh_2020\MyLibrary\bin\Debug\ru\DevExpress.Office.v20.1.Core.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\MyLibrary.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\MyLibrary.pdb
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\obj\Debug\MyLibrary.fdPopup.frmThemGhiChu.resources
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\obj\Debug\MyLibrary.csproj.GenerateResource.cache
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\obj\Debug\MyLibrary.csproj.CoreCompileInputs.cache
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\obj\Debug\MyLibrary.dll
-D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\obj\Debug\MyLibrary.pdb
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.Data.Desktop.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.Data.v20.1.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\DevExpress.Printing.v20.1.Core.dll
@@ -269,4 +264,9 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\d
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\es\DevExpress.Office.v20.1.Core.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\ja\DevExpress.Office.v20.1.Core.resources.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\bin\Debug\ru\DevExpress.Office.v20.1.Core.resources.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\obj\Debug\MyLibrary.fdPopup.frmThemGhiChu.resources
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\obj\Debug\MyLibrary.csproj.GenerateResource.cache
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\obj\Debug\MyLibrary.csproj.CoreCompileInputs.cache
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\obj\Debug\MyLibrary.csproj.CopyComplete
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\obj\Debug\MyLibrary.dll
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\MyLibrary\obj\Debug\MyLibrary.pdb
