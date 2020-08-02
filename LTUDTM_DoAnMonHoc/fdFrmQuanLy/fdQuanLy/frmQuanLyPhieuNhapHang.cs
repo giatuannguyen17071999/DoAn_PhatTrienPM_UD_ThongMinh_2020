@@ -102,7 +102,10 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy
 
             var maPN = cboxMaPhieu.SelectedValue;
             if (maPN == null)
+            {
+                FunctionStatic.hienThiThongBaoLoi("Mã phiếu nhập không được để trống!");
                 return;
+            }
             if (!maPN.ToString().Equals(pnTmp.MAPN))
             {
                 FunctionStatic.hienThiThongBaoLoi("Phiếu nhập này đã được lưu, không thêm chi tiết được!");
