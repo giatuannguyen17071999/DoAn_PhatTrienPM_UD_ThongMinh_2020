@@ -113,7 +113,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmSuaCT_PhieuNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmSuaCT_PhieuNhap";
+            this.Text = "Sửa chi tiết phiếu nhập";
             this.Load += new System.EventHandler(this.frmSuaCT_PhieuNhap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

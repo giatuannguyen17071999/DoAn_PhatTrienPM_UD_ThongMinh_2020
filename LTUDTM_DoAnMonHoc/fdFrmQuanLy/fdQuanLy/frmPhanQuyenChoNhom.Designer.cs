@@ -223,7 +223,7 @@
             this.ClientSize = new System.Drawing.Size(672, 538);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmPhanQuyenChoNhom";
-            this.Text = "frmPhanQuyenChoNhom";
+            this.Text = "Màn hình phân quyền cho nhóm";
             this.Load += new System.EventHandler(this.frmPhanQuyenChoNhom_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

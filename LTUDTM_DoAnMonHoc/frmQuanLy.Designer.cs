@@ -518,7 +518,7 @@
             this.Controls.Add(this.ribbonMain);
             this.IsMdiContainer = true;
             this.Name = "frmQuanLy";
-            this.Text = "frmQuanLy";
+            this.Text = "Màn Hình Chính";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmQuanLy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonMain)).EndInit();

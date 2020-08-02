@@ -473,7 +473,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "frmQuanLyNhanVien";
-            this.Text = "frmQuanLyNhanVien";
+            this.Text = "Quản lý nhân viên";
             this.Load += new System.EventHandler(this.frmQuanLyNhanVien_Load);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();

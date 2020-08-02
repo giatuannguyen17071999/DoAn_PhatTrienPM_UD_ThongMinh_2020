@@ -95,6 +95,9 @@
             this.rdoTren5Trieu = new System.Windows.Forms.RadioButton();
             this.tbTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
+            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
+            this.cboxTimKiem = new System.Windows.Forms.ComboBox();
+            this.cbCongThemGiaTien = new System.Windows.Forms.CheckBox();
             this.trvDanhMuc_TheLoai = new System.Windows.Forms.TreeView();
             this.pnSanPhams = new System.Windows.Forms.FlowLayoutPanel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -103,9 +106,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabCT = new System.Windows.Forms.TabControl();
-            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
-            this.cboxTimKiem = new System.Windows.Forms.ComboBox();
-            this.cbCongThemGiaTien = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.recentlyUsedItemsComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.designRepositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -139,11 +139,11 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel_rdo_drop_search.SuspendLayout();
+            this.tableLayoutPanel18.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabCT.SuspendLayout();
-            this.tableLayoutPanel18.SuspendLayout();
             this.SuspendLayout();
             // 
             // recentlyUsedItemsComboBox1
@@ -938,6 +938,43 @@
             this.btnTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTimKiem.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel18
+            // 
+            this.tableLayoutPanel18.ColumnCount = 1;
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel18.Controls.Add(this.cboxTimKiem, 0, 0);
+            this.tableLayoutPanel18.Controls.Add(this.cbCongThemGiaTien, 0, 2);
+            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(51, 3);
+            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
+            this.tableLayoutPanel18.RowCount = 3;
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(43, 63);
+            this.tableLayoutPanel18.TabIndex = 6;
+            // 
+            // cboxTimKiem
+            // 
+            this.cboxTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cboxTimKiem.FormattingEnabled = true;
+            this.cboxTimKiem.Location = new System.Drawing.Point(3, 3);
+            this.cboxTimKiem.Name = "cboxTimKiem";
+            this.cboxTimKiem.Size = new System.Drawing.Size(37, 21);
+            this.cboxTimKiem.TabIndex = 3;
+            // 
+            // cbCongThemGiaTien
+            // 
+            this.cbCongThemGiaTien.AutoSize = true;
+            this.cbCongThemGiaTien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbCongThemGiaTien.Location = new System.Drawing.Point(3, 45);
+            this.cbCongThemGiaTien.Name = "cbCongThemGiaTien";
+            this.cbCongThemGiaTien.Size = new System.Drawing.Size(37, 15);
+            this.cbCongThemGiaTien.TabIndex = 5;
+            this.cbCongThemGiaTien.Text = "+ Giá Tiền";
+            this.cbCongThemGiaTien.UseVisualStyleBackColor = true;
+            // 
             // trvDanhMuc_TheLoai
             // 
             this.trvDanhMuc_TheLoai.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1017,43 +1054,6 @@
             this.tabCT.Size = new System.Drawing.Size(762, 595);
             this.tabCT.TabIndex = 1;
             // 
-            // tableLayoutPanel18
-            // 
-            this.tableLayoutPanel18.ColumnCount = 1;
-            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel18.Controls.Add(this.cboxTimKiem, 0, 0);
-            this.tableLayoutPanel18.Controls.Add(this.cbCongThemGiaTien, 0, 2);
-            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel18.Location = new System.Drawing.Point(51, 3);
-            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
-            this.tableLayoutPanel18.RowCount = 3;
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(43, 63);
-            this.tableLayoutPanel18.TabIndex = 6;
-            // 
-            // cboxTimKiem
-            // 
-            this.cboxTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cboxTimKiem.FormattingEnabled = true;
-            this.cboxTimKiem.Location = new System.Drawing.Point(3, 3);
-            this.cboxTimKiem.Name = "cboxTimKiem";
-            this.cboxTimKiem.Size = new System.Drawing.Size(37, 21);
-            this.cboxTimKiem.TabIndex = 3;
-            // 
-            // cbCongThemGiaTien
-            // 
-            this.cbCongThemGiaTien.AutoSize = true;
-            this.cbCongThemGiaTien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbCongThemGiaTien.Location = new System.Drawing.Point(3, 43);
-            this.cbCongThemGiaTien.Name = "cbCongThemGiaTien";
-            this.cbCongThemGiaTien.Size = new System.Drawing.Size(37, 17);
-            this.cbCongThemGiaTien.TabIndex = 5;
-            this.cbCongThemGiaTien.Text = "+ Giá Tiền";
-            this.cbCongThemGiaTien.UseVisualStyleBackColor = true;
-            // 
             // frmBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1061,7 +1061,7 @@
             this.ClientSize = new System.Drawing.Size(762, 595);
             this.Controls.Add(this.tabCT);
             this.Name = "frmBanHang";
-            this.Text = "frmBanHang";
+            this.Text = "Màn hình bán hàng";
             this.Load += new System.EventHandler(this.frmBanHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.recentlyUsedItemsComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.designRepositoryItemComboBox1)).EndInit();
@@ -1103,13 +1103,13 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel_rdo_drop_search.ResumeLayout(false);
             this.tableLayoutPanel_rdo_drop_search.PerformLayout();
+            this.tableLayoutPanel18.ResumeLayout(false);
+            this.tableLayoutPanel18.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabCT.ResumeLayout(false);
-            this.tableLayoutPanel18.ResumeLayout(false);
-            this.tableLayoutPanel18.PerformLayout();
             this.ResumeLayout(false);
 
         }

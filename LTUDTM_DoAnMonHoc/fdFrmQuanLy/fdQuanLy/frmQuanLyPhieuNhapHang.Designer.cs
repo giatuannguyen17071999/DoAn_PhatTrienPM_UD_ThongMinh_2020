@@ -635,7 +635,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "frmQuanLyPhieuNhapHang";
-            this.Text = "frmQuanLyPhieuNhapHang";
+            this.Text = "Màn hình quản lý phiếu nhập hàng";
             this.Load += new System.EventHandler(this.frmQuanLyPhieuNhapHang_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

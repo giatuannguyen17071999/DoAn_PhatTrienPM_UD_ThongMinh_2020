@@ -141,7 +141,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "frmLogin";
-            this.Text = "frmLogin";
+            this.Text = "Màn Hình Đăng Nhập";
             this.ResumeLayout(false);
             this.PerformLayout();
 

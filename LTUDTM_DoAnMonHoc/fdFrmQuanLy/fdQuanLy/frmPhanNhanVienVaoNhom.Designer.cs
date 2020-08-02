@@ -147,7 +147,7 @@
             this.ClientSize = new System.Drawing.Size(877, 470);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmPhanNhanVienVaoNhom";
-            this.Text = "frmPhanNhanVienVaoNhom";
+            this.Text = "Màn hình phân nhân viên vào nhóm";
             this.Load += new System.EventHandler(this.frmPhanNhanVienVaoNhom_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);

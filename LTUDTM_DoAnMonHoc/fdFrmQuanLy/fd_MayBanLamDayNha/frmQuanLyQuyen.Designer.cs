@@ -422,7 +422,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmQuanLyQuyen";
-            this.Text = "frmQuanLyQuyen";
+            this.Text = "Quản lý quyền";
             this.Load += new System.EventHandler(this.frmQuanLyQuyen_Load);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);

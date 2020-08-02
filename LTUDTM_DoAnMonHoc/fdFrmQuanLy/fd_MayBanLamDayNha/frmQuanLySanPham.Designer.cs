@@ -456,7 +456,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmQuanLySanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmQuanLySanPham";
+            this.Text = "Quản lý sản phẩm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmQuanLySanPham_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

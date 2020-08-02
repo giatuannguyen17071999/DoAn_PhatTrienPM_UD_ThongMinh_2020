@@ -43,10 +43,12 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.lookupTenDM = new DevExpress.XtraEditors.LookUpEdit();
             this.txtTenLoaiSP = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.gcChuaDuLieu = new DevExpress.XtraGrid.GridControl();
             this.gvHienThiDuLieu = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -55,23 +57,21 @@
             this.TenLoaiSP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lookupTenDM = new DevExpress.XtraEditors.LookUpEdit();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookupTenDM.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenLoaiSP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcChuaDuLieu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvHienThiDuLieu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookupTenDM.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -173,52 +173,71 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(884, 30);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlTop.Size = new System.Drawing.Size(758, 24);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 584);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 471);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(884, 20);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlBottom.Size = new System.Drawing.Size(758, 20);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 554);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 447);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(884, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(758, 24);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 554);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 447);
             // 
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.lookupTenDM);
             this.layoutControl1.Controls.Add(this.txtTenLoaiSP);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 30);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 24);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(704, 0, 812, 500);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(884, 157);
+            this.layoutControl1.Size = new System.Drawing.Size(758, 128);
             this.layoutControl1.TabIndex = 9;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // lookupTenDM
+            // 
+            this.lookupTenDM.Enabled = false;
+            this.lookupTenDM.Location = new System.Drawing.Point(104, 34);
+            this.lookupTenDM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lookupTenDM.MenuManager = this.barManager1;
+            this.lookupTenDM.Name = "lookupTenDM";
+            this.lookupTenDM.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookupTenDM.Size = new System.Drawing.Size(643, 20);
+            this.lookupTenDM.StyleController = this.layoutControl1;
+            this.lookupTenDM.TabIndex = 5;
             // 
             // txtTenLoaiSP
             // 
             this.txtTenLoaiSP.Enabled = false;
-            this.txtTenLoaiSP.Location = new System.Drawing.Point(132, 12);
+            this.txtTenLoaiSP.Location = new System.Drawing.Point(104, 10);
+            this.txtTenLoaiSP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenLoaiSP.MenuManager = this.barManager1;
             this.txtTenLoaiSP.Name = "txtTenLoaiSP";
-            this.txtTenLoaiSP.Size = new System.Drawing.Size(740, 22);
+            this.txtTenLoaiSP.Size = new System.Drawing.Size(643, 20);
             this.txtTenLoaiSP.StyleController = this.layoutControl1;
             this.txtTenLoaiSP.TabIndex = 4;
             // 
@@ -231,7 +250,7 @@
             this.emptySpaceItem1,
             this.layoutControlItem3});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(884, 157);
+            this.Root.Size = new System.Drawing.Size(758, 128);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem2
@@ -239,36 +258,48 @@
             this.layoutControlItem2.Control = this.txtTenLoaiSP;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(864, 26);
+            this.layoutControlItem2.Size = new System.Drawing.Size(740, 24);
             this.layoutControlItem2.Text = "Tên Loại Sản Phẩm";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(117, 17);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(90, 13);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 52);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 48);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(864, 85);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(740, 64);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.lookupTenDM;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(740, 24);
+            this.layoutControlItem3.Text = "Tên Danh Mục ";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(90, 13);
             // 
             // layoutControl2
             // 
             this.layoutControl2.Controls.Add(this.gcChuaDuLieu);
             this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl2.Location = new System.Drawing.Point(0, 187);
+            this.layoutControl2.Location = new System.Drawing.Point(0, 152);
+            this.layoutControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(884, 397);
+            this.layoutControl2.Size = new System.Drawing.Size(758, 319);
             this.layoutControl2.TabIndex = 10;
             this.layoutControl2.Text = "layoutControl2";
             // 
             // gcChuaDuLieu
             // 
-            this.gcChuaDuLieu.Location = new System.Drawing.Point(12, 12);
+            this.gcChuaDuLieu.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gcChuaDuLieu.Location = new System.Drawing.Point(11, 10);
             this.gcChuaDuLieu.MainView = this.gvHienThiDuLieu;
+            this.gcChuaDuLieu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gcChuaDuLieu.MenuManager = this.barManager1;
             this.gcChuaDuLieu.Name = "gcChuaDuLieu";
-            this.gcChuaDuLieu.Size = new System.Drawing.Size(860, 373);
+            this.gcChuaDuLieu.Size = new System.Drawing.Size(736, 299);
             this.gcChuaDuLieu.TabIndex = 5;
             this.gcChuaDuLieu.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvHienThiDuLieu});
@@ -279,6 +310,7 @@
             this.MaLoai,
             this.MaDM,
             this.TenLoaiSP});
+            this.gvHienThiDuLieu.DetailHeight = 284;
             this.gvHienThiDuLieu.GridControl = this.gcChuaDuLieu;
             this.gvHienThiDuLieu.Name = "gvHienThiDuLieu";
             this.gvHienThiDuLieu.OptionsBehavior.ReadOnly = true;
@@ -292,37 +324,37 @@
             // 
             this.MaLoai.Caption = "Mã Loại";
             this.MaLoai.FieldName = "MaLoai";
-            this.MaLoai.MinWidth = 25;
+            this.MaLoai.MinWidth = 21;
             this.MaLoai.Name = "MaLoai";
             this.MaLoai.OptionsColumn.AllowEdit = false;
             this.MaLoai.OptionsColumn.ReadOnly = true;
             this.MaLoai.Visible = true;
             this.MaLoai.VisibleIndex = 0;
-            this.MaLoai.Width = 94;
+            this.MaLoai.Width = 81;
             // 
             // MaDM
             // 
             this.MaDM.Caption = "Tên Danh Mục";
             this.MaDM.FieldName = "DanhMuc.TenDM";
-            this.MaDM.MinWidth = 25;
+            this.MaDM.MinWidth = 21;
             this.MaDM.Name = "MaDM";
             this.MaDM.OptionsColumn.AllowEdit = false;
             this.MaDM.OptionsColumn.ReadOnly = true;
             this.MaDM.Visible = true;
             this.MaDM.VisibleIndex = 1;
-            this.MaDM.Width = 94;
+            this.MaDM.Width = 81;
             // 
             // TenLoaiSP
             // 
             this.TenLoaiSP.Caption = "Tên Loại Sản Phẩm";
             this.TenLoaiSP.FieldName = "TenLoaiSP";
-            this.TenLoaiSP.MinWidth = 25;
+            this.TenLoaiSP.MinWidth = 21;
             this.TenLoaiSP.Name = "TenLoaiSP";
             this.TenLoaiSP.OptionsColumn.AllowEdit = false;
             this.TenLoaiSP.OptionsColumn.ReadOnly = true;
             this.TenLoaiSP.Visible = true;
             this.TenLoaiSP.VisibleIndex = 2;
-            this.TenLoaiSP.Width = 94;
+            this.TenLoaiSP.Width = 81;
             // 
             // layoutControlGroup1
             // 
@@ -331,7 +363,7 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1});
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(884, 397);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(758, 319);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -339,60 +371,40 @@
             this.layoutControlItem1.Control = this.gcChuaDuLieu;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(864, 377);
+            this.layoutControlItem1.Size = new System.Drawing.Size(740, 303);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // lookupTenDM
-            // 
-            this.lookupTenDM.Enabled = false;
-            this.lookupTenDM.Location = new System.Drawing.Point(132, 38);
-            this.lookupTenDM.MenuManager = this.barManager1;
-            this.lookupTenDM.Name = "lookupTenDM";
-            this.lookupTenDM.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookupTenDM.Size = new System.Drawing.Size(740, 22);
-            this.lookupTenDM.StyleController = this.layoutControl1;
-            this.lookupTenDM.TabIndex = 5;
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.lookupTenDM;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 26);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(864, 26);
-            this.layoutControlItem3.Text = "Tên Danh Mục ";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(117, 17);
-            // 
             // FormLoaiSanPham
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 604);
+            this.ClientSize = new System.Drawing.Size(758, 491);
             this.Controls.Add(this.layoutControl2);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormLoaiSanPham";
-            this.Text = "FormLoaiSanPham";
+            this.Text = "Quản lý loại sản phẩm";
             this.Load += new System.EventHandler(this.FormLoaiSanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.lookupTenDM.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenLoaiSP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcChuaDuLieu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvHienThiDuLieu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookupTenDM.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

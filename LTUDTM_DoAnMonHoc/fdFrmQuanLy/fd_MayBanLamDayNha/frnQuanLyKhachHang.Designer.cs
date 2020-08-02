@@ -577,7 +577,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frnQuanLyKhachHang";
-            this.Text = "frnQuanLyKhachHang";
+            this.Text = "Quản lý khách hàng";
             this.Load += new System.EventHandler(this.frnQuanLyKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvUser)).EndInit();

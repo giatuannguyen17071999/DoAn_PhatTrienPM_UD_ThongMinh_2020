@@ -296,7 +296,7 @@
             this.MaximizeBox = false;
             this.Name = "frmChonKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmChonKhachHang";
+            this.Text = "Màn hình chọn khách hàng";
             this.Load += new System.EventHandler(this.frmChonKhachHang_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
