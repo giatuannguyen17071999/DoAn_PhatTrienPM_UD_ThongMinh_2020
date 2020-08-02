@@ -335,6 +335,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy
             lbPhieuNhapCho.Visible = false;
             dgvChiTietPN.DataSource = null;
             dgvChiTietPN.DataSource = ctPhieuNhapsTmp;
+            loadCboxMaPN(null);
         }
     }
 }
