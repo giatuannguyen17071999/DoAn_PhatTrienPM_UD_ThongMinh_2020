@@ -23,6 +23,7 @@ namespace LTUDTM_DoAnMonHoc.SERVER_CONF
         private DataTable dtDatabase;
         Configuration conf;
         string key;
+        string connectionString;
 
         public string GetStrConn
         {
@@ -45,6 +46,7 @@ namespace LTUDTM_DoAnMonHoc.SERVER_CONF
             btnLuu.Click += BtnLuu_Click;
             cboxServer.DropDown += CboxServer_DropDown;
             cboxDatabase.DropDown += CboxDatabase_DropDown;
+            btnLuu.Enabled = false;
 
             conf = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
             key = "DAL_BLL.Properties.Settings.QL_MUABAN_TBDTConnectionString";
@@ -53,23 +55,36 @@ namespace LTUDTM_DoAnMonHoc.SERVER_CONF
             dtDatabase = null;
         }
 
+        private void initConnection()
+        {
+            string server = cboxServer.Text,
+                database = cboxDatabase.Text,
+                userID = tbUserID.Text,
+                pwd = tbPassword.Text;
+
+            if (ckQuyenWindows.Checked)
+                connectionString = string.Format("Data Source={0};Initial Catalog={1};Integrated Security=true", server, database);
+            else
+                connectionString = string.Format("Data Source={0};Initial Catalog={1};User ID={2};Password={3}", server, database, userID, pwd);
+        }
+
         private void CboxDatabase_DropDown(object sender, EventArgs e)
         {
-            if (dtDatabase == null)
+            initConnection();
+            if (dtDatabase == null || dtDatabase.Rows.Count == 0)
             {
                 string userID = tbUserID.Text,
                     pass = tbPassword.Text;
-                if (string.IsNullOrEmpty(userID) || string.IsNullOrEmpty(pass))
+                if ((string.IsNullOrEmpty(userID) || string.IsNullOrEmpty(pass)) && !ckQuyenWindows.Checked)
                     MessageBox.Show("Fill UserID and Pass");
                 else
                 {
-                    strConn = string.Format("Server= {0}; User ID= {1}; pwd= {2}", cboxServer.Text, tbUserID.Text, tbPassword.Text);
                     try
                     {
-                        MessageBox.Show(strConn);
+                        MessageBox.Show(connectionString);
                         string query = "SELECT name FROM SYS.DATABASEs";
                         dtDatabase = new DataTable();
-                        SqlDataAdapter da = new SqlDataAdapter(query, strConn);
+                        SqlDataAdapter da = new SqlDataAdapter(query, connectionString);
                         da.Fill(dtDatabase);
                         cboxDatabase.DataSource = dtDatabase;
                         cboxDatabase.DisplayMember = "Name";
@@ -92,7 +107,7 @@ namespace LTUDTM_DoAnMonHoc.SERVER_CONF
 
         private void BtnLuu_Click(object sender, EventArgs e)
         {
-            string connectionString = string.Format("Data Source={0};Initial Catalog={1};User ID={2};Password={3}", cboxServer.Text, cboxDatabase.Text, tbUserID.Text, tbPassword.Text);
+            initConnection();
             conf.ConnectionStrings.ConnectionStrings[key].ConnectionString = connectionString;
             conf.ConnectionStrings.ConnectionStrings[key].ProviderName = "System.Data.SqlClient";
             conf.Save(ConfigurationSaveMode.Modified);
@@ -104,17 +119,22 @@ namespace LTUDTM_DoAnMonHoc.SERVER_CONF
 
         private void BtnTestConnect_Click(object sender, EventArgs e)
         {
+            initConnection();
             try
             {
-                string s = conf.ConnectionStrings.ConnectionStrings[key].ConnectionString;
-                SqlConnection conn = new SqlConnection(s);
+                SqlConnection conn = new SqlConnection(connectionString);
                 conn.Open();
+                conn.Close();
                 FunctionStatic.hienThiThongBaoThanhCong("Kiểm Tra kết nối thành công!");
+                btnLuu.Enabled = true;
             }
             catch
             {
                 FunctionStatic.hienThiThongBaoLoi("Kiểm Tra kết nối thất bại!");
+                btnLuu.Enabled = false;
             }
+
+            FunctionStatic.hienThiCauHoiYesNo(connectionString);
         }
 
         private void Bwk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -139,6 +159,14 @@ namespace LTUDTM_DoAnMonHoc.SERVER_CONF
         {
             bwk.ReportProgress(0);
             dtServerName = SqlDataSourceEnumerator.Instance.GetDataSources();
+        }
+
+        private void cboxQuyenWindows_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckQuyenWindows.Checked)
+                tbUserID.ReadOnly = tbPassword.ReadOnly = true;
+            else
+                tbUserID.ReadOnly = tbPassword.ReadOnly = false;
         }
     }
 }

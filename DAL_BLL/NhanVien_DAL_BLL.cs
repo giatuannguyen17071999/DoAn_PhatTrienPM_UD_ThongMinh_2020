@@ -6,7 +6,6 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using MyLibrary;
-using System.Windows.Forms;
 
 namespace DAL_BLL
 {
@@ -25,7 +24,6 @@ namespace DAL_BLL
 
         public NHANVIEN layNhanVien(string uName)
         {
-            MessageBox.Show(Properties.Settings.Default.QL_MUABAN_TBDTConnectionString);
             return db.NHANVIENs.FirstOrDefault(n => n.USERNAME.Equals(uName));
         }
 

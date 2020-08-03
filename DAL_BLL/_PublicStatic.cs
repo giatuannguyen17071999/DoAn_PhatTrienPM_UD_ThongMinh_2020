@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -14,6 +15,23 @@ namespace DAL_BLL
             const BindingFlags FLAGS = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
             var method = context.GetType().GetMethod("ClearCache", FLAGS);
             method.Invoke(context, null);
+        }
+
+        public static bool laKetNoiDB(out string strConn)
+        {
+            strConn = Properties.Settings.Default.QL_MUABAN_TBDTConnectionString;
+            try
+            {
+                
+                SqlConnection conn = new SqlConnection(strConn);
+                conn.Open();
+                conn.Close();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

@@ -34,6 +34,13 @@ namespace LTUDTM_DoAnMonHoc
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
+            string strConn;
+            if (!_PublicStatic.laKetNoiDB(out strConn))
+            {
+                FunctionStatic.hienThiThongBaoLoi("Kết nối DB Không thành công! Chuổi Kết Nối Hiện tại\n"+strConn);
+                return;
+            }
+
             string uName = tbTenDangNhap.Text,
                 pass = tbMatKhau.Text;
             NHANVIEN nv = nvDAL_BLL.layNhanVien(uName);
@@ -48,6 +55,8 @@ namespace LTUDTM_DoAnMonHoc
                 FunctionStatic.hienThiThongBaoLoi("Sai mật khẩu");
                 return;
             }
+
+            FunctionStatic.hienThiCauHoiYesNo(strConn);
 
             frmQuanLy frmQL = new frmQuanLy(nv);
             this.Hide();

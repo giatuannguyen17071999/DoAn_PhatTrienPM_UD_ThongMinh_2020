@@ -12,6 +12,22 @@
     <AssemblyName>LTUDTM_DoAnMonHoc</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\VIETSACLO-PC\Desktop\LTUDTM_Relese\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +47,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D73221566E07BF39069CBBBB7AAAE7FA41FC7956</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>LTUDTM_DoAnMonHoc_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Charts.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -291,6 +319,7 @@
       <DependentUpon>frmThayDoiServer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="LTUDTM_DoAnMonHoc_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -306,7 +335,18 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ControlDesign\ControlDesign.csproj">
       <Project>{BAECE3A3-4201-4275-91B0-343EA2D42E73}</Project>
@@ -326,6 +366,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Contents\Images\bill_96.png" />
+    <Content Include="Contents\Images\cate0_64.png" />
+    <Content Include="Contents\Images\cate1_48.png" />
+    <Content Include="Contents\Images\dislike.png" />
+    <Content Include="Contents\Images\product_64.png" />
+    <Content Include="Contents\Images\sp2020_7_30_15_55_59.jpg" />
+    <Content Include="Contents\Images\sp2020_7_30_15_57_41.jpg" />
+    <Content Include="Contents\Images\sp2020_7_30_16_10_1.jpg" />
+    <Content Include="Contents\Images\sp2020_7_30_16_11_56.jpg" />
+    <Content Include="Contents\Images\sp2020_7_30_16_12_56.jpg" />
+    <Content Include="Contents\Images\sp2020_7_30_16_2_25.jpg" />
+    <Content Include="Contents\Images\sp2020_7_30_16_6_29.jpg" />
+    <Content Include="Contents\Images\sp2020_7_30_16_8_46.jpg" />
     <None Include="Resources\backGroundGioiThieu1.jpg" />
     <None Include="Resources\backGroundGioiThieu.jpg" />
     <None Include="Contents\Images\iconBanTBDT.jpg" />
@@ -340,6 +393,9 @@
     <Content Include="Contents\Images\iconPhanTichBanHang.png" />
     <Content Include="Contents\Images\img1.jpg" />
     <Content Include="Contents\Images\img2.png" />
+    <Content Include="Contents\Images\imgNotFound.jpg" />
+    <Content Include="Contents\Images\khachhang_100.png" />
+    <Content Include="Contents\Images\like.png" />
     <Content Include="Contents\Images\logoSieuThi.png" />
     <None Include="Resources\icons8-new-copy-96.png" />
     <None Include="Resources\lock-300x300.png" />
