@@ -283,3 +283,5 @@ D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\bin\Debug\ru\
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\obj\Debug\DAL_BLL.csproj.CopyComplete
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\obj\Debug\DAL_BLL.dll
 D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\obj\Debug\DAL_BLL.pdb
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\obj\Debug\DAL_BLL.SERVER_CONF.frmThayDoiServer.resources
+D:\08DHTH1\Lap Trinh Ung Dung Thong Minh\LTUDTM_DoAnMonHoc\DAL_BLL\obj\Debug\DAL_BLL.csproj.GenerateResource.cache

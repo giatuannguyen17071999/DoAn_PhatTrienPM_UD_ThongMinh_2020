@@ -38,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnThayDoiServer = new DevExpress.XtraEditors.SimpleButton();
             this.SuspendLayout();
             // 
             // cbHienThiMatKhau
@@ -126,11 +127,22 @@
             this.panel1.Size = new System.Drawing.Size(93, 83);
             this.panel1.TabIndex = 10;
             // 
+            // btnThayDoiServer
+            // 
+            this.btnThayDoiServer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnThayDoiServer.Location = new System.Drawing.Point(12, 149);
+            this.btnThayDoiServer.Name = "btnThayDoiServer";
+            this.btnThayDoiServer.Size = new System.Drawing.Size(193, 47);
+            this.btnThayDoiServer.TabIndex = 18;
+            this.btnThayDoiServer.Text = "Thay Đổi Server";
+            this.btnThayDoiServer.Click += new System.EventHandler(this.btnThayDoiServer_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 206);
+            this.Controls.Add(this.btnThayDoiServer);
             this.Controls.Add(this.cbHienThiMatKhau);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangNhap);
@@ -158,5 +170,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private DevExpress.XtraEditors.SimpleButton btnThayDoiServer;
     }
 }

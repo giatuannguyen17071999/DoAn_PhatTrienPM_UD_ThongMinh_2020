@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using DAL_BLL;
 using MyLibrary;
 using DevExpress.Internal;
+using LTUDTM_DoAnMonHoc.SERVER_CONF;
 
 namespace LTUDTM_DoAnMonHoc
 {
@@ -56,6 +57,13 @@ namespace LTUDTM_DoAnMonHoc
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
+            Close();
+        }
+
+        private void btnThayDoiServer_Click(object sender, EventArgs e)
+        {
+            frmThayDoiServer frm = new frmThayDoiServer();
+            frm.ShowDialog();
             Close();
         }
     }
