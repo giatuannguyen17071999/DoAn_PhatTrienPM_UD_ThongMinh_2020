@@ -64,6 +64,10 @@ namespace DAL_BLL
         #endregion
 
         #region Phần Của Long
+        public bool IsNumber(string pValue)
+        {
+            return pValue.All(c => Char.IsDigit(c));
+        }
         public bool KiemTraDinhDangNgay(string s)
         {
             return DateTime.TryParseExact(s, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out _);
