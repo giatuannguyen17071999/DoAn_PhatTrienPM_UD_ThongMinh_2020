@@ -219,7 +219,7 @@ namespace DAL_BLL
 
         public string phatSinhMaTuDong()
         {
-            return FunctionStatic.phatSinhMaSP("SP", 20, timMaxIndex() + 1);
+            return FunctionStatic.phatSinhMaSP("SP", 8, timMaxIndex() + 1);
         }
 
         private int timMaxIndex()

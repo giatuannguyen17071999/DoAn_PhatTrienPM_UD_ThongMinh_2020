@@ -58,7 +58,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Charts.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -365,37 +365,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Contents\Images\bill_96.png" />
-    <Content Include="Contents\Images\cate0_64.png" />
-    <Content Include="Contents\Images\cate1_48.png" />
-    <Content Include="Contents\Images\dislike.png" />
-    <Content Include="Contents\Images\product_64.png" />
-    <Content Include="Contents\Images\sp2020_7_30_15_55_59.jpg" />
-    <Content Include="Contents\Images\sp2020_7_30_15_57_41.jpg" />
-    <Content Include="Contents\Images\sp2020_7_30_16_10_1.jpg" />
-    <Content Include="Contents\Images\sp2020_7_30_16_11_56.jpg" />
-    <Content Include="Contents\Images\sp2020_7_30_16_12_56.jpg" />
-    <Content Include="Contents\Images\sp2020_7_30_16_2_25.jpg" />
-    <Content Include="Contents\Images\sp2020_7_30_16_6_29.jpg" />
-    <Content Include="Contents\Images\sp2020_7_30_16_8_46.jpg" />
     <None Include="Resources\backGroundGioiThieu1.jpg" />
     <None Include="Resources\backGroundGioiThieu.jpg" />
-    <None Include="Contents\Images\iconBanTBDT.jpg" />
-    <None Include="Contents\Images\iconBanTBDT.png" />
-    <None Include="Contents\Images\backGroundGioiThieu.png" />
-    <None Include="Contents\Images\backGroundGioiThieu.jpg" />
-    <Content Include="Contents\Images\iconBaoCaoBanHang.png" />
-    <Content Include="Contents\Images\iconChaoMungUser.png" />
-    <Content Include="Contents\Images\iconInfo1.png" />
-    <Content Include="Contents\Images\iconInfo2.png" />
-    <Content Include="Contents\Images\iconKhachHangDoi.jpg" />
-    <Content Include="Contents\Images\iconPhanTichBanHang.png" />
-    <Content Include="Contents\Images\img1.jpg" />
-    <Content Include="Contents\Images\img2.png" />
-    <Content Include="Contents\Images\imgNotFound.jpg" />
-    <Content Include="Contents\Images\khachhang_100.png" />
-    <Content Include="Contents\Images\like.png" />
-    <Content Include="Contents\Images\logoSieuThi.png" />
     <None Include="Resources\icons8-new-copy-96.png" />
     <None Include="Resources\lock-300x300.png" />
     <None Include="Resources\publish_32x32.png" />
@@ -408,6 +379,9 @@
     <None Include="Resources\actions_edit.svg" />
     <None Include="Resources\actions_deletecircled.svg" />
     <None Include="Resources\actions_addcircled.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Contents\Images\iconBanTBDT.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
