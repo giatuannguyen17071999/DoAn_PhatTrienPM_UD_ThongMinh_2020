@@ -12,6 +12,22 @@
     <AssemblyName>LTUDTM_DoAnMonHoc</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\VIETSACLO-PC\Desktop\LTUDTM_Relese\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,42 +48,54 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D73221566E07BF39069CBBBB7AAAE7FA41FC7956</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>LTUDTM_DoAnMonHoc_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Charts.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.CodeParser.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.DataAccess.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.DataAccess.v20.1.UI, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Dialogs.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Pdf.v20.1.Drawing, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.PivotGrid.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.RichEdit.v20.1.Export, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Sparkline.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v20.1.UI, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Xpo.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraCharts.v20.1.Extensions, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraCharts.v20.1.Wizard, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraDialogs.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraGauges.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraNavBar.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPivotGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraReports.v20.1.Extensions, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraRichEdit.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraTreeList.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraVerticalGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Charts.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v20.1.UI, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dialogs.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v20.1.Drawing, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Export, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1.UI, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.Extensions, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.Wizard, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDialogs.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v20.1.Extensions, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -138,34 +166,34 @@
     <Compile Include="fdFrmQuanLy\fdQuanLy\frmPhatSinh\frmSuaCT_PhieuNhap.Designer.cs">
       <DependentUpon>frmSuaCT_PhieuNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\FormDanhMuc.cs">
+    <Compile Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\FormDanhMuc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\FormDanhMuc.Designer.cs">
+    <Compile Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\FormDanhMuc.Designer.cs">
       <DependentUpon>FormDanhMuc.cs</DependentUpon>
     </Compile>
-    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\FormLoaiSanPham.cs">
+    <Compile Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\FormLoaiSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\FormLoaiSanPham.Designer.cs">
+    <Compile Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\FormLoaiSanPham.Designer.cs">
       <DependentUpon>FormLoaiSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLyNhaCungCap.cs">
+    <Compile Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frmQuanLyNhaCungCap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLyNhaCungCap.Designer.cs">
+    <Compile Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frmQuanLyNhaCungCap.Designer.cs">
       <DependentUpon>frmQuanLyNhaCungCap.cs</DependentUpon>
     </Compile>
-    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLyNhanVien.cs">
+    <Compile Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frmQuanLyNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLyNhanVien.Designer.cs">
+    <Compile Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frmQuanLyNhanVien.Designer.cs">
       <DependentUpon>frmQuanLyNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLyNhomQuyen.cs">
+    <Compile Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frmQuanLyNhomQuyen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLyNhomQuyen.Designer.cs">
+    <Compile Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frmQuanLyNhomQuyen.Designer.cs">
       <DependentUpon>frmQuanLyNhomQuyen.cs</DependentUpon>
     </Compile>
     <Compile Include="fdFrmQuanLy\fdQuanLy\frmQuanLyPhieuNhapHang.cs">
@@ -174,28 +202,28 @@
     <Compile Include="fdFrmQuanLy\fdQuanLy\frmQuanLyPhieuNhapHang.Designer.cs">
       <DependentUpon>frmQuanLyPhieuNhapHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLyQuyen.cs">
+    <Compile Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frmQuanLyQuyen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLyQuyen.Designer.cs">
+    <Compile Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frmQuanLyQuyen.Designer.cs">
       <DependentUpon>frmQuanLyQuyen.cs</DependentUpon>
     </Compile>
-    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLySanPham.cs">
+    <Compile Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frmQuanLySanPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLySanPham.Designer.cs">
+    <Compile Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frmQuanLySanPham.Designer.cs">
       <DependentUpon>frmQuanLySanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frnQuanLyKhachHang.cs">
+    <Compile Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frnQuanLyKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frnQuanLyKhachHang.Designer.cs">
+    <Compile Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frnQuanLyKhachHang.Designer.cs">
       <DependentUpon>frnQuanLyKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmThongTin.cs">
+    <Compile Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frmThongTin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmThongTin.Designer.cs">
+    <Compile Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frmThongTin.Designer.cs">
       <DependentUpon>frmThongTin.cs</DependentUpon>
     </Compile>
     <Compile Include="fdExcelExport\FileCommon.cs" />
@@ -219,6 +247,12 @@
     <Compile Include="Report\rptInHoaDon.Designer.cs">
       <DependentUpon>rptInHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="SERVER_CONF\frmThayDoiServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SERVER_CONF\frmThayDoiServer.Designer.cs">
+      <DependentUpon>frmThayDoiServer.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="fdFrmQuanLy\fdBanHang\frmBanHang.resx">
       <DependentUpon>frmBanHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,34 +271,34 @@
     <EmbeddedResource Include="fdFrmQuanLy\fdQuanLy\frmPhatSinh\frmSuaCT_PhieuNhap.resx">
       <DependentUpon>frmSuaCT_PhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fdFrmQuanLy\fd_MayBanLamDayNha\FormDanhMuc.resx">
+    <EmbeddedResource Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\FormDanhMuc.resx">
       <DependentUpon>FormDanhMuc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fdFrmQuanLy\fd_MayBanLamDayNha\FormLoaiSanPham.resx">
+    <EmbeddedResource Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\FormLoaiSanPham.resx">
       <DependentUpon>FormLoaiSanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLyNhaCungCap.resx">
+    <EmbeddedResource Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frmQuanLyNhaCungCap.resx">
       <DependentUpon>frmQuanLyNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLyNhanVien.resx">
+    <EmbeddedResource Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frmQuanLyNhanVien.resx">
       <DependentUpon>frmQuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLyNhomQuyen.resx">
+    <EmbeddedResource Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frmQuanLyNhomQuyen.resx">
       <DependentUpon>frmQuanLyNhomQuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fdFrmQuanLy\fdQuanLy\frmQuanLyPhieuNhapHang.resx">
       <DependentUpon>frmQuanLyPhieuNhapHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLyQuyen.resx">
+    <EmbeddedResource Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frmQuanLyQuyen.resx">
       <DependentUpon>frmQuanLyQuyen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmQuanLySanPham.resx">
+    <EmbeddedResource Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frmQuanLySanPham.resx">
       <DependentUpon>frmQuanLySanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fdFrmQuanLy\fd_MayBanLamDayNha\frnQuanLyKhachHang.resx">
+    <EmbeddedResource Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frnQuanLyKhachHang.resx">
       <DependentUpon>frnQuanLyKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fdFrmQuanLy\fd_MayBanLamDayNha\frmThongTin.resx">
+    <EmbeddedResource Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frmThongTin.resx">
       <DependentUpon>frmThongTin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
@@ -280,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\rptInHoaDon.resx">
       <DependentUpon>rptInHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SERVER_CONF\frmThayDoiServer.resx">
+      <DependentUpon>frmThayDoiServer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
@@ -297,7 +334,18 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ControlDesign\ControlDesign.csproj">
       <Project>{BAECE3A3-4201-4275-91B0-343EA2D42E73}</Project>
@@ -319,19 +367,6 @@
   <ItemGroup>
     <None Include="Resources\backGroundGioiThieu1.jpg" />
     <None Include="Resources\backGroundGioiThieu.jpg" />
-    <None Include="Contents\Images\iconBanTBDT.jpg" />
-    <None Include="Contents\Images\iconBanTBDT.png" />
-    <None Include="Contents\Images\backGroundGioiThieu.png" />
-    <None Include="Contents\Images\backGroundGioiThieu.jpg" />
-    <Content Include="Contents\Images\iconBaoCaoBanHang.png" />
-    <Content Include="Contents\Images\iconChaoMungUser.png" />
-    <Content Include="Contents\Images\iconInfo1.png" />
-    <Content Include="Contents\Images\iconInfo2.png" />
-    <Content Include="Contents\Images\iconKhachHangDoi.jpg" />
-    <Content Include="Contents\Images\iconPhanTichBanHang.png" />
-    <Content Include="Contents\Images\img1.jpg" />
-    <Content Include="Contents\Images\img2.png" />
-    <Content Include="Contents\Images\logoSieuThi.png" />
     <None Include="Resources\icons8-new-copy-96.png" />
     <None Include="Resources\lock-300x300.png" />
     <None Include="Resources\publish_32x32.png" />
@@ -344,6 +379,9 @@
     <None Include="Resources\actions_edit.svg" />
     <None Include="Resources\actions_deletecircled.svg" />
     <None Include="Resources\actions_addcircled.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Contents\Images\iconBanTBDT.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
