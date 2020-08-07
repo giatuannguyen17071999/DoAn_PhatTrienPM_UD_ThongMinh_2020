@@ -9,6 +9,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL_BLL;
+using DevExpress.CodeParser;
 using DevExpress.XtraEditors;
 using DTO;
 
@@ -38,7 +39,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
             chkStatus.Checked = false;
             txtEmail.ResetText();
             txtPhone.ResetText();
-            txtDOB.ResetText();
+            dtpDOB.Value = DateTimePicker.MaximumDateTime;
         }
         private void btnThemUser_Click(object sender, EventArgs e)
         {
@@ -55,10 +56,6 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                     DiaChi = txtAddress.Text,
                     DienThoai1 = txtPhone.Text
                 };
-                if (!string.IsNullOrEmpty(txtDOB.Text))
-                {
-                    _tmpDto.NgaySinh = DateTime.Parse(txtDOB.Text, new CultureInfo("vi-VN"));
-                }
                 btnThemUser.Text = "Cancel";
 
                 ResetControl();
@@ -68,7 +65,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                 chkStatus.Enabled = !chkStatus.Enabled;
                 txtPassword.Enabled = !txtPassword.Enabled;
                 txtTenKH.Enabled = !txtTenKH.Enabled;
-                txtDOB.Enabled = !txtDOB.Enabled;
+                dtpDOB.Enabled = !dtpDOB.Enabled;
                 cboGender.Enabled = !cboGender.Enabled;
                 txtPhone.Enabled = !txtPhone.Enabled;
                 txtAddress.Enabled = !txtAddress.Enabled;
@@ -90,7 +87,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                 txtTenKH.Text = _tmpDto.HoTen;
                 txtUserName.Text = _tmpDto.TaiKhoan;
                 chkStatus.Checked = _tmpDto.Status;
-                txtDOB.Text = _tmpDto.NgaySinh.ToShortDateString();
+                dtpDOB.Value = DateTime.Parse(dtpDOB.Value.ToShortDateString());
                 cboGender.SelectedText = _tmpDto.GioiTinh;
                 txtAddress.Text = _tmpDto.DiaChi;
                 txtPhone.Text = _tmpDto.DienThoai1;
@@ -101,7 +98,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                 chkStatus.Enabled = !chkStatus.Enabled;
                 txtPassword.Enabled = !txtPassword.Enabled;
                 txtTenKH.Enabled = !txtTenKH.Enabled;
-                txtDOB.Enabled = !txtDOB.Enabled;
+                dtpDOB.Enabled = !dtpDOB.Enabled;
                 cboGender.Enabled = !cboGender.Enabled;
                 txtPhone.Enabled = !txtPhone.Enabled;
                 txtAddress.Enabled = !txtAddress.Enabled;
@@ -131,10 +128,6 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                     DiaChi = txtAddress.Text,
                     DienThoai1 = txtPhone.Text
                 };
-                if (!string.IsNullOrEmpty(txtDOB.Text))
-                {
-                    _tmpDto.NgaySinh = DateTime.Parse(txtDOB.Text, new CultureInfo("vi-VN"));
-                }
                 btnUpdateUser.Text = "Cancel";
 
 
@@ -142,7 +135,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                 chkStatus.Enabled = !chkStatus.Enabled;
                 txtPassword.Enabled = !txtPassword.Enabled;
                 txtTenKH.Enabled = !txtTenKH.Enabled;
-                txtDOB.Enabled = !txtDOB.Enabled;
+                dtpDOB.Enabled = !dtpDOB.Enabled;
                 cboGender.Enabled = !cboGender.Enabled;
                 txtPhone.Enabled = !txtPhone.Enabled;
                 txtAddress.Enabled = !txtAddress.Enabled;
@@ -164,7 +157,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                 txtPassword.Text = _tmpDto.MatKhau;
                 txtTenKH.Text = _tmpDto.HoTen;
                 chkStatus.Checked = _tmpDto.Status;
-                txtDOB.Text = _tmpDto.NgaySinh.ToShortDateString();
+                dtpDOB.Value = DateTime.Parse(dtpDOB.Value.ToShortDateString());
                 cboGender.SelectedText = _tmpDto.GioiTinh;
                 txtAddress.Text = _tmpDto.DiaChi;
                 txtPhone.Text = _tmpDto.DienThoai1;
@@ -174,7 +167,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                 chkStatus.Enabled = !chkStatus.Enabled;
                 txtPassword.Enabled = !txtPassword.Enabled;
                 txtTenKH.Enabled = !txtTenKH.Enabled;
-                txtDOB.Enabled = !txtDOB.Enabled;
+                dtpDOB.Enabled = !dtpDOB.Enabled;
                 cboGender.Enabled = !cboGender.Enabled;
                 txtPhone.Enabled = !txtPhone.Enabled;
                 txtAddress.Enabled = !txtAddress.Enabled;
@@ -212,7 +205,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
             if (btnThemUser.Text.Equals("Cancel"))
             {
                 if (string.IsNullOrEmpty(txtUserName.Text) || string.IsNullOrEmpty(txtPassword.Text) ||
-                    string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtTenKH.Text) || string.IsNullOrEmpty(txtDOB.Text) || string.IsNullOrEmpty(txtAddress.Text) || string.IsNullOrEmpty(txtPhone.Text) || string.IsNullOrEmpty(cboGender.Text))
+                    string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtTenKH.Text) || string.IsNullOrEmpty(txtAddress.Text) || string.IsNullOrEmpty(txtPhone.Text) || string.IsNullOrEmpty(cboGender.Text))
                 {
                     MessageBox.Show("Thông Tin Phải Được Điền Đầy Đủ", "Error", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
@@ -223,9 +216,9 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                 {
                     if (_dataKH.EmailIsValid(txtEmail.Text))
                     {
-                        if (_dataKH.KiemTraDinhDangNgay(txtDOB.Text))
+                        if (_dataKH.IsNumber(txtPhone.Text) && txtPhone.Text.Length > 10)
                         {
-                            if (_dataKH.IsNumber(txtPhone.Text))
+                            if (!_dataKH.CheckKhachHang(txtPhone.Text))
                             {
                                 var kq = _dataKH.AddKhachHang(new KhachHang_DTO()
                                 {
@@ -237,41 +230,38 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                                     GioiTinh = cboGender.Text,
                                     DiaChi = txtAddress.Text,
                                     DienThoai1 = txtPhone.Text,
-                                    NgaySinh = DateTime.Parse(txtDOB.Text, new CultureInfo("vi-VN"))
+                                    NgaySinh = DateTime.Parse(dtpDOB.Value.ToShortDateString())
                                 });
 
                                 MessageBox.Show("Thêm " + kq.ToString(), kq.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 btnThemUser.Text = "Add";
 
                                 ResetControl();
-
                                 txtEmail.Enabled = !txtEmail.Enabled;
                                 chkStatus.Enabled = !chkStatus.Enabled;
                                 txtPassword.Enabled = !txtPassword.Enabled;
                                 txtTenKH.Enabled = !txtTenKH.Enabled;
-                                txtDOB.Enabled = !txtDOB.Enabled;
+                                dtpDOB.Enabled = !dtpDOB.Enabled;
                                 cboGender.Enabled = !cboGender.Enabled;
                                 txtPhone.Enabled = !txtPhone.Enabled;
                                 txtAddress.Enabled = !txtAddress.Enabled;
-
-
+                                txtUserName.Enabled = false;
                                 btnUpdateUser.Enabled = !btnUpdateUser.Enabled;
                                 btnXoaUser.Enabled = !btnXoaUser.Enabled;
                                 btnSave.Enabled = !btnSave.Enabled;
-
 
                                 dgvUser.Enabled = !dgvUser.Enabled;
                             }
                             else
                             {
-                                MessageBox.Show("Không Đúng Định Dạng Phone", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Đã có SDT Này Rồi", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 return;
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Không Đúng Định Dạng Ngày (dd/MM/yyy => 11/06/1994)", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                            MessageBox.Show("Không Đúng Định Dạng Phone", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
                         }
                     }
                     else
@@ -291,9 +281,9 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                 if (!_dataKH.GetById(txtUserName.Text)) return;
                 if (_dataKH.EmailIsValid(txtEmail.Text))
                 {
-                    if (_dataKH.KiemTraDinhDangNgay(txtDOB.Text))
+                    if (_dataKH.IsNumber(txtPhone.Text) && txtPhone.Text.Length > 10)
                     {
-                        if (_dataKH.IsNumber(txtPhone.Text))
+                        if (!_dataKH.CheckKhachHang(txtPhone.Text))
                         {
                             var khDto = new KhachHang_DTO()
                             {
@@ -305,44 +295,38 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                                 GioiTinh = cboGender.Text,
                                 DiaChi = txtAddress.Text,
                                 DienThoai1 = txtPhone.Text,
-                                NgaySinh = DateTime.Parse(txtDOB.Text, new CultureInfo("vi-VN"))
+                                NgaySinh = DateTime.Parse(dtpDOB.Value.ToShortDateString())
                             };
                             var kq = _dataKH.UpdateKhachHang(khDto);
                             MessageBox.Show("Update " + kq.ToString(), kq.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             btnUpdateUser.Text = "Update";
-
+                            txtUserName.Enabled = false;
 
                             txtEmail.Enabled = !txtEmail.Enabled;
                             chkStatus.Enabled = !chkStatus.Enabled;
                             txtPassword.Enabled = !txtPassword.Enabled;
                             txtTenKH.Enabled = !txtTenKH.Enabled;
-                            txtDOB.Enabled = !txtDOB.Enabled;
+                            dtpDOB.Enabled = !dtpDOB.Enabled;
                             cboGender.Enabled = !cboGender.Enabled;
                             txtPhone.Enabled = !txtPhone.Enabled;
                             txtAddress.Enabled = !txtAddress.Enabled;
-
-
-
                             btnThemUser.Enabled = !btnThemUser.Enabled;
                             btnXoaUser.Enabled = !btnXoaUser.Enabled;
                             btnSave.Enabled = !btnSave.Enabled;
-
-
                             dgvUser.Enabled = !dgvUser.Enabled;
                         }
                         else
                         {
-                            MessageBox.Show("Không Đúng Định Dạng Phone", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Đã có SDT Này Rồi", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Không Đúng Định Dạng Ngày (dd/MM/yyy => 11/06/1994)", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Không Đúng Định Dạng Phone", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-
                 }
                 else
                 {
@@ -363,6 +347,8 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                 btnSave.Enabled = !btnSave.Enabled;
                 dgvUser.Enabled = !dgvUser.Enabled;
             }
+
+            ResetControl();
             _dataKH.SaveChanged();
             LoadGridViewKH();
         }
@@ -397,8 +383,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
             };
             if (gvUser.GetRowCellValue(e.RowHandle, "NgaySinh") != null)
             {
-                khDto.NgaySinh = DateTime.Parse(gvUser.GetRowCellValue(e.RowHandle, "NgaySinh").ToString(),
-                    new CultureInfo("vi-VN"));
+                khDto.NgaySinh = DateTime.Parse(gvUser.GetRowCellValue(e.RowHandle, "NgaySinh").ToString());
                 var kq = _dataKH.UpdateKhachHang(khDto);
                 MessageBox.Show("Update " + kq.ToString(), kq.ToString(), MessageBoxButtons.OK, MessageBoxIcon
                     .Information);
@@ -407,29 +392,30 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
 
         private void gvUser_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
-            txtUserName.Text = gvUser.GetRowCellValue(e.RowHandle, "TaiKhoan").ToString();
+            txtUserName.Text = gvUser.GetRowCellValue(e.RowHandle, "TaiKhoan").ToString().Trim();
             txtEmail.Text = gvUser.GetRowCellValue(e.RowHandle, "Email") != null
-                ? gvUser.GetRowCellValue(e.RowHandle, "Email").ToString()
+                ? gvUser.GetRowCellValue(e.RowHandle, "Email").ToString().Trim()
                 : null;
-            chkStatus.Checked = bool.Parse(gvUser.GetRowCellValue(e.RowHandle, "Status").ToString());
-            txtPassword.Text = gvUser.GetRowCellValue(e.RowHandle, "MatKhau").ToString();
-            txtTenKH.Text = gvUser.GetRowCellValue(e.RowHandle, "HoTen").ToString();
-            cboGender.Text = gvUser.GetRowCellValue(e.RowHandle, "GioiTinh").ToString();
+            chkStatus.Checked = bool.Parse(gvUser.GetRowCellValue(e.RowHandle, "Status").ToString().Trim());
+            txtPassword.Text = gvUser.GetRowCellValue(e.RowHandle, "MatKhau").ToString().Trim();
+            txtTenKH.Text = gvUser.GetRowCellValue(e.RowHandle, "HoTen").ToString().Trim();
+            cboGender.Text = gvUser.GetRowCellValue(e.RowHandle, "GioiTinh").ToString().Trim();
             txtAddress.Text = gvUser.GetRowCellValue(e.RowHandle, "DiaChi") != null
-                ? gvUser.GetRowCellValue(e.RowHandle, "DiaChi").ToString()
+                ? gvUser.GetRowCellValue(e.RowHandle, "DiaChi").ToString().Trim()
                 : null;
             txtPhone.Text = gvUser.GetRowCellValue(e.RowHandle, "DienThoai") != null
-                ? gvUser.GetRowCellValue(e.RowHandle, "DienThoai").ToString()
+                ? gvUser.GetRowCellValue(e.RowHandle, "DienThoai").ToString().Trim()
                 : null;
             if (gvUser.GetRowCellValue(e.RowHandle, "NgaySinh") != null)
             {
-                txtDOB.Text = gvUser.GetRowCellValue(e.RowHandle, "NgaySinh").ToString();
+                dtpDOB.Value = DateTime.Parse(gvUser.GetRowCellValue(e.RowHandle, "NgaySinh").ToString());
             }
         }
 
         private void frnQuanLyKhachHang_Load(object sender, EventArgs e)
         {
             LoadGridViewKH();
+            cboGender.SelectedIndex = 0;
         }
 
         private void LoadGridViewKH()
