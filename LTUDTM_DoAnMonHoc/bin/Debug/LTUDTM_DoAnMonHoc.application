@@ -7,14 +7,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="LTUDTM_DoAnMonHoc.exe.manifest" size="129926">
+    <dependentAssembly dependencyType="install" codebase="LTUDTM_DoAnMonHoc.exe.manifest" size="119628">
       <assemblyIdentity name="LTUDTM_DoAnMonHoc.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wpils2QhB/6T79y6z2Ju3b2mwIMDl/PGEnPRCJY4cZA=</dsig:DigestValue>
+        <dsig:DigestValue>jr/LvTXIN4litHriNWzBJfgSDF0FJGFjMoqPST6i+PY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

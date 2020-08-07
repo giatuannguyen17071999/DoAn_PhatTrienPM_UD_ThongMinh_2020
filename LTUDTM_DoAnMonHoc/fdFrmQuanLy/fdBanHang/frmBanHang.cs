@@ -70,29 +70,34 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang
         private void BtnTimKiem_Click(object sender, EventArgs e)
         {
             List<SanPham_DTO> sanPhams = null;
-            if (!cbCongThemGiaTien.Checked)
-            {
-                string cboxSelect = (cboxTimKiem.SelectedItem as KeyValue).Key;
-                if (cboxSelect.Equals("masp"))
-                    sanPhams = spDAL_BLL.timKiemSanPham(SanPham_DAL_BLL.ETimKim.TIM_THEO_MA, tbTimKiem.Text);
-                else
-                    sanPhams = spDAL_BLL.timKiemSanPham(SanPham_DAL_BLL.ETimKim.TIM_THEM_TEN, tbTimKiem.Text);
-            }
+            string cboxSelect = (cboxTimKiem.SelectedItem as KeyValue).Key;
+            if (cboxSelect.Equals("masp"))
+                sanPhams = spDAL_BLL.timKiemSanPham(SanPham_DAL_BLL.ETimKim.TIM_THEO_MA, tbTimKiem.Text);
             else
+                sanPhams = spDAL_BLL.timKiemSanPham(SanPham_DAL_BLL.ETimKim.TIM_THEM_TEN, tbTimKiem.Text);
+
+            if (cbCongThemGiaTien.Checked)
             {
                 int cGia = 0;
                 if (rdoDuoi5Trieu.Checked)
                     cGia = 1;
                 else if (rdoTren5Trieu.Checked)
                     cGia = 2;
-                
-                string cboxSelect = (cboxTimKiem.SelectedItem as KeyValue).Key;
-                if (cboxSelect.Equals("masp"))
-                    sanPhams = spDAL_BLL.timKiemSanPham(SanPham_DAL_BLL.ETimKim.TIM_THEO_MA, tbTimKiem.Text);
-                else
-                    sanPhams = spDAL_BLL.timKiemSanPham(SanPham_DAL_BLL.ETimKim.TIM_THEM_TEN, tbTimKiem.Text);
                 spDAL_BLL.locTiep_TheoGia(ref sanPhams, cGia);
             }
+            if (cbLocThemLoaiSP.Checked)
+            {
+                TreeNode nodeSel = trvDanhMuc_TheLoai.SelectedNode;
+                if (nodeSel == null || nodeSel.Level != 1)
+                {
+                    FunctionStatic.hienThiThongBaoLoi("Bạn Chưa Chọn Thể Loại!");
+                    trvDanhMuc_TheLoai.ExpandAll();
+                    return;
+                }
+                LoaiSP_DTO lsp = nodeSel.Tag as LoaiSP_DTO;
+                spDAL_BLL.locTiep_TheoTheLoai(ref sanPhams, lsp.MaLoai);
+            }    
+            
 
             if (sanPhams == null)
                 return;

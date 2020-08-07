@@ -108,6 +108,11 @@ namespace DAL_BLL
             else list = list.Where(n => n.GiaBan >= 5000000).ToList();
         }
 
+        public void locTiep_TheoTheLoai(ref List<SanPham_DTO> list, int maLoai)
+        {
+            list = list.Where(n => n.MaLoai == maLoai).ToList();
+        }
+
         public List<SanPham_DTO> latTaCa(int maLoai)
         {
             List<SanPham_DTO> result = new List<SanPham_DTO>();
@@ -214,7 +219,7 @@ namespace DAL_BLL
 
         public string phatSinhMaTuDong()
         {
-            return FunctionStatic.phatSinhMaSP("SP", 20, timMaxIndex() + 1);
+            return FunctionStatic.phatSinhMaSP("SP", 8, timMaxIndex() + 1);
         }
 
         private int timMaxIndex()

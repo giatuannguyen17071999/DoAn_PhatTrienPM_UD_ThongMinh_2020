@@ -13,7 +13,7 @@ namespace MyLibrary
 {
     public class FunctionStatic
     {
-        public const string imgPolder = @"../../Contents/Images/";
+        public const string imgPolder = @"Contents/Images/";
         public const string imgNotFound = "imgNotFound.jpg";
         public const string GIOI_THIEU_UNG_DUNG =
             "TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP THỰC PHẨM\n" +
