@@ -1926,14 +1926,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LTUDTM_DoAnMonHoc.exe" size="632320">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LTUDTM_DoAnMonHoc.exe" size="633344">
       <assemblyIdentity name="LTUDTM_DoAnMonHoc" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3i7TASzs2PkCuriRruKNf9+zivQltib0elmFcrA4OfY=</dsig:DigestValue>
+        <dsig:DigestValue>GZTRcBfbaHNCzY5eXEok/6uQDAIFmJyfDc5LmJltGZU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
