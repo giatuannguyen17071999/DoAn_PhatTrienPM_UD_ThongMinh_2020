@@ -100,6 +100,15 @@ namespace DAL_BLL
             return EStatus.THANH_CONG;
 
         }
+        /// <summary>
+        /// Checks the khach hang.
+        /// </summary>
+        /// <param name="sdt">The SDT.</param>
+        /// <returns></returns>
+        public bool CheckKhachHang(string sdt)
+        {
+            return db.KhachHangs.Any(x => x.DienThoai == sdt);
+        }
         public void SaveChanged()
         {
             db.SubmitChanges();

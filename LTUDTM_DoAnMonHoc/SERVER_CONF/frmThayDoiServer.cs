@@ -168,5 +168,10 @@ namespace LTUDTM_DoAnMonHoc.SERVER_CONF
             else
                 tbUserID.ReadOnly = tbPassword.ReadOnly = false;
         }
+
+        private void btnTestConnect_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
