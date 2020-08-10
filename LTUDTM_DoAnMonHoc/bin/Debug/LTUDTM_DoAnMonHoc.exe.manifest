@@ -1933,7 +1933,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>XPPVoFMDRe7jXzNhUdjWTTx+llD0ont9fa2jfKmpPKs=</dsig:DigestValue>
+        <dsig:DigestValue>OcQBVVAuoCvFLo0cweGdHDqiOn83I78rOjEubo2RD9Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

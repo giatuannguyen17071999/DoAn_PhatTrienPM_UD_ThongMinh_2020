@@ -108,7 +108,7 @@ namespace LTUDTM_DoAnMonHoc
             appCtr = new AppControl();
 
             FunctionStatic.hienThiFormMoi(this, new frmThongTin());
-            //loadPhanQuyen();
+            loadPhanQuyen();
             barItemWellcomUser.Caption = string.Format("Chào Mừng: [ {0} ]", nVien.TENNHANVIEN);
         }
 
