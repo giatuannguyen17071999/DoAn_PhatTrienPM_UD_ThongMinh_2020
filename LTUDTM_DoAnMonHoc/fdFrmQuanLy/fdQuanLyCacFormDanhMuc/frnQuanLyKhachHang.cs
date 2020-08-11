@@ -216,7 +216,7 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fd_MayBanLamDayNha
                 {
                     if (_dataKH.EmailIsValid(txtEmail.Text))
                     {
-                        if (_dataKH.IsNumber(txtPhone.Text) && txtPhone.Text.Length > 10)
+                        if (_dataKH.IsNumber(txtPhone.Text) && txtPhone.Text.Length >= 10)
                         {
                             if (!_dataKH.CheckKhachHang(txtPhone.Text))
                             {
