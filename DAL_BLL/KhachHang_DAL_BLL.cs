@@ -21,25 +21,9 @@ namespace DAL_BLL
 
         #region Phần Của Việt
 
-        public List<KhachHang_DTO> lay5KH_GanDay()
+        public List<KhachHang> lay5KH_GanDay()
         {
-            List<KhachHang_DTO> result = new List<KhachHang_DTO>();
-            var list = db.KhachHangs.OrderByDescending(n => n.NGAYTAO).Take(5);
-            foreach (KhachHang kh in list)
-                result.Add(new KhachHang_DTO
-                {
-                    MaKH = kh.MaKH,
-                    TaiKhoan = kh.TaiKhoan,
-                    DiaChi = kh.DiaChi,
-                    DienThoai1 = kh.DienThoai,
-                    GioiTinh = kh.GioiTinh,
-                    HoTen = kh.HoTen,
-                    MatKhau = kh.MatKhau,
-                    Status = kh.Status,
-                    Email = kh.Email
-                });
-
-            return result;
+            return db.KhachHangs.OrderByDescending(n => n.NGAYTAO).Take(5).ToList();
         }
 
         public KhachHang_DTO layKhachHang(int maKH)

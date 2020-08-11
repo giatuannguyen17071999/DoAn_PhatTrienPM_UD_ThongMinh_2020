@@ -288,23 +288,20 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy
             if (rowCTPNhapSelected < 0)
                 return;
 
-            frmSuaCT_PhieuNhap frmSua = new frmSuaCT_PhieuNhap();
+            string maPN = FunctionStatic.layTextGridView(gvChiTietPN, rowCTPNhapSelected, CT_PhieuNhap_Print.COL_MAPN),
+                maSP = FunctionStatic.layTextGridView(gvChiTietPN, rowCTPNhapSelected, CT_PhieuNhap_Print.COL_MASP);
+
+            CT_PHIEU_NHAP ctSua = ctPhieuNhapsTmp.FirstOrDefault(n => n.MASP.Equals(maSP) && n.MAPN.Equals(maPN));
+            frmSuaCT_PhieuNhap frmSua = new frmSuaCT_PhieuNhap(ctSua);
             DialogResult res = frmSua.ShowDialog();
 
             if (res != DialogResult.OK)
                 return;
 
-            string maPN = FunctionStatic.layTextGridView(gvChiTietPN, rowCTPNhapSelected, CT_PhieuNhap_Print.COL_MAPN),
-                maSP = FunctionStatic.layTextGridView(gvChiTietPN, rowCTPNhapSelected, CT_PhieuNhap_Print.COL_MASP);
             int soLuong = frmSua.soLuong;
             decimal giaNhap = frmSua.donGia;
-            bool isSua = ctPN_DAL_BLL.sua(new CT_PHIEU_NHAP
-            {
-                MAPN = maPN,
-                MASP = maSP,
-                SL_NHAP = soLuong,
-                GIANHAP = giaNhap
-            });
+            CT_PHIEU_NHAP ctTim = ctPhieuNhapsTmp.FirstOrDefault(n => n.MAPN.Equals(maPN) && n.MASP.Equals(maSP));
+            bool isSua = ctTim != null;
 
             if (!isSua)
             {
@@ -312,8 +309,23 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy
                 return;
             }
 
+            //cap nhat;
+            ctTim.SL_NHAP = soLuong;
+            ctTim.GIANHAP = giaNhap;
+
+            pnTmp.TONGTIEN = tinhTongTienCTPN_temp();
+            
             FunctionStatic.hienThiThongBaoThanhCong("Sửa Chi tiêt này thành công");
             loadCTPhieuNhap();
+        }
+
+        private decimal tinhTongTienCTPN_temp()
+        {
+            decimal tongTien = 0;
+            foreach (CT_PHIEU_NHAP ct in ctPhieuNhapsTmp)
+                tongTien += int.Parse(ct.SL_NHAP.ToString()) * decimal.Parse(ct.GIANHAP.ToString());
+
+            return tongTien;
         }
 
         private void bntLuu_Click(object sender, EventArgs e)
@@ -339,6 +351,17 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy
             dgvChiTietPN.DataSource = null;
             dgvChiTietPN.DataSource = ctPhieuNhapsTmp;
             loadCboxMaPN(null);
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            object dataSource = sPham_DAL_BLL.latTaCa();
+            frmTim frmT = new frmTim(dataSource, new int[] { 0, 1, 4, 7}, 0);
+            DialogResult res = frmT.ShowDialog();
+            if (res == DialogResult.Yes)
+            {
+                cboxMaSanPham.SelectedValue = frmT.valueGET;
+            }
         }
     }
 }

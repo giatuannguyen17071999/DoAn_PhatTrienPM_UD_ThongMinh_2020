@@ -22,10 +22,7 @@ namespace MyLibrary
             "Năm Học 2020\n" +
             "CÁC THÀNH VIÊN TRONG NHÓM\n" +
             "1. NGUYỄN QUỐC VIỆT\n" +
-            "2. BÙI VŨ TRƯỜNG\n" +
-            "3. TRẦN BẢO LONG\n" +
-            "4. LÝ XUÂN THÀNH\n" +
-            "5. NGUYỄN TRẦN GIA TUẤN";
+            "2. LÝ XUÂN THÀNH\n";
 
         public const string GIOI_THIEU_TRUONG = 
             "TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP THỰC PHẨM\n" +
@@ -38,10 +35,7 @@ namespace MyLibrary
         public const string GIOI_THIEU_THANH_VIEN =
             "CÁC THÀNH VIÊN TRONG NHÓM\n" +
             "1. NGUYỄN QUỐC VIỆT\n" +
-            "2. BÙI VŨ TRƯỜNG\n" +
-            "3. TRẦN BẢO LONG\n" +
-            "4. LÝ XUÂN THÀNH\n" +
-            "5. NGUYỄN TRẦN GIA TUẤN";
+            "2. LÝ XUÂN THÀNH";
 
         public static void hienThiFormMoi(Form frmCha, Form frmDich)
         {

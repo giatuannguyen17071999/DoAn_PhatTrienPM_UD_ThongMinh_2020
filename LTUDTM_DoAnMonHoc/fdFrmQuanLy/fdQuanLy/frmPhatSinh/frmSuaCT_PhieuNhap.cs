@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using MyLibrary;
+using DAL_BLL;
 
 namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy.frmPhatSinh
 {
@@ -17,9 +18,12 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy.frmPhatSinh
         public int soLuong;
         public decimal donGia;
 
-        public frmSuaCT_PhieuNhap()
+        public frmSuaCT_PhieuNhap(CT_PHIEU_NHAP ct)
         {
             InitializeComponent();
+
+            tbSoLuong.Text = ct.SL_NHAP.ToString();
+            tbDonGia.Text = ct.GIANHAP.ToString();
         }
 
         private void frmSuaCT_PhieuNhap_Load(object sender, EventArgs e)

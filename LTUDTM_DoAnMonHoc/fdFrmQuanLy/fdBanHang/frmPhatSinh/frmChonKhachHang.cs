@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DAL_BLL;
 using DTO;
+using LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdQuanLy.frmPhatSinh;
 
 namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang.frmPhatSinh
 {
@@ -27,14 +28,18 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang.frmPhatSinh
         {
             khDAL_BLL = new KhachHang_DAL_BLL();
             //load
-            loadCboxKhachHang();
+            loadCboxKhachHang(false);
         }
 
-        private void loadCboxKhachHang()
+        private void loadCboxKhachHang(bool isFull)
         {
+            cboxLayKhachHang.DataSource = null;
             cboxLayKhachHang.DisplayMember = "taiKhoan";
             cboxLayKhachHang.ValueMember = "maKH";
-            cboxLayKhachHang.DataSource = khDAL_BLL.lay5KH_GanDay();
+            if (isFull)
+                cboxLayKhachHang.DataSource = khDAL_BLL.LayKhachHangs();
+            else
+                cboxLayKhachHang.DataSource = khDAL_BLL.lay5KH_GanDay();
         }
 
         private void cboxLayKhachHang_SelectedIndexChanged(object sender, EventArgs e)
@@ -44,10 +49,10 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang.frmPhatSinh
 
         private void loadThongTin()
         {
-          var maKH = cboxLayKhachHang.SelectedValue.ToString();
+          var maKH = cboxLayKhachHang.SelectedValue;
             if (maKH == null)
                 return;
-            var kh = khDAL_BLL.layKhachHang(int.Parse(maKH));
+            var kh = khDAL_BLL.layKhachHang(int.Parse(maKH.ToString()));
             lbHoTenKH.Text = kh.HoTen;
             lbDiaChi.Text = kh.DiaChi;
             lbGioiTinh.Text = kh.GioiTinh;
@@ -57,12 +62,48 @@ namespace LTUDTM_DoAnMonHoc.fdFrmQuanLy.fdBanHang.frmPhatSinh
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
-            khChon = cboxLayKhachHang.SelectedItem as KhachHang_DTO;
+            KhachHang k = cboxLayKhachHang.SelectedItem as KhachHang;
+            khChon = new KhachHang_DTO()
+            {
+                DiaChi = k.DiaChi,
+                DienThoai1 = k.DienThoai,
+                Email = k.Email,
+                GioiTinh = k.GioiTinh,
+                HoTen = k.HoTen,
+                MaKH = k.MaKH,
+                MatKhau = k.MatKhau,
+                Status = k.Status,
+                TaiKhoan = k.TaiKhoan
+            };
+            if (k.NgaySinh != null)
+            {
+                try
+                {
+                    khChon.NgaySinh = DateTime.ParseExact(k.NgaySinh.Value.ToString("dd/MM/yyyy"), "dd/MM/yyyy", null);
+                }
+                catch
+                {
+
+                }
+            }
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            object dataSource = khDAL_BLL.LayKhachHangs();
+            frmTim frmTim = new frmTim(dataSource, new int[] { 0, 1, 3, 5, 6}, 0);
+            DialogResult res = frmTim.ShowDialog();
+
+            if (res == DialogResult.Yes)
+            {
+                loadCboxKhachHang(true);
+                cboxLayKhachHang.SelectedValue = int.Parse(frmTim.valueGET);
+            }
         }
     }
 }

@@ -59,6 +59,7 @@
             this.cboxMaSanPham = new System.Windows.Forms.ComboBox();
             this.tbDonGia = new ControlDesign.tbNhapSo();
             this.tbSoLuong = new ControlDesign.tbNhapSo();
+            this.btnTim = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvChiTietPN = new DevExpress.XtraGrid.GridControl();
             this.gvChiTietPN = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -346,6 +347,7 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel7, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.btnTim, 1, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -456,6 +458,16 @@
             this.tbSoLuong.Name = "tbSoLuong";
             this.tbSoLuong.Size = new System.Drawing.Size(58, 21);
             this.tbSoLuong.TabIndex = 9;
+            // 
+            // btnTim
+            // 
+            this.btnTim.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTim.ImageOptions.Image")));
+            this.btnTim.Location = new System.Drawing.Point(259, 3);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(152, 33);
+            this.btnTim.TabIndex = 1;
+            this.btnTim.Text = "Tìm Sản Phẩm";
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // tableLayoutPanel8
             // 
@@ -710,5 +722,6 @@
         private DevExpress.XtraEditors.SimpleButton btnThemPhieuNhap;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.Label lbPhieuNhapCho;
+        private DevExpress.XtraEditors.SimpleButton btnTim;
     }
 }

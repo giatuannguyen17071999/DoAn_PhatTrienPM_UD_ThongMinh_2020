@@ -196,6 +196,12 @@
     <Compile Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frmQuanLyNhomQuyen.Designer.cs">
       <DependentUpon>frmQuanLyNhomQuyen.cs</DependentUpon>
     </Compile>
+    <Compile Include="fdFrmQuanLy\fdQuanLy\frmPhatSinh\frmTim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fdFrmQuanLy\fdQuanLy\frmPhatSinh\frmTim.Designer.cs">
+      <DependentUpon>frmTim.cs</DependentUpon>
+    </Compile>
     <Compile Include="fdFrmQuanLy\fdQuanLy\frmQuanLyPhieuNhapHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fdFrmQuanLy\fdQuanLyCacFormDanhMuc\frmQuanLyNhomQuyen.resx">
       <DependentUpon>frmQuanLyNhomQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fdFrmQuanLy\fdQuanLy\frmPhatSinh\frmTim.resx">
+      <DependentUpon>frmTim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fdFrmQuanLy\fdQuanLy\frmQuanLyPhieuNhapHang.resx">
       <DependentUpon>frmQuanLyPhieuNhapHang.cs</DependentUpon>

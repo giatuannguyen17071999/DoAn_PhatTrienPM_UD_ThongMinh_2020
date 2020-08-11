@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MyLibrary;
 using DTO;
+using System.IO;
 
 namespace ControlDesign
 {
@@ -20,6 +21,16 @@ namespace ControlDesign
         public void setControlTrangThaiHover(ToolStripStatusLabel ctr)
         {
             ctrTrangThaiHover = ctr;
+        }
+
+        private void loadPicHinh(Control ctr, string fName)
+        {
+            using (FileStream fs = new FileStream(fName, FileMode.Open, FileAccess.Read))
+            {
+                ctr.BackgroundImage = Image.FromStream(fs);
+                fs.Dispose();
+                ctr.BackgroundImageLayout = ImageLayout.Zoom;
+            }
         }
 
         public UCSanPham(SanPham_DTO sanPham)
@@ -38,10 +49,8 @@ namespace ControlDesign
             pnAnh.Size = new Size(180, 150);
             pnAnh.Top = 10;
             pnAnh.Left = 10;
-            pnAnh.BackColor = Color.Red;
-            Image img = Image.FromFile(imgPolder + sanPham.Hinh);
-            pnAnh.BackgroundImage = img;
-            pnAnh.BackgroundImageLayout = ImageLayout.Stretch;
+            pnAnh.BackColor = Color.White;
+            loadPicHinh(pnAnh, imgPolder + sanPham.Hinh);
             pnAnh.Tag = sanPham;
 
             Label lbMaSP = new Label();
